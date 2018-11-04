@@ -9,10 +9,17 @@
 import UIKit
 
 class ViewController: UIViewController {
+  
+  let viewModel = WikiArticlesViewModel()
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    // Do any additional setup after loading the view, typically from a nib.
+    //Code to test view model
+    viewModel.refresh(month: 11, day: 2) { [unowned self] in
+      DispatchQueue.main
+    }
+    print("view did load")
+    
   }
 
 

@@ -20,6 +20,8 @@
 		65898919218F579C00D53E95 /* SearchWikiArticlesClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65898918218F579C00D53E95 /* SearchWikiArticlesClient.swift */; };
 		65898952218F5C2000D53E95 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65898945218F5BF200D53E95 /* Alamofire.framework */; };
 		65898953218F5C2000D53E95 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 65898945218F5BF200D53E95 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		65898961218F841C00D53E95 /* WikiParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65898960218F841C00D53E95 /* WikiParser.swift */; };
+		65898963218F848300D53E95 /* WikiArticlesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65898962218F848300D53E95 /* WikiArticlesViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +112,8 @@
 		65898915218F575000D53E95 /* ResponseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseData.swift; sourceTree = "<group>"; };
 		65898918218F579C00D53E95 /* SearchWikiArticlesClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchWikiArticlesClient.swift; sourceTree = "<group>"; };
 		65898939218F5BF200D53E95 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = "../../../../Downloads/Alamofire-master 2/Alamofire.xcodeproj"; sourceTree = "<group>"; };
+		65898960218F841C00D53E95 /* WikiParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikiParser.swift; sourceTree = "<group>"; };
+		65898962218F848300D53E95 /* WikiArticlesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikiArticlesViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,9 +150,11 @@
 			children = (
 				59C386BC218E1435003F5919 /* AppDelegate.swift */,
 				59C386BE218E1435003F5919 /* ViewController.swift */,
+				65898958218F840600D53E95 /* Parser */,
 				65898917218F576700D53E95 /* Network */,
 				6589890E218F56FC00D53E95 /* Models */,
 				59C386C0218E1435003F5919 /* Main.storyboard */,
+				65898962218F848300D53E95 /* WikiArticlesViewModel.swift */,
 				59C386C6218E1439003F5919 /* Assets.xcassets */,
 				59C386C8218E1439003F5919 /* LaunchScreen.storyboard */,
 				59C386CB218E1439003F5919 /* Info.plist */,
@@ -188,6 +194,14 @@
 				65898951218F5BF200D53E95 /* Alamofire.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		65898958218F840600D53E95 /* Parser */ = {
+			isa = PBXGroup;
+			children = (
+				65898960218F841C00D53E95 /* WikiParser.swift */,
+			);
+			path = Parser;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -325,10 +339,12 @@
 				65898919218F579C00D53E95 /* SearchWikiArticlesClient.swift in Sources */,
 				65898916218F575000D53E95 /* ResponseData.swift in Sources */,
 				59C386BF218E1435003F5919 /* ViewController.swift in Sources */,
+				65898961218F841C00D53E95 /* WikiParser.swift in Sources */,
 				59C386C5218E1435003F5919 /* _7442_DM.xcdatamodeld in Sources */,
 				59C386BD218E1435003F5919 /* AppDelegate.swift in Sources */,
 				65898914218F574000D53E95 /* Event.swift in Sources */,
 				65898912218F573100D53E95 /* Link.swift in Sources */,
+				65898963218F848300D53E95 /* WikiArticlesViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
