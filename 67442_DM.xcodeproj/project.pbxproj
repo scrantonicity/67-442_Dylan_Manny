@@ -13,6 +13,11 @@
 		59C386C5218E1435003F5919 /* _7442_DM.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 59C386C3218E1435003F5919 /* _7442_DM.xcdatamodeld */; };
 		59C386C7218E1439003F5919 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59C386C6218E1439003F5919 /* Assets.xcassets */; };
 		59C386CA218E1439003F5919 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59C386C8218E1439003F5919 /* LaunchScreen.storyboard */; };
+		65898910218F571A00D53E95 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6589890F218F571A00D53E95 /* Response.swift */; };
+		65898912218F573100D53E95 /* Link.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65898911218F573100D53E95 /* Link.swift */; };
+		65898914218F574000D53E95 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65898913218F574000D53E95 /* Event.swift */; };
+		65898916218F575000D53E95 /* ResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65898915218F575000D53E95 /* ResponseData.swift */; };
+		65898919218F579C00D53E95 /* SearchWikiArticlesClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65898918218F579C00D53E95 /* SearchWikiArticlesClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,11 @@
 		59C386C6218E1439003F5919 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		59C386C9218E1439003F5919 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		59C386CB218E1439003F5919 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6589890F218F571A00D53E95 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		65898911218F573100D53E95 /* Link.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Link.swift; sourceTree = "<group>"; };
+		65898913218F574000D53E95 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		65898915218F575000D53E95 /* ResponseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseData.swift; sourceTree = "<group>"; };
+		65898918218F579C00D53E95 /* SearchWikiArticlesClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchWikiArticlesClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +68,8 @@
 			children = (
 				59C386BC218E1435003F5919 /* AppDelegate.swift */,
 				59C386BE218E1435003F5919 /* ViewController.swift */,
+				65898917218F576700D53E95 /* Network */,
+				6589890E218F56FC00D53E95 /* Models */,
 				59C386C0218E1435003F5919 /* Main.storyboard */,
 				59C386C6218E1439003F5919 /* Assets.xcassets */,
 				59C386C8218E1439003F5919 /* LaunchScreen.storyboard */,
@@ -65,6 +77,25 @@
 				59C386C3218E1435003F5919 /* _7442_DM.xcdatamodeld */,
 			);
 			path = 67442_DM;
+			sourceTree = "<group>";
+		};
+		6589890E218F56FC00D53E95 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6589890F218F571A00D53E95 /* Response.swift */,
+				65898913218F574000D53E95 /* Event.swift */,
+				65898915218F575000D53E95 /* ResponseData.swift */,
+				65898911218F573100D53E95 /* Link.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		65898917218F576700D53E95 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				65898918218F579C00D53E95 /* SearchWikiArticlesClient.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +169,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65898910218F571A00D53E95 /* Response.swift in Sources */,
+				65898919218F579C00D53E95 /* SearchWikiArticlesClient.swift in Sources */,
+				65898916218F575000D53E95 /* ResponseData.swift in Sources */,
 				59C386BF218E1435003F5919 /* ViewController.swift in Sources */,
 				59C386C5218E1435003F5919 /* _7442_DM.xcdatamodeld in Sources */,
 				59C386BD218E1435003F5919 /* AppDelegate.swift in Sources */,
+				65898914218F574000D53E95 /* Event.swift in Sources */,
+				65898912218F573100D53E95 /* Link.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
