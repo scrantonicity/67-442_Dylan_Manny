@@ -27,6 +27,9 @@
 		6589896A218F91D700D53E95 /* Link.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65898969218F91D700D53E95 /* Link.swift */; };
 		6589896C218F91E800D53E95 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6589896B218F91E800D53E95 /* Event.swift */; };
 		6589896E218F921200D53E95 /* ResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6589896D218F921200D53E95 /* ResponseData.swift */; };
+		65898971218F928200D53E95 /* SearchArticlesClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65898970218F928200D53E95 /* SearchArticlesClient.swift */; };
+		65898974218F92A900D53E95 /* WikiParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65898973218F92A900D53E95 /* WikiParser.swift */; };
+		65898976218F92CF00D53E95 /* ArticlesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65898975218F92CF00D53E95 /* ArticlesViewModel.swift */; };
 		F9D539064B88CB0C279350FC /* Pods_67442_DM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9C96599F6C5C5833F5CB062 /* Pods_67442_DM.framework */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +57,9 @@
 		65898969218F91D700D53E95 /* Link.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Link.swift; sourceTree = "<group>"; };
 		6589896B218F91E800D53E95 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		6589896D218F921200D53E95 /* ResponseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseData.swift; sourceTree = "<group>"; };
+		65898970218F928200D53E95 /* SearchArticlesClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchArticlesClient.swift; sourceTree = "<group>"; };
+		65898973218F92A900D53E95 /* WikiParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikiParser.swift; sourceTree = "<group>"; };
+		65898975218F92CF00D53E95 /* ArticlesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesViewModel.swift; sourceTree = "<group>"; };
 		AB988AC5306188F9F7B94597 /* Pods-67442_DM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-67442_DM.release.xcconfig"; path = "Pods/Target Support Files/Pods-67442_DM/Pods-67442_DM.release.xcconfig"; sourceTree = "<group>"; };
 		C9C96599F6C5C5833F5CB062 /* Pods_67442_DM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_67442_DM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -128,7 +134,10 @@
 		59C386D2218E1CA2003F5919 /* Articles */ = {
 			isa = PBXGroup;
 			children = (
+				65898972218F929700D53E95 /* Parser */,
+				6589896F218F925B00D53E95 /* Network */,
 				65898965218F91A800D53E95 /* Models */,
+				65898975218F92CF00D53E95 /* ArticlesViewModel.swift */,
 			);
 			path = Articles;
 			sourceTree = "<group>";
@@ -186,6 +195,22 @@
 				65898969218F91D700D53E95 /* Link.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		6589896F218F925B00D53E95 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				65898970218F928200D53E95 /* SearchArticlesClient.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		65898972218F929700D53E95 /* Parser */ = {
+			isa = PBXGroup;
+			children = (
+				65898973218F92A900D53E95 /* WikiParser.swift */,
+			);
+			path = Parser;
 			sourceTree = "<group>";
 		};
 		9CBC5219CA9BE901E0C9F15B /* Pods */ = {
@@ -320,6 +345,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65898971218F928200D53E95 /* SearchArticlesClient.swift in Sources */,
 				59C386E1218F7CF7003F5919 /* Song.swift in Sources */,
 				59C386DB218F7C5C003F5919 /* SongsViewModel.swift in Sources */,
 				59C386C5218E1435003F5919 /* _7442_DM.xcdatamodeld in Sources */,
@@ -331,8 +357,10 @@
 				6589896E218F921200D53E95 /* ResponseData.swift in Sources */,
 				65898967218F91B600D53E95 /* Response.swift in Sources */,
 				59C386E3218F7D0C003F5919 /* Result.swift in Sources */,
+				65898974218F92A900D53E95 /* WikiParser.swift in Sources */,
 				59C386E5218F7D2B003F5919 /* SongsParser.swift in Sources */,
 				59C386BD218E1435003F5919 /* AppDelegate.swift in Sources */,
+				65898976218F92CF00D53E95 /* ArticlesViewModel.swift in Sources */,
 				6589896C218F91E800D53E95 /* Event.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
