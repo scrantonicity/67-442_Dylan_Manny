@@ -8,12 +8,13 @@
 
 import UIKit
 
-//class ArticlesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-
-class ArticlesViewController: UITableViewController {
+class ArticlesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+ 
+//class ArticlesViewController: UITableViewController, UITableViewDataSource, UITableViewDelegate {
   // MARK: - Properties & Outlets
   let viewModel = ArticlesViewModel()
   
+
   @IBOutlet var tableView: UITableView!
   
   // MARK: - viewDidLoad, WillAppear
@@ -23,7 +24,7 @@ class ArticlesViewController: UITableViewController {
     let cellNib = UINib(nibName: "HeadlineTableViewCell", bundle: nil)
     tableView.register(cellNib, forCellReuseIdentifier: "acell")
     // get the data for the table
-    viewModel.refresh { [unowned self] in
+    viewModel.refresh(month: 11, day: 2) { [unowned self] in
       DispatchQueue.main.async {
         self.tableView.reloadData()
       }
