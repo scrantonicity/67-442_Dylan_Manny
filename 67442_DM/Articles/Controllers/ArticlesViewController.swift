@@ -23,6 +23,8 @@ class ArticlesViewController: UIViewController, UITableViewDataSource, UITableVi
     // register the nib
     let cellNib = UINib(nibName: "Headline", bundle: nil)
     tableView.register(cellNib, forCellReuseIdentifier: "acell")
+    tableView.rowHeight = UITableView.automaticDimension
+    tableView.estimatedRowHeight = 140
     // get the data for the table
     viewModel.refresh(month: 11, day: 2) { [unowned self] in
       DispatchQueue.main.async {
@@ -50,6 +52,9 @@ class ArticlesViewController: UIViewController, UITableViewDataSource, UITableVi
     cell.year?.text = viewModel.yearForRowAtIndexPath(indexPath)
     return cell
   }
+  
+  
+
   
 //  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
 //    performSegue(withIdentifier: "toDetailArticle", sender: indexPath)
