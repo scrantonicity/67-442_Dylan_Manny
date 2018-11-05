@@ -142,7 +142,6 @@
 		59C386D2218E1CA2003F5919 /* Articles */ = {
 			isa = PBXGroup;
 			children = (
-				6589897D218F9A0400D53E95 /* ArticlesViewController.swift */,
 				65898981218FE64800D53E95 /* Controllers */,
 				65898978218F964000D53E95 /* Storyboards */,
 				65898972218F929700D53E95 /* Parser */,
@@ -235,6 +234,7 @@
 		65898981218FE64800D53E95 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				6589897D218F9A0400D53E95 /* ArticlesViewController.swift */,
 				65898975218F92CF00D53E95 /* ArticlesViewModel.swift */,
 				6589897B218F96EF00D53E95 /* HeadlineTableViewCell.swift */,
 			);

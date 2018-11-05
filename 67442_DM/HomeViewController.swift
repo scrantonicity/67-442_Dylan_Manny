@@ -21,7 +21,7 @@ class HomeViewController: UIViewController {
     let storyboard = UIStoryboard(name: "Articles", bundle: nil)
     
     // Create an instance of the storyboard's initial view controller
-    let controller = storyboard.instantiateViewController(withIdentifier: "ArticlesViewController") as UIViewController
+    let controller = storyboard.instantiateViewController(withIdentifier: "ArticlesController") as UIViewController
     
     // Display the new view controller
     present(controller, animated: true, completion: nil)

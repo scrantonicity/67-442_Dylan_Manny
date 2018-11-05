@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Articles-->
+        <!--Articles View Controller-->
         <scene sceneID="j78-G6-MsQ">
             <objects>
                 <tableViewController id="eef-iK-Hy1" customClass="ArticlesViewController" customModule="_7442_DM" customModuleProvider="target" sceneMemberID="viewController">
@@ -31,7 +31,10 @@
                             <outlet property="delegate" destination="eef-iK-Hy1" id="TdG-Yb-62L"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Articles" id="afL-4b-W2w"/>
+                    <navigationItem key="navigationItem" id="afL-4b-W2w"/>
+                    <connections>
+                        <outlet property="tableView" destination="9OR-Yj-wvY" id="lYF-lE-XLM"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="039-p4-wmZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -40,7 +43,7 @@
         <!--Navigation Controller-->
         <scene sceneID="iUo-r4-EJn">
             <objects>
-                <navigationController id="EiW-a3-tJj" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="ArticlesController" id="EiW-a3-tJj" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ugt-36-kpt">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

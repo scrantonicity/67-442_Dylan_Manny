@@ -9,8 +9,8 @@
 import UIKit
 
 class ArticlesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
- 
-//class ArticlesViewController: UITableViewController, UITableViewDataSource, UITableViewDelegate {
+
+//class ArticlesViewController: UITableViewController {
   // MARK: - Properties & Outlets
   let viewModel = ArticlesViewModel()
   
@@ -21,7 +21,7 @@ class ArticlesViewController: UIViewController, UITableViewDataSource, UITableVi
   override func viewDidLoad() {
     super.viewDidLoad()
     // register the nib
-    let cellNib = UINib(nibName: "HeadlineTableViewCell", bundle: nil)
+    let cellNib = UINib(nibName: "Headline", bundle: nil)
     tableView.register(cellNib, forCellReuseIdentifier: "acell")
     // get the data for the table
     viewModel.refresh(month: 11, day: 2) { [unowned self] in
