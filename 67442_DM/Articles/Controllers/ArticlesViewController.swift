@@ -8,9 +8,9 @@
 
 import UIKit
 
-class ArticlesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-  
-//class ArticlesViewController: UITableViewController {
+//class ArticlesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+
+class ArticlesViewController: UITableViewController {
   // MARK: - Properties & Outlets
   let viewModel = ArticlesViewModel()
   
@@ -27,6 +27,13 @@ class ArticlesViewController: UIViewController, UITableViewDataSource, UITableVi
       DispatchQueue.main.async {
         self.tableView.reloadData()
       }
+    }
+  }
+  
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    if let selectedRow = tableView.indexPathForSelectedRow {
+      tableView.deselectRow(at: selectedRow, animated: true)
     }
   }
   
@@ -49,30 +56,6 @@ class ArticlesViewController: UIViewController, UITableViewDataSource, UITableVi
   
 
 }
-
-//
-//
-//  override func viewDidLoad() {
-//    super.viewDidLoad()
-//    // register the nib
-//    let cellNib = UINib(nibName: "TableViewCell", bundle: nil)
-//    tableView.register(cellNib, forCellReuseIdentifier: "cell")
-//    // set up the search bar (method below)
-//    setupSearchBar()
-//    // get the data for the table
-//    viewModel.refresh { [unowned self] in
-//      DispatchQueue.main.async {
-//        self.tableView.reloadData()
-//      }
-//    }
-//  }
-//
-//  override func viewWillAppear(_ animated: Bool) {
-//    super.viewWillAppear(animated)
-//    if let selectedRow = tableView.indexPathForSelectedRow {
-//      tableView.deselectRow(at: selectedRow, animated: true)
-//    }
-//  }
 
 //
 //  // MARK: - Segues
