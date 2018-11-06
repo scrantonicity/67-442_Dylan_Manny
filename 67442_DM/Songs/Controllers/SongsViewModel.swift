@@ -6,12 +6,26 @@
 //  Copyright © 2018 Dylan Hyun. All rights reserved.
 //
 
+extension String {
+  subscript (bounds: CountableClosedRange<Int>) -> String {
+    let start = index(startIndex, offsetBy: bounds.lowerBound)
+    let end = index(startIndex, offsetBy: bounds.upperBound)
+    return String(self[start...end])
+  }
+  
+  subscript (bounds: CountableRange<Int>) -> String {
+    let start = index(startIndex, offsetBy: bounds.lowerBound)
+    let end = index(startIndex, offsetBy: bounds.upperBound)
+    return String(self[start..<end])
+  }
+}
+
 import Foundation
 import Alamofire
 
 class SongsViewModel {
   var songs = [Song]()
-  //  var filteredSongs = [Song]()
+  var filteredSongs = [Song]()
   
   let client = SearchSongsClient()
   let parser = SongsParser()
@@ -23,36 +37,46 @@ class SongsViewModel {
         print("got songs!")
         print(self.songs[0...5])
         print(songs.count)
+        self.getSongsForDay(month: 11, day: 6)
       }
       completion()
     }
     
   }
   
+  func getSongsForDay(month: Int, day: Int) -> Void {
+    for song in self.songs {
+      let songMonth:Int?  = Int(song.date[5...6])
+      let songDay:Int?  = Int(song.date[8...9])
+      if (songMonth == month && songDay == day) {
+        filteredSongs.append(song)
+      }
+    }
+  }
+  
   func numberOfRows() -> Int {
-    return songs.count
+    return filteredSongs.count
   }
   
   func yearForRowAtIndexPath(_ indexPath: IndexPath) -> String {
-    print(songs[indexPath.row].date)
-    guard indexPath.row >= 0 && indexPath.row < songs.count else {
+    guard indexPath.row >= 0 && indexPath.row < filteredSongs.count else {
       return ""
     }
-    return songs[indexPath.row].date
+    return filteredSongs[indexPath.row].date[0...3]
   }
   
   func titleForRowAtIndexPath(_ indexPath: IndexPath) -> String {
-    guard indexPath.row >= 0 && indexPath.row < songs.count else {
+    guard indexPath.row >= 0 && indexPath.row < filteredSongs.count else {
       return ""
     }
-    return songs[indexPath.row].title
+    return filteredSongs[indexPath.row].title
   }
   
   func artistForRowAtIndexPath(_ indexPath: IndexPath) -> String {
-    guard indexPath.row >= 0 && indexPath.row < songs.count else {
+    guard indexPath.row >= 0 && indexPath.row < filteredSongs.count else {
       return ""
     }
-    return songs[indexPath.row].artist
+    return filteredSongs[indexPath.row].artist
   }
   
   //  func detailViewModelForRowAtIndexPath(_ indexPath: IndexPath) -> RepositoryDetailViewModel {
