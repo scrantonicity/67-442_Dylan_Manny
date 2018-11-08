@@ -8,8 +8,9 @@
 
 import UIKit
 
+//class SongsViewController: UITableViewController {
 class SongsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-  
+
   // MARK: - Properties & Outlets
   let viewModel = SongsViewModel()
   
@@ -19,7 +20,7 @@ class SongsViewController: UIViewController, UITableViewDataSource, UITableViewD
     super.viewDidLoad()
     // register the nib
     let cellNib = UINib(nibName: "TableViewCell", bundle: nil)
-    tableView.register(cellNib, forCellReuseIdentifier: "cell")
+    tableView.register(cellNib, forCellReuseIdentifier: "scell")
     // get the data for the table
     viewModel.refresh { [unowned self] in
       DispatchQueue.main.async {
@@ -42,7 +43,7 @@ class SongsViewController: UIViewController, UITableViewDataSource, UITableViewD
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     print("calling in data from table view")
-    let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TableViewCell
+    let cell = tableView.dequeueReusableCell(withIdentifier: "scell", for: indexPath) as! TableViewCell
     cell.year?.text = viewModel.yearForRowAtIndexPath(indexPath)
     cell.title?.text = viewModel.titleForRowAtIndexPath(indexPath)
     cell.artist?.text = viewModel.artistForRowAtIndexPath(indexPath)
