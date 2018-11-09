@@ -55,23 +55,17 @@ class ArticlesViewController: UIViewController, UITableViewDataSource, UITableVi
     return cell
   }
   
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
+    performSegue(withIdentifier: "showArticleDetails", sender: indexPath)
+  }
   
-
-  
-//  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
-//    performSegue(withIdentifier: "toDetailArticle", sender: indexPath)
-//  }
-  
+  // MARK: - Segues
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if let detailArticle = segue.destination as? ArticleDetailsViewController,
+      let indexPath = sender as? IndexPath {
+      detailArticle.viewModel = viewModel.detailViewModelForRowAtIndexPath(indexPath)
+    }
+  }
 
 }
 
-//
-//  // MARK: - Segues
-//  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//    if let detailVC = segue.destination as? RepositoryDetailViewController,
-//      let indexPath = sender as? IndexPath {
-//      detailVC.viewModel = viewModel.detailViewModelForRowAtIndexPath(indexPath)
-//    }
-//  }
-//
-//}

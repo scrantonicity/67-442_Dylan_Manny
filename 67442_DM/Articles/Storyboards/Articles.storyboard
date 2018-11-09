@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Article-->
+        <!--Articles-->
         <scene sceneID="j78-G6-MsQ">
             <objects>
-                <tableViewController id="eef-iK-Hy1" customClass="ArticlesViewController" customModule="_7442_DM" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Articles" id="eef-iK-Hy1" customClass="ArticlesViewController" customModule="_7442_DM" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="9OR-Yj-wvY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -34,7 +34,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="FfW-NN-oGA" kind="show" id="a57-By-Fea"/>
+                                    <segue destination="FfW-NN-oGA" kind="show" identifier="showArticleDetails" id="a57-By-Fea"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -52,10 +52,10 @@
             </objects>
             <point key="canvasLocation" x="120.8" y="-1182.4587706146926"/>
         </scene>
-        <!--showArticleDetails-->
+        <!--ArticleDetails-->
         <scene sceneID="jKd-Ke-BLl">
             <objects>
-                <viewControllerPlaceholder storyboardName="ArticleDetails" referencedIdentifier="showArticleDetails" id="FfW-NN-oGA" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="ArticleDetails" id="FfW-NN-oGA" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FnL-WA-ULv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="790" y="-1183"/>

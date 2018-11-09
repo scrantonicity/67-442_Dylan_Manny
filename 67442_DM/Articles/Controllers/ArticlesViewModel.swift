@@ -44,10 +44,10 @@ class ArticlesViewModel {
     return articles[indexPath.row].year
   }
   
-//  func detailViewModelForRowAtIndexPath(_ indexPath: IndexPath) -> RepositoryDetailViewModel {
-//    let repo = (filteredRepos.isEmpty ? repos[indexPath.row] : filteredRepos[indexPath.row])
-//    return RepositoryDetailViewModel(repository: repo)
-//  }
+  func detailViewModelForRowAtIndexPath(_ indexPath: IndexPath) -> ArticleDetailsViewModel {
+    let article = articles[indexPath.row]
+    return ArticleDetailsViewModel(article: article)
+  }
   
 }
 
