@@ -152,11 +152,12 @@
 		59C386D2218E1CA2003F5919 /* Articles */ = {
 			isa = PBXGroup;
 			children = (
-				65898981218FE64800D53E95 /* Controllers */,
+				6589898F2195455800D53E95 /* ArticleDetails */,
+				65898981218FE64800D53E95 /* Articles */,
 				65898978218F964000D53E95 /* Storyboards */,
 				65898972218F929700D53E95 /* Parser */,
 				6589896F218F925B00D53E95 /* Network */,
-				65898965218F91A800D53E95 /* Models */,
+				65898965218F91A800D53E95 /* Parser Model */,
 			);
 			path = Articles;
 			sourceTree = "<group>";
@@ -205,16 +206,15 @@
 			path = Data;
 			sourceTree = "<group>";
 		};
-		65898965218F91A800D53E95 /* Models */ = {
+		65898965218F91A800D53E95 /* Parser Model */ = {
 			isa = PBXGroup;
 			children = (
 				65898966218F91B600D53E95 /* Response.swift */,
 				6589896D218F921200D53E95 /* ResponseData.swift */,
 				6589896B218F91E800D53E95 /* Event.swift */,
 				65898969218F91D700D53E95 /* Link.swift */,
-				6589898921952D9800D53E95 /* ArticleDetailsViewModel.swift */,
 			);
-			path = Models;
+			path = "Parser Model";
 			sourceTree = "<group>";
 		};
 		6589896F218F925B00D53E95 /* Network */ = {
@@ -244,16 +244,25 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
-		65898981218FE64800D53E95 /* Controllers */ = {
+		65898981218FE64800D53E95 /* Articles */ = {
 			isa = PBXGroup;
 			children = (
 				6589897D218F9A0400D53E95 /* ArticlesViewController.swift */,
-				6589898721952D1700D53E95 /* ArticleDetailsViewController.swift */,
-				65898975218F92CF00D53E95 /* ArticlesViewModel.swift */,
 				6589897B218F96EF00D53E95 /* HeadlineTableViewCell.swift */,
+			);
+			path = Articles;
+			sourceTree = "<group>";
+		};
+		6589898F2195455800D53E95 /* ArticleDetails */ = {
+			isa = PBXGroup;
+			children = (
+				6589898721952D1700D53E95 /* ArticleDetailsViewController.swift */,
+				6589898921952D9800D53E95 /* ArticleDetailsViewModel.swift */,
+				65898975218F92CF00D53E95 /* ArticlesViewModel.swift */,
 				6589898D219533D300D53E95 /* LinksTableViewCell.swift */,
 			);
-			path = Controllers;
+			name = ArticleDetails;
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 		9CBC5219CA9BE901E0C9F15B /* Pods */ = {

@@ -8,9 +8,10 @@
 
 import UIKit
 
-class ArticleDetailsViewController: UIViewController {
+class ArticleDetailsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
   
   var viewModel: ArticleDetailsViewModel?
+//  var article: Event
   
   @IBOutlet weak var headline: UILabel!
   @IBOutlet weak var year: UILabel!
@@ -18,7 +19,8 @@ class ArticleDetailsViewController: UIViewController {
 
     override func viewDidLoad() {
       super.viewDidLoad()
-      
+      headline.text = viewModel?.article.headline
+      year.text = viewModel?.article.year
       let cellNib = UINib(nibName: "Links", bundle: nil)
       tableView.register(cellNib, forCellReuseIdentifier: "linkcell")
     }
@@ -29,6 +31,8 @@ class ArticleDetailsViewController: UIViewController {
     if let selectedRow = tableView.indexPathForSelectedRow {
       tableView.deselectRow(at: selectedRow, animated: true)
     }
+    
+    
   }
   
   

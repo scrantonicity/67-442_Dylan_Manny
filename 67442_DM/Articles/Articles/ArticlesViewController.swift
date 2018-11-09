@@ -64,6 +64,7 @@ class ArticlesViewController: UIViewController, UITableViewDataSource, UITableVi
     if let detailArticle = segue.destination as? ArticleDetailsViewController,
       let indexPath = sender as? IndexPath {
       detailArticle.viewModel = viewModel.detailViewModelForRowAtIndexPath(indexPath)
+//      detailArticle.article = self.
     }
   }
 
