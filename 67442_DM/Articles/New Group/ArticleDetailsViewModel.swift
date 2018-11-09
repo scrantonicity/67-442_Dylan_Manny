@@ -19,18 +19,30 @@ class ArticleDetailsViewModel {
     return article.links.count
   }
   
-  func headline(_ indexPath: IndexPath) -> String {
+  //should change to titleAtRow to avoid confusion
+  func headlineAtRow(_ indexPath: IndexPath) -> String {
+    print("running headlineAtRow")
     guard indexPath.row >= 0 && indexPath.row < article.links.count else {
-    return ""
+      print("guard failed")
+      return ""
     }
     let list = links()
-    
+//    print("lists: \(list)")
     let result = list[indexPath.row]
+//    print("result: \(result)")
     return result.0
   }
   
-  func year() -> String {
-    return article.year
+  func linkAtRow(_ indexPath: IndexPath) -> String {
+    print("running linkAtRow")
+    guard indexPath.row >= 0 && indexPath.row < article.links.count else {
+      print("guard failed")
+      return ""
+    }
+    
+    let list = links()
+    let result = list[indexPath.row]
+    return result.1
   }
   
   //returns list with tuples of titles and urls

@@ -11,7 +11,6 @@ import UIKit
 class ArticleDetailsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
   
   var viewModel: ArticleDetailsViewModel?
-//  var article: Event
   
   @IBOutlet weak var headline: UILabel!
   @IBOutlet weak var year: UILabel!
@@ -21,8 +20,9 @@ class ArticleDetailsViewController: UIViewController, UITableViewDataSource, UIT
       super.viewDidLoad()
       headline.text = viewModel?.article.headline
       year.text = viewModel?.article.year
-      let cellNib = UINib(nibName: "Links", bundle: nil)
-      tableView.register(cellNib, forCellReuseIdentifier: "linkcell")
+//      let cellNib = UINib(nibName: "Links", bundle: nil)
+//      tableView.register(cellNib, forCellReuseIdentifier: "linkcell")
+      tableView.reloadData()
     }
   
   
@@ -41,11 +41,31 @@ class ArticleDetailsViewController: UIViewController, UITableViewDataSource, UIT
     return viewModel!.numberOfRows()
   }
   
+//  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//    let cell = tableView.dequeueReusableCell(withIdentifier: "linkcell", for: indexPath) as! LinksTableViewCell
+//    print("getting titles")
+//    cell.title?.text = viewModel?.headlineAtRow(indexPath)
+//    print(cell.title?.text)
+//    return cell
+//  }
+
+  
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: "linkcell", for: indexPath) as! LinksTableViewCell
-    cell.title?.text = viewModel?.headline(indexPath) 
+    let cell = tableView.dequeueReusableCell(withIdentifier: "lcell", for: indexPath)
+    cell.textLabel?.text = viewModel?.headlineAtRow(indexPath)
     return cell
   }
-    
-
+  
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    performSegue(withIdentifier: "showWebPage", sender: tableView)
+  }
+  
+  // MARK: - Segues
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if let indexPath = self.tableView.indexPathForSelectedRow {
+      let link = viewModel?.linkAtRow(indexPath)
+      (segue.destination as! ArticleWebViewController).urlString = link
+    }
+  }
+  
 }
