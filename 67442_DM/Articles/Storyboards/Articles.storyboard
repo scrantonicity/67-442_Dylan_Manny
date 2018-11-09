@@ -66,10 +66,10 @@
             </objects>
             <point key="canvasLocation" x="790" y="-1183"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Articles-->
         <scene sceneID="iUo-r4-EJn">
             <objects>
-                <navigationController storyboardIdentifier="ArticlesController" id="EiW-a3-tJj" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="ArticlesController" title="Articles" id="EiW-a3-tJj" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ugt-36-kpt">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

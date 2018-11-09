@@ -29,7 +29,7 @@
         <!--Songs-->
         <scene sceneID="TPH-BS-I6g">
             <objects>
-                <viewControllerPlaceholder storyboardName="Songs" referencedIdentifier="Songs" id="hbv-ix-n0C" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardIdentifier="Tabs" storyboardName="Songs" referencedIdentifier="Songs" id="hbv-ix-n0C" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Songs" id="onQ-Ph-9Ei"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rwo-CN-9XX" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -40,7 +40,7 @@
         <scene sceneID="9og-4m-gOO">
             <objects>
                 <viewControllerPlaceholder storyboardName="Articles" referencedIdentifier="ArticlesController" id="j8X-8s-axU" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="aRc-be-ekp"/>
+                    <tabBarItem key="tabBarItem" title="Articles" id="aRc-be-ekp"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RL7-eQ-TZj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
