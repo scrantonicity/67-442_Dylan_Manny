@@ -29,7 +29,7 @@
         <!--Songs-->
         <scene sceneID="TPH-BS-I6g">
             <objects>
-                <viewControllerPlaceholder storyboardName="Songs" id="hbv-ix-n0C" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Songs" referencedIdentifier="Songs" id="hbv-ix-n0C" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="onQ-Ph-9Ei"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rwo-CN-9XX" userLabel="First Responder" sceneMemberID="firstResponder"/>

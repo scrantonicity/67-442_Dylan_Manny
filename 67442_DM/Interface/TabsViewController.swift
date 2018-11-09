@@ -13,12 +13,12 @@ class TabsViewController: UITabBarController, UITabBarControllerDelegate {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    let songsViewController = SongsViewController()
-    songsViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .Songs, tag: 0)
-    let articlesViewController = ArticlesViewController()
-    articlesViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .Articles, tag: 1)
-    let viewControllerList = [ songsViewController, articlesViewController]
-    viewControllers = viewControllerList
+//    let songsViewController = SongsViewController()
+//    songsViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .Songs, tag: 0)
+//    let articlesViewController = ArticlesViewController()
+//    articlesViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .Articles, tag: 1)
+//    let viewControllerList = [ songsViewController, articlesViewController]
+//    viewControllers = viewControllerList
     
   }
   
