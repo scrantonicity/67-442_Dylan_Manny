@@ -2,7 +2,7 @@
 //  _7442_DMTests.swift
 //  67442_DMTests
 //
-//  Created by Dylan Hyun on 11/9/18.
+//  Created by Manuel Lopez on 11/9/18.
 //  Copyright © 2018 Dylan Hyun. All rights reserved.
 //
 
