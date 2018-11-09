@@ -9,6 +9,8 @@
 import UIKit
 
 class TabsViewController: UITabBarController, UITabBarControllerDelegate {
+  
+//  @IBOutlet weak var songsViewController: 
 
   override func viewDidLoad() {
     super.viewDidLoad()
