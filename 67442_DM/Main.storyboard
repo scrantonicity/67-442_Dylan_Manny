@@ -17,43 +17,53 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="On this day in history..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7lW-rP-h5T">
-                                <rect key="frame" x="100" y="206" width="174" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MmD-JC-m0W">
-                                <rect key="frame" x="169" y="318" width="37" height="30"/>
-                                <state key="normal" title="Enter"/>
+                                <rect key="frame" x="100" y="364" width="170" height="30"/>
+                                <state key="normal" title="Open Your Paper"/>
                                 <connections>
                                     <segue destination="ATk-kw-YrZ" kind="show" id="gBQ-ug-pmw"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GYs-xx-GA8">
-                                <rect key="frame" x="161" y="391" width="53" height="30"/>
-                                <state key="normal" title="Articles"/>
-                                <connections>
-                                    <action selector="articlesButtonTapped" destination="UCl-bw-Wm2" eventType="touchUpInside" id="439-6h-K7w"/>
-                                </connections>
-                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Welcome to this day in history" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7lW-rP-h5T">
+                                <rect key="frame" x="73" y="151" width="230" height="57"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="57" id="39x-cN-Z8j"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zYx-0d-oX7">
+                                <rect key="frame" x="142" y="216" width="92" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="Ebv-NS-68b"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="GYs-xx-GA8" firstAttribute="centerX" secondItem="lik-EG-dS2" secondAttribute="centerX" id="0OE-DM-E8w"/>
-                            <constraint firstItem="GYs-xx-GA8" firstAttribute="top" secondItem="MmD-JC-m0W" secondAttribute="bottom" constant="43" id="0o2-zc-l96"/>
-                            <constraint firstItem="7lW-rP-h5T" firstAttribute="top" secondItem="Bc6-ey-iPb" secondAttribute="top" constant="186" id="F7x-pB-T25"/>
-                            <constraint firstItem="7lW-rP-h5T" firstAttribute="leading" secondItem="Bc6-ey-iPb" secondAttribute="leading" constant="100" id="Fbe-jd-kk7"/>
-                            <constraint firstItem="GYs-xx-GA8" firstAttribute="centerX" secondItem="7lW-rP-h5T" secondAttribute="centerX" id="dlV-fW-Ebk"/>
-                            <constraint firstItem="Bc6-ey-iPb" firstAttribute="bottom" secondItem="GYs-xx-GA8" secondAttribute="bottom" constant="246" id="heY-nP-7NP"/>
-                            <constraint firstItem="GYs-xx-GA8" firstAttribute="centerX" secondItem="MmD-JC-m0W" secondAttribute="centerX" id="jcG-Ho-xXe"/>
+                            <constraint firstItem="7lW-rP-h5T" firstAttribute="top" secondItem="Bc6-ey-iPb" secondAttribute="top" constant="131" id="AsI-sH-CcE"/>
+                            <constraint firstItem="zYx-0d-oX7" firstAttribute="top" secondItem="Bc6-ey-iPb" secondAttribute="top" constant="196" id="DWe-z7-80U"/>
+                            <constraint firstItem="zYx-0d-oX7" firstAttribute="centerX" secondItem="lik-EG-dS2" secondAttribute="centerX" id="JbC-Zi-fe9"/>
+                            <constraint firstItem="zYx-0d-oX7" firstAttribute="leading" secondItem="Bc6-ey-iPb" secondAttribute="leading" constant="142" id="L1T-ZC-Nhl"/>
+                            <constraint firstItem="Bc6-ey-iPb" firstAttribute="trailing" secondItem="MmD-JC-m0W" secondAttribute="trailing" constant="105" id="Y6b-9i-FRV"/>
+                            <constraint firstItem="7lW-rP-h5T" firstAttribute="leading" secondItem="Bc6-ey-iPb" secondAttribute="leading" constant="73" id="bRX-sG-zkS"/>
+                            <constraint firstItem="MmD-JC-m0W" firstAttribute="leading" secondItem="Bc6-ey-iPb" secondAttribute="leading" constant="100" id="wsQ-4H-CjY"/>
+                            <constraint firstItem="Bc6-ey-iPb" firstAttribute="bottom" secondItem="MmD-JC-m0W" secondAttribute="bottom" constant="273" id="xJG-nZ-JnH"/>
+                            <constraint firstItem="7lW-rP-h5T" firstAttribute="centerX" secondItem="lik-EG-dS2" secondAttribute="centerX" id="z9x-II-BSR"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Bc6-ey-iPb"/>
                     </view>
+                    <connections>
+                        <outlet property="date" destination="zYx-0d-oX7" id="IXj-Hf-0WS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Ms-ny-GG6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-68" y="190"/>
+            <point key="canvasLocation" x="-68" y="189.3553223388306"/>
         </scene>
         <!--Tabs-->
         <scene sceneID="JR4-6E-G8e">

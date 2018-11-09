@@ -9,11 +9,12 @@
 import UIKit
 
 class HomeViewController: UIViewController {
+  
+  @IBOutlet weak var date: UILabel!
 
     override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+      super.viewDidLoad()
+      date.text = getCurrentDate()
     }
   
   @IBAction func articlesButtonTapped() {
@@ -25,6 +26,13 @@ class HomeViewController: UIViewController {
     
     // Display the new view controller
     present(controller, animated: true, completion: nil)
+  }
+  
+  func getCurrentDate() -> String {
+    let dateCurrent = Date()
+    let calendar = Calendar.current
+    let components = calendar.dateComponents([Calendar.Component.day, Calendar.Component.month, Calendar.Component.year], from: dateCurrent)
+    return "\(components.month!)/\(components.day!)"
   }
     
 
