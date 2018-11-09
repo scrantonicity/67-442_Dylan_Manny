@@ -24,12 +24,12 @@ class ArticlesViewController: UIViewController, UITableViewDataSource, UITableVi
     let cellNib = UINib(nibName: "Headline", bundle: nil)
     tableView.register(cellNib, forCellReuseIdentifier: "acell")
     tableView.rowHeight = UITableView.automaticDimension
-    tableView.estimatedRowHeight = 140
+    tableView.estimatedRowHeight = 240
     // get the data for the table
     viewModel.refresh(month: 11, day: 2) { [unowned self] in
       DispatchQueue.main.async {
         self.tableView.reloadData()
-        print("refreshed")
+//        print("refreshed")
       }
     }
   }
@@ -50,6 +50,7 @@ class ArticlesViewController: UIViewController, UITableViewDataSource, UITableVi
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: "acell", for: indexPath) as! HeadlineTableViewCell
     cell.headline?.text = viewModel.headlineForRowAtIndexPath(indexPath)
+//    cell.headline?.numberOfLines = 0 
     cell.year?.text = viewModel.yearForRowAtIndexPath(indexPath)
     return cell
   }

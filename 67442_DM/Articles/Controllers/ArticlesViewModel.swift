@@ -18,9 +18,9 @@ class ArticlesViewModel {
     client.fetchArticles(month: month, day: day) { [unowned self] data in
       if let articles = self.parser.articlesFromWiki(data) {
         self.articles = articles
-        for article in articles{
-          print(article)
-        }
+//        for article in articles{
+//          print(article)
+//        }
       }
       completion()
     }
