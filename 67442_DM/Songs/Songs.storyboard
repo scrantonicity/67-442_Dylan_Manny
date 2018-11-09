@@ -31,7 +31,9 @@
                             <outlet property="delegate" destination="jaM-UT-giU" id="hh3-HT-cdj"/>
                         </connections>
                     </tableView>
+                    <tabBarItem key="tabBarItem" title="Songs" id="lmE-c9-GDs"/>
                     <navigationItem key="navigationItem" title="Root View Controller" id="PBi-fe-MiS"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="9pH-L6-fTN" id="kGU-lc-svg"/>
                     </connections>

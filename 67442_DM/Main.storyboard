@@ -55,10 +55,10 @@
             </objects>
             <point key="canvasLocation" x="-68" y="190"/>
         </scene>
-        <!--Songs-->
+        <!--Tabs-->
         <scene sceneID="JR4-6E-G8e">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="SongsView" storyboardName="Songs" id="ATk-kw-YrZ" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardIdentifier="SongsView" storyboardName="Tabs" id="ATk-kw-YrZ" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jY8-Re-L7e" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="413" y="177"/>

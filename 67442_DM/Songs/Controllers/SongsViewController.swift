@@ -18,6 +18,7 @@ class SongsViewController: UIViewController, UITableViewDataSource, UITableViewD
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    self.title = "Songs"
     // register the nib
     let cellNib = UINib(nibName: "TableViewCell", bundle: nil)
     tableView.register(cellNib, forCellReuseIdentifier: "scell")
