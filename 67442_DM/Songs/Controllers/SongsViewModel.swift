@@ -37,21 +37,25 @@ class SongsViewModel {
         print("got songs!")
         print(self.songs[0...5])
         print(songs.count)
-        self.getSongsForDay(month: 11, day: 6)
+        self.getSongsForDay()
       }
       completion()
     }
     
   }
   
-  func getSongsForDay(month: Int, day: Int) -> Void {
+  func getSongsForDay() -> Void {
+    let dateCurrent = Date()
+    let calendar = Calendar.current
+    let components = calendar.dateComponents([Calendar.Component.day, Calendar.Component.month, Calendar.Component.year], from: dateCurrent)
     for song in self.songs {
       let songMonth:Int?  = Int(song.date[5...6])
       let songDay:Int?  = Int(song.date[8...9])
-      if (songMonth == month && songDay == day) {
+      if (songMonth == components.month && songDay == components.day) {
         filteredSongs.append(song)
       }
     }
+    self.filteredSongs.reverse()
   }
   
   func numberOfRows() -> Int {
