@@ -10,6 +10,7 @@ import Foundation
 
 class ArticlesViewModel {
   var articles = [Event]()
+  var reverse = false
   
   let client = SearchArticlesClient()
   let parser = Parser()
@@ -17,7 +18,11 @@ class ArticlesViewModel {
   func refresh(month: Int, day: Int, _ completion: @escaping () -> Void) {
     client.fetchArticles(month: month, day: day) { [unowned self] data in
       if let articles = self.parser.articlesFromWiki(data) {
-        self.articles = articles
+        if self.reverse {
+          self.articles = articles.reversed()
+        } else {
+          self.articles = articles
+        }
 //        for article in articles{
 //          print(article)
 //        }
@@ -48,6 +53,7 @@ class ArticlesViewModel {
     let article = articles[indexPath.row]
     return ArticleDetailsViewModel(article: article)
   }
+
   
 }
 

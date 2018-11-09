@@ -16,6 +16,7 @@ class ArticlesViewController: UIViewController, UITableViewDataSource, UITableVi
   
 
   @IBOutlet var tableView: UITableView!
+  @IBOutlet weak var filter: UIBarButtonItem!
   
   // MARK: - viewDidLoad, WillAppear
   override func viewDidLoad() {
@@ -24,14 +25,9 @@ class ArticlesViewController: UIViewController, UITableViewDataSource, UITableVi
     let cellNib = UINib(nibName: "Headline", bundle: nil)
     tableView.register(cellNib, forCellReuseIdentifier: "acell")
     tableView.rowHeight = UITableView.automaticDimension
-    tableView.estimatedRowHeight = 240
+    tableView.estimatedRowHeight = 300
     // get the data for the table
-    viewModel.refresh(month: 11, day: 2) { [unowned self] in
-      DispatchQueue.main.async {
-        self.tableView.reloadData()
-//        print("refreshed")
-      }
-    }
+    self.refresh()
   }
   
   override func viewWillAppear(_ animated: Bool) {
@@ -39,6 +35,17 @@ class ArticlesViewController: UIViewController, UITableViewDataSource, UITableVi
     if let selectedRow = tableView.indexPathForSelectedRow {
       tableView.deselectRow(at: selectedRow, animated: true)
     }
+  }
+  
+  //MARK: - Actions
+  
+  @IBAction func filterHit(_ sender: Any) {
+    if viewModel.reverse {
+      viewModel.reverse = false
+    } else {
+      viewModel.reverse = true
+    }
+    self.refresh()
   }
   
   
@@ -65,6 +72,14 @@ class ArticlesViewController: UIViewController, UITableViewDataSource, UITableVi
       let indexPath = sender as? IndexPath {
       detailArticle.viewModel = viewModel.detailViewModelForRowAtIndexPath(indexPath)
 //      detailArticle.article = self.
+    }
+  }
+  
+  func refresh() -> Void {
+    viewModel.refresh(month: 11, day: 2) { [unowned self] in
+      DispatchQueue.main.async {
+        self.tableView.reloadData()
+      }
     }
   }
 
