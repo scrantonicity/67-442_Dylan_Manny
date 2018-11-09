@@ -29,6 +29,7 @@ class ArticlesViewController: UIViewController, UITableViewDataSource, UITableVi
     viewModel.refresh(month: 11, day: 2) { [unowned self] in
       DispatchQueue.main.async {
         self.tableView.reloadData()
+        print("refreshed")
       }
     }
   }
