@@ -76,11 +76,21 @@ class ArticlesViewController: UIViewController, UITableViewDataSource, UITableVi
   }
   
   func refresh() -> Void {
-    viewModel.refresh(month: 11, day: 2) { [unowned self] in
+    let date = getCurrentDate()
+    let month = Int(date.0)!
+    let day = Int(date.1)!
+    viewModel.refresh(month: month, day: day) { [unowned self] in
       DispatchQueue.main.async {
         self.tableView.reloadData()
       }
     }
+  }
+  
+  func getCurrentDate() -> (String, String) {
+    let dateCurrent = Date()
+    let calendar = Calendar.current
+    let components = calendar.dateComponents([Calendar.Component.day, Calendar.Component.month, Calendar.Component.year], from: dateCurrent)
+    return ("\(components.month ?? 1)", "\(components.day ?? 1)")
   }
 
 }
