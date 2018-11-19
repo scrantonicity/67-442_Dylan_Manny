@@ -21,7 +21,7 @@ class ArticleDetailsViewModel {
   
   //should change to titleAtRow to avoid confusion
   func headlineAtRow(_ indexPath: IndexPath) -> String {
-    print("running headlineAtRow")
+//    print("running headlineAtRow")
     guard indexPath.row >= 0 && indexPath.row < article.links.count else {
       print("guard failed")
       return ""
@@ -34,7 +34,7 @@ class ArticleDetailsViewModel {
   }
   
   func linkAtRow(_ indexPath: IndexPath) -> String {
-    print("running linkAtRow")
+//    print("running linkAtRow")
     guard indexPath.row >= 0 && indexPath.row < article.links.count else {
       print("guard failed")
       return ""

@@ -20,11 +20,11 @@ class ArticleWebViewController: UIViewController, WKNavigationDelegate {
   override func viewDidLoad() {
     super.viewDidLoad()
     webView.navigationDelegate = self
-    print(urlString ?? "None given")
-    let url:URL = URL(string: urlString!)!
-    
-    let urlRequest:URLRequest = URLRequest(url:url)
-    webView.load(urlRequest)
+//    print(urlString ?? "None given")
+//    let url:URL = URL(string: urlString!)!
+//
+//    let urlRequest:URLRequest = URLRequest(url:url)
+//    webView.load(urlRequest)
     // Do any additional setup after loading the view.
     activityIndicator = UIActivityIndicatorView()
     activityIndicator.center = self.view.center
@@ -36,10 +36,11 @@ class ArticleWebViewController: UIViewController, WKNavigationDelegate {
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(true)
 //    print(urlString ?? "None given")
-//    let url:URL = URL(string: urlString!)!
-//
-//    let urlRequest:URLRequest = URLRequest(url:url)
-//    webView.load(urlRequest)
+    let url:URL = URL(string: urlString!)!
+
+    let urlRequest:URLRequest = URLRequest(url:url)
+    webView.load(urlRequest)
+    print("url loaded")
   }
   
   func showActivityIndicator(show: Bool) {

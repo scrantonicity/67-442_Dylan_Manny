@@ -32,7 +32,6 @@ class ArticleDetailsViewController: UIViewController, UITableViewDataSource, UIT
       tableView.deselectRow(at: selectedRow, animated: true)
     }
     
-    
   }
   
   
@@ -56,15 +55,13 @@ class ArticleDetailsViewController: UIViewController, UITableViewDataSource, UIT
     return cell
   }
   
-  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    performSegue(withIdentifier: "showWebPage", sender: tableView)
-  }
   
   // MARK: - Segues
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     if let indexPath = self.tableView.indexPathForSelectedRow {
       let link = viewModel?.linkAtRow(indexPath)
       (segue.destination as! ArticleWebViewController).urlString = link
+      print("going to link")
     }
   }
   

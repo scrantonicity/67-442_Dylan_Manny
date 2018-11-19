@@ -20,7 +20,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Headline Goes Here" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Tm-bH-mW1">
                                 <rect key="frame" x="28" y="115" width="319" height="175"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="175" id="JbO-p3-rSZ"/>
+                                    <constraint firstAttribute="height" constant="175" identifier="titleHeight" id="JbO-p3-rSZ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <nil key="textColor"/>
@@ -43,6 +43,7 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="m7I-9Y-8mx" id="dT0-jf-UUh">
                                             <rect key="frame" x="0.0" y="0.0" width="342" height="46.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <viewLayoutGuide key="safeArea" id="c27-Gv-HXu"/>
                                         </tableViewCellContentView>
                                         <connections>
                                             <segue destination="xay-W7-GOR" kind="show" identifier="showWebPage" id="y3g-be-6D5"/>
@@ -55,14 +56,14 @@
                                     <outlet property="delegate" destination="ACv-0w-qe9" id="LOb-Cc-5it"/>
                                 </connections>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="On This Day in History..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mCB-bs-E4N">
-                                <rect key="frame" x="91" y="74" width="192" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="On This Day in History..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mCB-bs-E4N">
+                                <rect key="frame" x="91" y="74" width="193" height="21"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Year" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OU7-zz-Dsg">
-                                <rect key="frame" x="16" y="308" width="76" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Year" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OU7-zz-Dsg">
+                                <rect key="frame" x="16" y="308" width="36" height="21"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -70,23 +71,21 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="OU7-zz-Dsg" firstAttribute="leading" secondItem="wcz-xX-Ntp" secondAttribute="leadingMargin" id="0Nb-DT-FQx"/>
-                            <constraint firstItem="mCB-bs-E4N" firstAttribute="centerX" secondItem="hdn-6F-m8e" secondAttribute="centerX" id="3ei-E2-AV7"/>
-                            <constraint firstItem="7SS-lb-kzJ" firstAttribute="bottom" secondItem="hdn-6F-m8e" secondAttribute="bottom" id="4hi-BK-7BN"/>
-                            <constraint firstItem="1Tm-bH-mW1" firstAttribute="top" secondItem="mCB-bs-E4N" secondAttribute="bottom" constant="20" id="5oe-WS-fWK"/>
-                            <constraint firstItem="7SS-lb-kzJ" firstAttribute="top" secondItem="Ogh-Zc-yrJ" secondAttribute="bottom" constant="22" id="CiD-Qa-LCl"/>
-                            <constraint firstItem="Ogh-Zc-yrJ" firstAttribute="leading" secondItem="hdn-6F-m8e" secondAttribute="leading" constant="16" id="GD0-5o-s8e"/>
-                            <constraint firstItem="Ogh-Zc-yrJ" firstAttribute="top" secondItem="OU7-zz-Dsg" secondAttribute="bottom" constant="60" id="LJT-V2-h3X"/>
-                            <constraint firstItem="OU7-zz-Dsg" firstAttribute="top" secondItem="1Tm-bH-mW1" secondAttribute="bottom" constant="18" id="TBT-bJ-hub"/>
-                            <constraint firstItem="Ogh-Zc-yrJ" firstAttribute="leading" secondItem="OU7-zz-Dsg" secondAttribute="leading" id="aLL-mf-MGo"/>
-                            <constraint firstItem="mCB-bs-E4N" firstAttribute="leading" secondItem="hdn-6F-m8e" secondAttribute="leading" constant="91" id="bHd-sG-ipH"/>
-                            <constraint firstItem="7SS-lb-kzJ" firstAttribute="leading" secondItem="wcz-xX-Ntp" secondAttribute="leading" id="bbw-oY-dYY"/>
-                            <constraint firstItem="mCB-bs-E4N" firstAttribute="top" secondItem="hdn-6F-m8e" secondAttribute="top" constant="54" id="d2z-X8-FNx"/>
-                            <constraint firstItem="7SS-lb-kzJ" firstAttribute="centerX" secondItem="1Tm-bH-mW1" secondAttribute="centerX" id="egw-eN-Dfl"/>
-                            <constraint firstItem="hdn-6F-m8e" firstAttribute="trailing" secondItem="1Tm-bH-mW1" secondAttribute="trailing" constant="28" id="g4p-tL-8yf"/>
-                            <constraint firstItem="OU7-zz-Dsg" firstAttribute="leading" secondItem="hdn-6F-m8e" secondAttribute="leading" constant="16" id="iWw-KS-5kH"/>
-                            <constraint firstItem="1Tm-bH-mW1" firstAttribute="top" secondItem="hdn-6F-m8e" secondAttribute="top" constant="95" id="qNi-ZV-JXw"/>
-                            <constraint firstItem="1Tm-bH-mW1" firstAttribute="leading" secondItem="hdn-6F-m8e" secondAttribute="leading" constant="28" id="voL-ld-h6N"/>
+                            <constraint firstItem="7SS-lb-kzJ" firstAttribute="bottom" secondItem="hdn-6F-m8e" secondAttribute="bottom" identifier="tableBottomAlign" id="4hi-BK-7BN"/>
+                            <constraint firstItem="7SS-lb-kzJ" firstAttribute="top" secondItem="Ogh-Zc-yrJ" secondAttribute="bottom" constant="22" identifier="linksTableSpace" id="CiD-Qa-LCl"/>
+                            <constraint firstItem="Ogh-Zc-yrJ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="hdn-6F-m8e" secondAttribute="leading" constant="10" identifier="linksLeadingSpace" id="GD0-5o-s8e"/>
+                            <constraint firstItem="Ogh-Zc-yrJ" firstAttribute="top" secondItem="OU7-zz-Dsg" secondAttribute="bottom" constant="60" identifier="yearBottomSpace" id="LJT-V2-h3X"/>
+                            <constraint firstItem="OU7-zz-Dsg" firstAttribute="top" secondItem="1Tm-bH-mW1" secondAttribute="bottom" constant="18" identifier="titleSpaceAboveYear" id="TBT-bJ-hub"/>
+                            <constraint firstItem="Ogh-Zc-yrJ" firstAttribute="leading" secondItem="OU7-zz-Dsg" secondAttribute="leading" identifier="linksYearSpaceLeading" id="aLL-mf-MGo"/>
+                            <constraint firstItem="mCB-bs-E4N" firstAttribute="centerX" secondItem="hdn-6F-m8e" secondAttribute="centerX" identifier="headerCenterAlign" id="bQv-1C-VhO"/>
+                            <constraint firstItem="7SS-lb-kzJ" firstAttribute="leading" secondItem="wcz-xX-Ntp" secondAttribute="leading" identifier="tableSuperview" id="bbw-oY-dYY"/>
+                            <constraint firstItem="mCB-bs-E4N" firstAttribute="top" secondItem="hdn-6F-m8e" secondAttribute="top" constant="54" identifier="headerTopSpace" id="bzb-tn-ewt"/>
+                            <constraint firstItem="7SS-lb-kzJ" firstAttribute="centerX" secondItem="1Tm-bH-mW1" secondAttribute="centerX" identifier="titleCenterX" id="egw-eN-Dfl"/>
+                            <constraint firstItem="hdn-6F-m8e" firstAttribute="trailing" secondItem="1Tm-bH-mW1" secondAttribute="trailing" constant="28" identifier="titleFollowingSpace" id="g4p-tL-8yf"/>
+                            <constraint firstItem="mCB-bs-E4N" firstAttribute="leading" secondItem="hdn-6F-m8e" secondAttribute="leading" constant="91" identifier="headerInsertSpace" id="idd-1v-pA7"/>
+                            <constraint firstItem="OU7-zz-Dsg" firstAttribute="leading" secondItem="hdn-6F-m8e" secondAttribute="leading" constant="16" id="kaK-jN-hWK"/>
+                            <constraint firstItem="1Tm-bH-mW1" firstAttribute="top" secondItem="hdn-6F-m8e" secondAttribute="top" constant="95" identifier="titleTopSpace" id="qNi-ZV-JXw"/>
+                            <constraint firstItem="1Tm-bH-mW1" firstAttribute="leading" secondItem="hdn-6F-m8e" secondAttribute="leading" constant="28" identifier="titleLeadingSpace" id="voL-ld-h6N"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hdn-6F-m8e"/>
                     </view>
