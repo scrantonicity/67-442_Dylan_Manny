@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="A0x-f9-2rZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="A0x-f9-2rZ">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -26,25 +26,25 @@
             </objects>
             <point key="canvasLocation" x="-782" y="-39"/>
         </scene>
-        <!--Songs-->
+        <!--ArticlesController-->
         <scene sceneID="TPH-BS-I6g">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="Tabs" storyboardName="Songs" referencedIdentifier="Songs" id="hbv-ix-n0C" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardIdentifier="Tabs" storyboardName="Articles" referencedIdentifier="ArticlesController" id="hbv-ix-n0C" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Songs" id="onQ-Ph-9Ei"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rwo-CN-9XX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-170" y="-217"/>
         </scene>
-        <!--ArticlesController-->
+        <!--Songs-->
         <scene sceneID="9og-4m-gOO">
             <objects>
-                <viewControllerPlaceholder storyboardName="Articles" referencedIdentifier="ArticlesController" id="j8X-8s-axU" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Songs" referencedIdentifier="Songs" id="j8X-8s-axU" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Articles" id="aRc-be-ekp"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RL7-eQ-TZj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-148" y="62"/>
+            <point key="canvasLocation" x="-127" y="80"/>
         </scene>
     </scenes>
 </document>

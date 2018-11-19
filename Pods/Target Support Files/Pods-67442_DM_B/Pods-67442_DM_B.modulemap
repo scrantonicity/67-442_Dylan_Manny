@@ -1,0 +1,6 @@
+framework module Pods_67442_DM_B {
+  umbrella header "Pods-67442_DM_B-umbrella.h"
+
+  export *
+  module * { export * }
+}

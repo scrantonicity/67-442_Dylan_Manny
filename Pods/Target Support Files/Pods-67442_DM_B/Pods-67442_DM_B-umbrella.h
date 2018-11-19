@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_67442_DMVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_67442_DMVersionString[];
+FOUNDATION_EXPORT double Pods_67442_DM_BVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_67442_DM_BVersionString[];
 
