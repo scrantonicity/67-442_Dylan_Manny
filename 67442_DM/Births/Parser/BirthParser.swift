@@ -13,6 +13,7 @@ class birthParser {
   func birthParser(_ data: Data?)-> Response? {
     if let data = data,
       let result = try? JSONDecoder().decode(Response.self, from: data){
+      print("got data")
       return result
     } else {
       print("Error in Decoding Data")

@@ -21,6 +21,7 @@ class SearchArticlesClient {
         completion(response.data)
         return
       }
+      print("network call successful")
       completion(response.data)
     }
     

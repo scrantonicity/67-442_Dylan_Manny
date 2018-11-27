@@ -19,9 +19,6 @@ class BirthViewModel {
     client.fetchWikiInfo(month: month, day: day) { [unowned self] data in
       if let births = self.parser.birthsFromWiki(data) {
           self.births = births
-        //        for article in articles{
-        //          print(article)
-        //        }
       }
       completion()
     }

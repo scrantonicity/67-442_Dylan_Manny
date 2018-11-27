@@ -1,3 +1,5 @@
+import Foundation
+
 struct Birth: Decodable {
   let year:String
   let person:String
