@@ -29,6 +29,7 @@
 		59C386EB218F8C85003F5919 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59C386EA218F8C85003F5919 /* Main.storyboard */; };
 		59C386ED218F8D9F003F5919 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C386EC218F8D9F003F5919 /* HomeViewController.swift */; };
 		59CA95BD2190842E000CDDC0 /* Songs.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59CA95BC2190842E000CDDC0 /* Songs.storyboard */; };
+		59E47C9821AA4BAB001DE835 /* SpotifyiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59E47C9721AA4BAB001DE835 /* SpotifyiOS.framework */; };
 		65898967218F91B600D53E95 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65898966218F91B600D53E95 /* Response.swift */; };
 		6589896A218F91D700D53E95 /* Link.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65898969218F91D700D53E95 /* Link.swift */; };
 		6589896C218F91E800D53E95 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6589896B218F91E800D53E95 /* Event.swift */; };
@@ -69,7 +70,7 @@
 		592DB2C1219608B300D3ED0B /* ArticleDetailsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailsViewModelTests.swift; sourceTree = "<group>"; };
 		594C922B2195203900B4256C /* Tabs.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tabs.storyboard; sourceTree = "<group>"; };
 		594C922D2195257000B4256C /* TabsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabsViewController.swift; sourceTree = "<group>"; };
-		59C386B9218E1435003F5919 /* 67442_DM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 67442_DM.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		59C386B9218E1435003F5919 /* DailyArchive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyArchive.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		59C386BC218E1435003F5919 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		59C386C4218E1435003F5919 /* _7442_DM.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = _7442_DM.xcdatamodel; sourceTree = "<group>"; };
 		59C386C6218E1439003F5919 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -87,6 +88,8 @@
 		59C386EA218F8C85003F5919 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		59C386EC218F8D9F003F5919 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		59CA95BC2190842E000CDDC0 /* Songs.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Songs.storyboard; sourceTree = "<group>"; };
+		59E47C9721AA4BAB001DE835 /* SpotifyiOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SpotifyiOS.framework; sourceTree = "<group>"; };
+		59E47C9921AA543B001DE835 /* DailyArchive-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DailyArchive-Bridging-Header.h"; sourceTree = "<group>"; };
 		65898966218F91B600D53E95 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		65898969218F91D700D53E95 /* Link.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Link.swift; sourceTree = "<group>"; };
 		6589896B218F91E800D53E95 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
@@ -121,6 +124,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F9D539064B88CB0C279350FC /* Pods_67442_DM.framework in Frameworks */,
+				59E47C9821AA4BAB001DE835 /* SpotifyiOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,6 +187,7 @@
 		59C386B0218E1435003F5919 = {
 			isa = PBXGroup;
 			children = (
+				59E47C9921AA543B001DE835 /* DailyArchive-Bridging-Header.h */,
 				59C386BB218E1435003F5919 /* 67442_DM */,
 				592DB2AE2195EB9C00D3ED0B /* 67442_DMTests */,
 				59C386BA218E1435003F5919 /* Products */,
@@ -194,7 +199,7 @@
 		59C386BA218E1435003F5919 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				59C386B9218E1435003F5919 /* 67442_DM.app */,
+				59C386B9218E1435003F5919 /* DailyArchive.app */,
 				592DB2AD2195EB9C00D3ED0B /* 67442_DMTests.xctest */,
 			);
 			name = Products;
@@ -203,6 +208,8 @@
 		59C386BB218E1435003F5919 /* 67442_DM */ = {
 			isa = PBXGroup;
 			children = (
+				59E47C9721AA4BAB001DE835 /* SpotifyiOS.framework */,
+				59E47BB221AA390C001DE835 /* Libraries */,
 				594C922621951A1000B4256C /* Interface */,
 				59C386D2218E1CA2003F5919 /* Articles */,
 				59C386D1218E1C8F003F5919 /* Songs */,
@@ -286,6 +293,13 @@
 				59C386E8218F7E18003F5919 /* billboard.json */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		59E47BB221AA390C001DE835 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Libraries;
 			sourceTree = "<group>";
 		};
 		65898965218F91A800D53E95 /* Parser Model */ = {
@@ -401,7 +415,7 @@
 			);
 			name = 67442_DM;
 			productName = 67442_DM;
-			productReference = 59C386B9218E1435003F5919 /* 67442_DM.app */;
+			productReference = 59C386B9218E1435003F5919 /* DailyArchive.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -743,13 +757,25 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X7RL4D5VTN;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/67442_DM/Libraries/ios-sdk",
+					"$(PROJECT_DIR)/67442_DM",
+				);
 				INFOPLIST_FILE = 67442_DM/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"Alamofire\"",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "cmu67442.-7442-DM";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = DailyArchive;
+				SWIFT_OBJC_BRIDGING_HEADER = "DailyArchive-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -762,13 +788,25 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X7RL4D5VTN;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/67442_DM/Libraries/ios-sdk",
+					"$(PROJECT_DIR)/67442_DM",
+				);
 				INFOPLIST_FILE = 67442_DM/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"Alamofire\"",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "cmu67442.-7442-DM";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = DailyArchive;
+				SWIFT_OBJC_BRIDGING_HEADER = "DailyArchive-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
