@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Births-->
+        <!--BirthsTable-->
         <scene sceneID="5ge-Qm-kvr">
             <objects>
-                <tableViewController title="Births" id="Mx5-GC-edE" customClass="BirthsViewController" customModule="_7442_DM" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="BirthsTable" id="Mx5-GC-edE" customClass="BirthsViewController" customModule="_7442_DM" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="phS-od-x0m">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -40,10 +40,10 @@
             </objects>
             <point key="canvasLocation" x="36" y="30"/>
         </scene>
-        <!--BirthInitial-->
+        <!--Births-->
         <scene sceneID="eiy-lX-8HS">
             <objects>
-                <navigationController storyboardIdentifier="BirthInitial" title="BirthInitial" id="Ya1-1c-LdD" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="Births" title="Births" id="Ya1-1c-LdD" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="TTM-WB-rqU">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
