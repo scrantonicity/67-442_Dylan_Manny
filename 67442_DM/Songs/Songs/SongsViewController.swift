@@ -55,11 +55,11 @@ class SongsViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
   
   // MARK: - Segues
-  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    if let detailSong = segue.destination as? SongDetailsViewController,
-      let indexPath = sender as? IndexPath {
-      detailSong.viewModel = viewModel.detailViewModelForRowAtIndexPath(indexPath)
-    }
-  }
+//  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//    if let detailSong = segue.destination as? SongDetailsViewController,
+//      let indexPath = sender as? IndexPath {
+//      detailSong.viewModel = viewModel.detailViewModelForRowAtIndexPath(indexPath)
+//    }
+//  }
   
 }

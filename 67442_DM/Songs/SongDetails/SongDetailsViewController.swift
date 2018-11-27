@@ -21,20 +21,20 @@ class SongDetailsViewController: UIViewController {
 
     override func viewDidLoad() {
       super.viewDidLoad()
-      date.text = viewModel?.song.date
-//      cover.image =
-      trackTitle.text = viewModel?.song.title
-      artist.text = viewModel?.song.artist
-      self.refresh()
+//      date.text = viewModel?.song.date 
+////      cover.image =
+//      trackTitle.text = viewModel?.song.title
+//      artist.text = viewModel?.song.artist
+//      self.refresh()
     }
   
-  func refresh() -> Void {
-    viewModel!.refresh() { [unowned self] in
-      DispatchQueue.main.async {
-        self.url.reloadInputViews()
-      }
-    }
-  }
+//  func refresh() -> Void {
+//    viewModel!.refresh() { [unowned self] in
+//      DispatchQueue.main.async {
+//        self.url.reloadInputViews()
+//      }
+//    }
+//  }
   
     
     
