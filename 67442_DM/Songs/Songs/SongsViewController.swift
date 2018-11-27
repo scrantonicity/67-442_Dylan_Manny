@@ -43,7 +43,6 @@ class SongsViewController: UIViewController, UITableViewDataSource, UITableViewD
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    print("calling in data from table view")
     let cell = tableView.dequeueReusableCell(withIdentifier: "scell", for: indexPath) as! TableViewCell
     cell.year?.text = viewModel.yearForRowAtIndexPath(indexPath)
     cell.title?.text = viewModel.titleForRowAtIndexPath(indexPath)
@@ -51,16 +50,16 @@ class SongsViewController: UIViewController, UITableViewDataSource, UITableViewD
     return cell
   }
   
-  //  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-  //    performSegue(withIdentifier: "toDetailVC", sender: indexPath)
-  //  }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+      performSegue(withIdentifier: "showSongDetails", sender: indexPath)
+    }
   
   // MARK: - Segues
-  //  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-  //    if let detailVC = segue.destination as? RepositoryDetailViewController,
-  //      let indexPath = sender as? IndexPath {
-  //      detailVC.viewModel = viewModel.detailViewModelForRowAtIndexPath(indexPath)
-  //    }
-  //  }
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if let detailSong = segue.destination as? SongDetailsViewController,
+      let indexPath = sender as? IndexPath {
+      detailSong.viewModel = viewModel.detailViewModelForRowAtIndexPath(indexPath)
+    }
+  }
   
 }

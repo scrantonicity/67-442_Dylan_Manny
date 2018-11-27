@@ -83,14 +83,9 @@ class SongsViewModel {
     return filteredSongs[indexPath.row].artist
   }
   
-  //  func detailViewModelForRowAtIndexPath(_ indexPath: IndexPath) -> RepositoryDetailViewModel {
-  //    let repo = (filteredRepos.isEmpty ? repos[indexPath.row] : filteredRepos[indexPath.row])
-  //    return RepositoryDetailViewModel(repository: repo)
-  //  }
+  func detailViewModelForRowAtIndexPath(_ indexPath: IndexPath) -> SongDetailsViewModel {
+    let song = filteredSongs[indexPath.row]
+    return SongDetailsViewModel(song: song)
+  }
   
-  //  func updateFiltering(_ searchText: String) -> Void {
-  //    filteredSongs = self.repos.filter { repo in
-  //      return repo.name.lowercased().contains(searchText.lowercased())
-  //    }
-  //  }
 }
