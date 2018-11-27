@@ -78,7 +78,7 @@
 		592DB2C1219608B300D3ED0B /* ArticleDetailsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailsViewModelTests.swift; sourceTree = "<group>"; };
 		594C922B2195203900B4256C /* Tabs.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tabs.storyboard; sourceTree = "<group>"; };
 		594C922D2195257000B4256C /* TabsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabsViewController.swift; sourceTree = "<group>"; };
-		59C386B9218E1435003F5919 /* 67442_DM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 67442_DM.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		59C386B9218E1435003F5919 /* DailyArchive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyArchive.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		59C386BC218E1435003F5919 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		59C386C4218E1435003F5919 /* _7442_DM.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = _7442_DM.xcdatamodel; sourceTree = "<group>"; };
 		59C386C6218E1439003F5919 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -212,7 +212,7 @@
 		59C386BA218E1435003F5919 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				59C386B9218E1435003F5919 /* 67442_DM.app */,
+				59C386B9218E1435003F5919 /* DailyArchive.app */,
 				592DB2AD2195EB9C00D3ED0B /* 67442_DMTests.xctest */,
 			);
 			name = Products;
@@ -468,7 +468,7 @@
 			);
 			name = 67442_DM;
 			productName = 67442_DM;
-			productReference = 59C386B9218E1435003F5919 /* 67442_DM.app */;
+			productReference = 59C386B9218E1435003F5919 /* DailyArchive.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -824,7 +824,8 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "cmu67442.-7442-DM";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = DailyArchive;
+				SWIFT_OBJC_BRIDGING_HEADER = "DailyArchive-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -842,7 +843,8 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "cmu67442.-7442-DM";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = DailyArchive;
+				SWIFT_OBJC_BRIDGING_HEADER = "DailyArchive-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
