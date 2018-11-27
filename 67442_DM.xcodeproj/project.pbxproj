@@ -32,6 +32,12 @@
 		653734BF21ACC71E0064EA8A /* BirthParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653734BE21ACC71E0064EA8A /* BirthParser.swift */; };
 		653734C221ACC8890064EA8A /* Birth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653734C121ACC8890064EA8A /* Birth.swift */; };
 		653734C421ACC89D0064EA8A /* Death.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653734C321ACC89D0064EA8A /* Death.swift */; };
+		653734C721ACD5930064EA8A /* SearchBirthsClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653734C621ACD5930064EA8A /* SearchBirthsClient.swift */; };
+		653734CA21ACD72F0064EA8A /* BirthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653734C921ACD72F0064EA8A /* BirthViewModel.swift */; };
+		653734CC21ACD89D0064EA8A /* BirthsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653734CB21ACD89D0064EA8A /* BirthsViewController.swift */; };
+		653734CF21ACDAD40064EA8A /* Births.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 653734CE21ACDAD40064EA8A /* Births.storyboard */; };
+		653734D121ACDE1B0064EA8A /* BirthCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 653734D021ACDE1B0064EA8A /* BirthCell.xib */; };
+		653734D321ACDE660064EA8A /* BirthCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653734D221ACDE660064EA8A /* BirthCellTableViewCell.swift */; };
 		65898967218F91B600D53E95 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65898966218F91B600D53E95 /* Response.swift */; };
 		6589896A218F91D700D53E95 /* Link.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65898969218F91D700D53E95 /* Link.swift */; };
 		6589896C218F91E800D53E95 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6589896B218F91E800D53E95 /* Event.swift */; };
@@ -93,6 +99,12 @@
 		653734BE21ACC71E0064EA8A /* BirthParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthParser.swift; sourceTree = "<group>"; };
 		653734C121ACC8890064EA8A /* Birth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Birth.swift; sourceTree = "<group>"; };
 		653734C321ACC89D0064EA8A /* Death.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Death.swift; sourceTree = "<group>"; };
+		653734C621ACD5930064EA8A /* SearchBirthsClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBirthsClient.swift; sourceTree = "<group>"; };
+		653734C921ACD72F0064EA8A /* BirthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthViewModel.swift; sourceTree = "<group>"; };
+		653734CB21ACD89D0064EA8A /* BirthsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthsViewController.swift; sourceTree = "<group>"; };
+		653734CE21ACDAD40064EA8A /* Births.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Births.storyboard; sourceTree = "<group>"; };
+		653734D021ACDE1B0064EA8A /* BirthCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BirthCell.xib; sourceTree = "<group>"; };
+		653734D221ACDE660064EA8A /* BirthCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthCellTableViewCell.swift; sourceTree = "<group>"; };
 		65898966218F91B600D53E95 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		65898969218F91D700D53E95 /* Link.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Link.swift; sourceTree = "<group>"; };
 		6589896B218F91E800D53E95 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
@@ -298,6 +310,9 @@
 		653734BD21ACC6F80064EA8A /* Births */ = {
 			isa = PBXGroup;
 			children = (
+				653734CD21ACDABD0064EA8A /* Storyboards */,
+				653734C821ACD7090064EA8A /* BirthList */,
+				653734C521ACD57F0064EA8A /* Network */,
 				653734C021ACC7840064EA8A /* Parser */,
 			);
 			path = Births;
@@ -309,6 +324,33 @@
 				653734BE21ACC71E0064EA8A /* BirthParser.swift */,
 			);
 			path = Parser;
+			sourceTree = "<group>";
+		};
+		653734C521ACD57F0064EA8A /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				653734C621ACD5930064EA8A /* SearchBirthsClient.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		653734C821ACD7090064EA8A /* BirthList */ = {
+			isa = PBXGroup;
+			children = (
+				653734C921ACD72F0064EA8A /* BirthViewModel.swift */,
+				653734CB21ACD89D0064EA8A /* BirthsViewController.swift */,
+				653734D221ACDE660064EA8A /* BirthCellTableViewCell.swift */,
+			);
+			path = BirthList;
+			sourceTree = "<group>";
+		};
+		653734CD21ACDABD0064EA8A /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				653734CE21ACDAD40064EA8A /* Births.storyboard */,
+				653734D021ACDE1B0064EA8A /* BirthCell.xib */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 		65898965218F91A800D53E95 /* Parser Model */ = {
@@ -479,6 +521,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				653734CF21ACDAD40064EA8A /* Births.storyboard in Resources */,
+				653734D121ACDE1B0064EA8A /* BirthCell.xib in Resources */,
 				6589897A218F965A00D53E95 /* Headline.xib in Resources */,
 				65898980218F9DF500D53E95 /* Articles.storyboard in Resources */,
 				594C922C2195203900B4256C /* Tabs.storyboard in Resources */,
@@ -560,9 +604,11 @@
 			files = (
 				65898971218F928200D53E95 /* SearchArticlesClient.swift in Sources */,
 				6589897E218F9A0400D53E95 /* ArticlesViewController.swift in Sources */,
+				653734CC21ACD89D0064EA8A /* BirthsViewController.swift in Sources */,
 				59C386E1218F7CF7003F5919 /* Song.swift in Sources */,
 				59C386DB218F7C5C003F5919 /* SongsViewModel.swift in Sources */,
 				59C386C5218E1435003F5919 /* _7442_DM.xcdatamodeld in Sources */,
+				653734CA21ACD72F0064EA8A /* BirthViewModel.swift in Sources */,
 				6589896A218F91D700D53E95 /* Link.swift in Sources */,
 				59C386DD218F7C96003F5919 /* TableViewCell.swift in Sources */,
 				6589898A21952D9800D53E95 /* ArticleDetailsViewModel.swift in Sources */,
@@ -581,7 +627,9 @@
 				59C386E5218F7D2B003F5919 /* SongsParser.swift in Sources */,
 				6589898E219533D300D53E95 /* LinksTableViewCell.swift in Sources */,
 				6589899221954F5000D53E95 /* ArticleWebViewController.swift in Sources */,
+				653734D321ACDE660064EA8A /* BirthCellTableViewCell.swift in Sources */,
 				59C386BD218E1435003F5919 /* AppDelegate.swift in Sources */,
+				653734C721ACD5930064EA8A /* SearchBirthsClient.swift in Sources */,
 				6589897C218F96EF00D53E95 /* HeadlineTableViewCell.swift in Sources */,
 				65898976218F92CF00D53E95 /* ArticlesViewModel.swift in Sources */,
 				6589896C218F91E800D53E95 /* Event.swift in Sources */,
