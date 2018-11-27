@@ -10,7 +10,7 @@ import Foundation
 
 struct SpotifyResponse: Decodable {
   
-  let track: [SpotifyTrack]
+  let track: SpotifyTrack
   
   enum CodingKeys : String, CodingKey {
     case track = "tracks"

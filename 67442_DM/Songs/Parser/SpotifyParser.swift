@@ -21,13 +21,13 @@ class SpotifyParser {
     }
   }
   
-  func spotifySongsFromLoadResponse(_ data: Data?) -> [Song]? {
+  func spotifySongsFromLoadResponse(_ data: Data?) -> String? {
     guard let result = parseDictionary(data) else {
       print("Error: couldn't parse result from data")
       return nil
     }
     print("Got result from data")
-    return result.songs
+    return SpotifyResponse.track
   }
   
 }
