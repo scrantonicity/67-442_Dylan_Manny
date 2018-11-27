@@ -29,6 +29,9 @@
 		59C386EB218F8C85003F5919 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59C386EA218F8C85003F5919 /* Main.storyboard */; };
 		59C386ED218F8D9F003F5919 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C386EC218F8D9F003F5919 /* HomeViewController.swift */; };
 		59CA95BD2190842E000CDDC0 /* Songs.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59CA95BC2190842E000CDDC0 /* Songs.storyboard */; };
+		653734BF21ACC71E0064EA8A /* BirthParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653734BE21ACC71E0064EA8A /* BirthParser.swift */; };
+		653734C221ACC8890064EA8A /* Birth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653734C121ACC8890064EA8A /* Birth.swift */; };
+		653734C421ACC89D0064EA8A /* Death.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653734C321ACC89D0064EA8A /* Death.swift */; };
 		65898967218F91B600D53E95 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65898966218F91B600D53E95 /* Response.swift */; };
 		6589896A218F91D700D53E95 /* Link.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65898969218F91D700D53E95 /* Link.swift */; };
 		6589896C218F91E800D53E95 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6589896B218F91E800D53E95 /* Event.swift */; };
@@ -87,6 +90,9 @@
 		59C386EA218F8C85003F5919 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		59C386EC218F8D9F003F5919 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		59CA95BC2190842E000CDDC0 /* Songs.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Songs.storyboard; sourceTree = "<group>"; };
+		653734BE21ACC71E0064EA8A /* BirthParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthParser.swift; sourceTree = "<group>"; };
+		653734C121ACC8890064EA8A /* Birth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Birth.swift; sourceTree = "<group>"; };
+		653734C321ACC89D0064EA8A /* Death.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Death.swift; sourceTree = "<group>"; };
 		65898966218F91B600D53E95 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		65898969218F91D700D53E95 /* Link.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Link.swift; sourceTree = "<group>"; };
 		6589896B218F91E800D53E95 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
@@ -203,6 +209,8 @@
 		59C386BB218E1435003F5919 /* 67442_DM */ = {
 			isa = PBXGroup;
 			children = (
+				65898965218F91A800D53E95 /* Parser Model */,
+				653734BD21ACC6F80064EA8A /* Births */,
 				594C922621951A1000B4256C /* Interface */,
 				59C386D2218E1CA2003F5919 /* Articles */,
 				59C386D1218E1C8F003F5919 /* Songs */,
@@ -239,7 +247,6 @@
 				65898978218F964000D53E95 /* Storyboards */,
 				65898972218F929700D53E95 /* Parser */,
 				6589896F218F925B00D53E95 /* Network */,
-				65898965218F91A800D53E95 /* Parser Model */,
 			);
 			path = Articles;
 			sourceTree = "<group>";
@@ -288,6 +295,22 @@
 			path = Data;
 			sourceTree = "<group>";
 		};
+		653734BD21ACC6F80064EA8A /* Births */ = {
+			isa = PBXGroup;
+			children = (
+				653734C021ACC7840064EA8A /* Parser */,
+			);
+			path = Births;
+			sourceTree = "<group>";
+		};
+		653734C021ACC7840064EA8A /* Parser */ = {
+			isa = PBXGroup;
+			children = (
+				653734BE21ACC71E0064EA8A /* BirthParser.swift */,
+			);
+			path = Parser;
+			sourceTree = "<group>";
+		};
 		65898965218F91A800D53E95 /* Parser Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -295,6 +318,8 @@
 				6589896D218F921200D53E95 /* ResponseData.swift */,
 				6589896B218F91E800D53E95 /* Event.swift */,
 				65898969218F91D700D53E95 /* Link.swift */,
+				653734C121ACC8890064EA8A /* Birth.swift */,
+				653734C321ACC89D0064EA8A /* Death.swift */,
 			);
 			path = "Parser Model";
 			sourceTree = "<group>";
@@ -544,9 +569,12 @@
 				59C386E7218F7D4A003F5919 /* SearchSongsClient.swift in Sources */,
 				59C386ED218F8D9F003F5919 /* HomeViewController.swift in Sources */,
 				59C386D9218F7C1B003F5919 /* SongsViewController.swift in Sources */,
+				653734C221ACC8890064EA8A /* Birth.swift in Sources */,
 				594C922E2195257000B4256C /* TabsViewController.swift in Sources */,
+				653734BF21ACC71E0064EA8A /* BirthParser.swift in Sources */,
 				6589896E218F921200D53E95 /* ResponseData.swift in Sources */,
 				65898967218F91B600D53E95 /* Response.swift in Sources */,
+				653734C421ACC89D0064EA8A /* Death.swift in Sources */,
 				59C386E3218F7D0C003F5919 /* Result.swift in Sources */,
 				65898974218F92A900D53E95 /* WikiParser.swift in Sources */,
 				6589898821952D1700D53E95 /* ArticleDetailsViewController.swift in Sources */,
