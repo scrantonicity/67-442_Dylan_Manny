@@ -43,7 +43,7 @@
                             <outlet property="delegate" destination="eef-iK-Hy1" id="TdG-Yb-62L"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Articles" id="EtO-pZ-LKn">
+                    <navigationItem key="navigationItem" title="Events" id="EtO-pZ-LKn">
                         <barButtonItem key="rightBarButtonItem" title="Filter" id="10B-C5-Dck">
                             <connections>
                                 <action selector="filterHit:" destination="eef-iK-Hy1" id="fUa-PW-eEY"/>

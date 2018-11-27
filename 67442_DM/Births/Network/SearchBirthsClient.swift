@@ -1,16 +1,16 @@
 //
-//  SearchArticlesClient.swift
-//  TimeFeed
+//  SearchBirthsClient.swift
+//  67442_DM
 //
-//  Created by Manuel Lopez on 10/31/18.
-//  Copyright © 2018 Manuel Lopez. All rights reserved.
+//  Created by Manuel Lopez on 11/26/18.
+//  Copyright © 2018 Dylan Hyun. All rights reserved.
 //
 
 import Foundation
 import Alamofire
 
-class SearchArticlesClient {
-  func fetchArticles(month: Int, day: Int, _ completion: @escaping (Data?) -> Void) {
+class SearchWikiClient {
+  func fetchWikiInfo(month: Int, day: Int, _ completion: @escaping (Data?) -> Void) {
     
     //Must be https or else this will complain
     let urlString = "https://history.muffinlabs.com/date/\(month)/\(day)"
@@ -21,10 +21,8 @@ class SearchArticlesClient {
         completion(response.data)
         return
       }
-      print("network call successful")
       completion(response.data)
     }
     
   }
 }
-

@@ -19,7 +19,8 @@ class ArticleDetailsViewController: UIViewController, UITableViewDataSource, UIT
     override func viewDidLoad() {
       super.viewDidLoad()
       headline.text = viewModel?.article.headline
-      year.text = viewModel?.article.year
+//      year.text = viewModel?.article.year
+      year.text = viewModel?.date()
 //      let cellNib = UINib(nibName: "Links", bundle: nil)
 //      tableView.register(cellNib, forCellReuseIdentifier: "linkcell")
       tableView.reloadData()

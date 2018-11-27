@@ -15,9 +15,13 @@ class ArticlesViewModel {
   let client = SearchArticlesClient()
   let parser = Parser()
   
+  
   func refresh(month: Int, day: Int, _ completion: @escaping () -> Void) {
+    print("running refresh")
     client.fetchArticles(month: month, day: day) { [unowned self] data in
+      print("fetched articles")
       if let articles = self.parser.articlesFromWiki(data) {
+        print("finished refresh")
         if self.reverse {
           self.articles = articles.reversed()
         } else {
