@@ -27,7 +27,7 @@ class birthParser {
       print("Error: couldn't parse result from data")
       return nil
     }
-    
+
     return result.data.births
   }
   
