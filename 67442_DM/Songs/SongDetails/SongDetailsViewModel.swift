@@ -13,8 +13,8 @@ class SongDetailsViewModel {
   let song: Song
   var url: String
   
-  let client = SearchSpotifyClient()
-  let parser = SpotifyParser()
+  let client: SearchSpotifyClient
+  let parser: SpotifyParser
   
   init(song: Song) {
     self.song = song
