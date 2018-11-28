@@ -37,7 +37,9 @@ class ArticleDetailsViewController: UIViewController, UITableViewDataSource, UIT
   }
   
   @IBAction func shareButtonTapped(_ sender: Any) {
-    let textToShare = headline.text!
+    let text = self.headline.text!
+    let year = self.year.text!
+    let textToShare = "Did you know? On \(year), \(text)"
     
     let ac = UIActivityViewController(activityItems: [textToShare], applicationActivities: nil)
     present(ac, animated: true)
@@ -49,14 +51,6 @@ class ArticleDetailsViewController: UIViewController, UITableViewDataSource, UIT
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return viewModel!.numberOfRows()
   }
-  
-//  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//    let cell = tableView.dequeueReusableCell(withIdentifier: "linkcell", for: indexPath) as! LinksTableViewCell
-//    print("getting titles")
-//    cell.title?.text = viewModel?.headlineAtRow(indexPath)
-//    print(cell.title?.text)
-//    return cell
-//  }
 
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
