@@ -18,7 +18,7 @@ class BirthViewModel {
   func refresh(month: Int, day: Int, _ completion: @escaping () -> Void) {
     client.fetchWikiInfo(month: month, day: day) { [unowned self] data in
       if let births = self.parser.birthsFromWiki(data) {
-          self.births = births
+          self.births = births.reversed()
       }
       completion()
     }
