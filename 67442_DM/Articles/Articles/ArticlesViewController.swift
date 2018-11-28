@@ -24,8 +24,6 @@ class ArticlesViewController: UIViewController, UITableViewDataSource, UITableVi
     // register the nib
     let cellNib = UINib(nibName: "Headline", bundle: nil)
     tableView.register(cellNib, forCellReuseIdentifier: "acell")
-    tableView.rowHeight = UITableView.automaticDimension
-    tableView.estimatedRowHeight = 300
     // get the data for the table
     self.refresh()
   }
