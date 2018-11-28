@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct SpotifyItem: Decodable {
+struct SpotifyItemBackup: Decodable {
   
 //  let images: [SpotifyImages]
   let link: String

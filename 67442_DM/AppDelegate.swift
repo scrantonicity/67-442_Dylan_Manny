@@ -8,15 +8,38 @@
 
 import UIKit
 import CoreData
+import SpotifyKit
+
+fileprivate let application = SpotifyManager.SpotifyDeveloperApplication(
+  clientId:     "e32331cd032847249c3aed5780f6a12b",
+  clientSecret: "40bb2b273af94a458b8459e093fa6265",
+  redirectUri:  "dailyarchive://callback"
+)
+
+let spotifyManager = SpotifyManager(with: application)
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
   
   var window: UIWindow?
   
+//  let spotifyManager = SpotifyManager(with:
+//    SpotifyManager.SpotifyDeveloperApplication(
+//      clientId:     "e32331cd032847249c3aed5780f6a12b",
+//      clientSecret: "40bb2b273af94a458b8459e093fa6265",
+//      redirectUri:  "https://dailyarchive.com/callback/redirect"
+//    )
+//  )
+  
   
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     // Override point for customization after application launch.
+    return true
+  }
+  
+  func application(_ application: UIApplication, handleOpen url: URL) -> Bool {
+    spotifyManager.saveToken(from: url)
+    
     return true
   }
   
@@ -36,6 +59,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   
   func applicationDidBecomeActive(_ application: UIApplication) {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    spotifyManager.authorize()
   }
   
   func applicationWillTerminate(_ application: UIApplication) {

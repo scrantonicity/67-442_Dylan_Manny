@@ -8,8 +8,8 @@
 
 import Foundation
 
-struct SpotifyTrack: Decodable {
-  let item: SpotifyItem
+struct SpotifyTrackBackup: Decodable {
+  let item: SpotifyItemBackup
   
   enum CodingKeys : String, CodingKey {
     case item = "items"

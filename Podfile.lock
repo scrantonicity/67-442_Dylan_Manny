@@ -1,16 +1,20 @@
 PODS:
   - Alamofire (4.7.3)
+  - SpotifyKit (0.0.6)
 
 DEPENDENCIES:
   - Alamofire (~> 4.7)
+  - SpotifyKit
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - SpotifyKit
 
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
+  SpotifyKit: 20abf7e1e170e35683ecbe6d93598e91d4e7b6ab
 
-PODFILE CHECKSUM: fd553aeece78c20567d129d145cb0296a85d1c9b
+PODFILE CHECKSUM: 41b2d2e63ff5ce22f014295ba5f6639ee269587b
 
 COCOAPODS: 1.5.3

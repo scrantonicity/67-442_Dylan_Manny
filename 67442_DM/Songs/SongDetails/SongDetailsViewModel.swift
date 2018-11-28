@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import SpotifyKit
 
 class SongDetailsViewModel {
   let song: Song
@@ -28,5 +29,22 @@ class SongDetailsViewModel {
       }
 //      completion()
     }
+  }
+  
+  func openSpotify() -> Void {
+    spotifyManager.authorize()
+    spotifyManager.find(SpotifyTrack.self, song.title) { tracks in
+      let uri = tracks[0].uri
+      print(uri)
+      let url = self.convertToURL(uri: uri)
+      print(url)
+    }
+  }
+  
+  func convertToURL(uri: String) -> String {
+    let head = "https://open.spotify.com/track/"
+    let index = uri.index(uri.startIndex, offsetBy: 14)
+    let body = uri[index...]
+    return head+body
   }
 }

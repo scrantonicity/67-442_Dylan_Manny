@@ -42,13 +42,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="url" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qLi-YX-oaa">
-                                <rect key="frame" x="16" y="298" width="20" height="21"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X4n-Bq-dAD">
+                                <rect key="frame" x="16" y="281" width="116" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <state key="normal" title="Listen on Spotify"/>
+                                <connections>
+                                    <action selector="openSpotify:" destination="h2B-cG-IiQ" eventType="touchUpInside" id="SWR-ou-DCF"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Q7w-aU-Miu"/>
@@ -57,8 +58,8 @@
                         <outlet property="artist" destination="JV3-1l-RAC" id="ogG-av-zXt"/>
                         <outlet property="cover" destination="bHY-2I-7k9" id="eus-Ly-Vd3"/>
                         <outlet property="date" destination="6Yg-1r-YZx" id="eJc-Xv-rHz"/>
+                        <outlet property="playButton" destination="X4n-Bq-dAD" id="txo-zr-j3d"/>
                         <outlet property="trackTitle" destination="hzi-d5-FzA" id="Hlh-8d-hIZ"/>
-                        <outlet property="url" destination="qLi-YX-oaa" id="p0R-if-mLc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XRK-bu-uJp" userLabel="First Responder" sceneMemberID="firstResponder"/>

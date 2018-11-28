@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SpotifyKit
 
 class SongDetailsViewController: UIViewController {
   
@@ -16,7 +17,7 @@ class SongDetailsViewController: UIViewController {
   @IBOutlet weak var cover: UIImageView!
   @IBOutlet weak var trackTitle: UILabel!
   @IBOutlet weak var artist: UILabel!
-  @IBOutlet weak var url: UILabel!
+  @IBOutlet weak var playButton: UIButton!
   
 
     override func viewDidLoad() {
@@ -25,12 +26,25 @@ class SongDetailsViewController: UIViewController {
 //      cover.image =
       trackTitle.text = viewModel?.song.title
       artist.text = viewModel?.song.artist
-      self.refresh()
+      
+//      spotifyManager.authorize()
+//
+//      spotifyManager.find(SpotifyTrack.self,  (viewModel?.song.title)!) { tracks in
+//        for track in tracks {
+//          print("URI \(track.uri)")
+//        }
+//      }
+      
+//      self.refresh()
     }
   
-  func refresh() -> Void {
-    viewModel!.refresh()
-  }
+//  func refresh() -> Void {
+//    viewModel!.refresh()
+//  }
+  
+    @IBAction func openSpotify(_ sender: Any) {
+      viewModel!.openSpotify()
+    }
   
     
     
