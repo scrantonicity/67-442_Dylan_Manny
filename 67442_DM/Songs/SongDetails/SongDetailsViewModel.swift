@@ -9,7 +9,6 @@
 import Foundation
 
 class SongDetailsViewModel {
-  
   let song: Song
   var url = String()
   
@@ -30,6 +29,4 @@ class SongDetailsViewModel {
 //      completion()
     }
   }
-  
-  
 }

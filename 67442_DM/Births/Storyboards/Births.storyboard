@@ -5,13 +5,14 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--BirthsTable-->
         <scene sceneID="5ge-Qm-kvr">
             <objects>
-                <tableViewController title="BirthsTable" id="Mx5-GC-edE" customClass="BirthsViewController" customModule="_7442_DM" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="BirthsTable" id="Mx5-GC-edE" customClass="BirthsViewController" customModule="DailyArchive" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="phS-od-x0m">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -24,6 +25,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="5f6-Ki-0hS" kind="show" identifier="showBirthDetails" id="psm-2P-F9x"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -39,6 +43,40 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HoJ-zD-dIu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="36" y="30"/>
+        </scene>
+        <!--Birth Web View Controller-->
+        <scene sceneID="JAi-Oc-V7J">
+            <objects>
+                <viewController id="5f6-Ki-0hS" customClass="BirthWebViewController" customModule="DailyArchive" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4hq-s5-I6F">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wok-jG-H5Z">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="wok-jG-H5Z" firstAttribute="leading" secondItem="4hq-s5-I6F" secondAttribute="leading" id="Msw-Zg-WEa"/>
+                            <constraint firstItem="wok-jG-H5Z" firstAttribute="top" secondItem="TAr-6c-6Uf" secondAttribute="top" id="NxN-ht-HZA"/>
+                            <constraint firstItem="wok-jG-H5Z" firstAttribute="bottom" secondItem="TAr-6c-6Uf" secondAttribute="bottom" id="hzw-6x-VnM"/>
+                            <constraint firstAttribute="trailing" secondItem="wok-jG-H5Z" secondAttribute="trailing" id="nuj-mY-xLU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="TAr-6c-6Uf"/>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="wok-jG-H5Z" id="R2e-Yk-dwL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ngF-ik-EH6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="861.60000000000002" y="28.335832083958024"/>
         </scene>
         <!--Births-->
         <scene sceneID="eiy-lX-8HS">

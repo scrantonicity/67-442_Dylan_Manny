@@ -11,7 +11,7 @@
         <!--Tabs View Controller-->
         <scene sceneID="FoU-AJ-69s">
             <objects>
-                <tabBarController id="A0x-f9-2rZ" customClass="TabsViewController" customModule="_7442_DM" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController id="A0x-f9-2rZ" customClass="TabsViewController" customModule="DailyArchive" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Zoe-O7-KOj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -21,6 +21,7 @@
                         <segue destination="hbv-ix-n0C" kind="relationship" relationship="viewControllers" id="HRW-N4-97F"/>
                         <segue destination="j8X-8s-axU" kind="relationship" relationship="viewControllers" id="u5H-J8-Sz5"/>
                         <segue destination="6VW-sc-SXd" kind="relationship" relationship="viewControllers" id="fVI-p9-a9B"/>
+                        <segue destination="dPA-fm-ufD" kind="relationship" relationship="viewControllers" id="HJW-K4-KR5"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zIC-AQ-3ZX" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -36,6 +37,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rwo-CN-9XX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-248" y="-238"/>
+        </scene>
+        <!--Deaths-->
+        <scene sceneID="vwz-nT-u5h">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Deaths" referencedIdentifier="Deaths" id="dPA-fm-ufD" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Deaths" id="GtN-YE-YVT"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e0g-m6-rS9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-172" y="-134"/>
         </scene>
         <!--Births-->
         <scene sceneID="WWc-9I-yhh">

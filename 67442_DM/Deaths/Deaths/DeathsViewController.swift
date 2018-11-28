@@ -1,30 +1,30 @@
 //
-//  BirthsViewController.swift
+//  DeathsViewController.swift
 //  67442_DM
 //
-//  Created by Manuel Lopez on 11/26/18.
+//  Created by Manuel Lopez on 11/27/18.
 //  Copyright © 2018 Dylan Hyun. All rights reserved.
 //
 
 import UIKit
 import Foundation
 
-class BirthsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
-  
+class DeathsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
+
   //class ArticlesViewController: UITableViewController {
   // MARK: - Properties & Outlets
-  let viewModel = BirthViewModel()
+  let viewModel = DeathViewModel()
   
   
   
-  @IBOutlet var tableView: UITableView! 
-  @IBOutlet weak var filter: UIBarButtonItem!
+  @IBOutlet var tableView: UITableView!
+//  @IBOutlet weak var filter: UIBarButtonItem!
   
   // MARK: - viewDidLoad, WillAppear
   override func viewDidLoad() {
     super.viewDidLoad()
-    let cellNib = UINib(nibName: "BirthCell", bundle: nil)
-    tableView.register(cellNib, forCellReuseIdentifier: "birthCell")
+    let cellNib = UINib(nibName: "DeathCell", bundle: nil)
+    tableView.register(cellNib, forCellReuseIdentifier: "deathCell")
     // get the data for the table
     self.refresh()
   }
@@ -46,7 +46,7 @@ class BirthsViewController: UIViewController, UITableViewDataSource, UITableView
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: "birthCell", for: indexPath) as! BirthCellTableViewCell
+    let cell = tableView.dequeueReusableCell(withIdentifier: "deathCell", for: indexPath) as! DeathCellTableViewCell
     cell.person?.text = viewModel.headlineForRowAtIndexPath(indexPath)
     //    cell.headline?.numberOfLines = 0
     cell.year?.text = viewModel.yearForRowAtIndexPath(indexPath)
@@ -54,17 +54,17 @@ class BirthsViewController: UIViewController, UITableViewDataSource, UITableView
   }
   
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
-    performSegue(withIdentifier: "showBirthDetails", sender: indexPath)
+    performSegue(withIdentifier: "showDeathDetails", sender: indexPath)
   }
   
-//   MARK: - Segues
+  //   MARK: - Segues
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    if let birthWebView = segue.destination as? BirthWebViewController,
+    if let deathWebView = segue.destination as? DeathWebViewController,
       let indexPath = sender as? IndexPath {
-      birthWebView.viewModel = viewModel.detailViewModelForRowAtIndexPath(indexPath)
+      deathWebView.viewModel = viewModel.detailViewModelForRowAtIndexPath(indexPath) 
     }
   }
-
+  
   
   
   
