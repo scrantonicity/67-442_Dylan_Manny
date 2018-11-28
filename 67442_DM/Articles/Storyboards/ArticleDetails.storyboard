@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ACv-0w-qe9">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kyi-8q-c70">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,16 +9,33 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Detail-->
+        <scene sceneID="42c-Mg-h2I">
+            <objects>
+                <navigationController storyboardIdentifier="detailsInit" title="Detail" id="kyi-8q-c70" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" restorationIdentifier="detailsInit" insetsLayoutMarginsFromSafeArea="NO" id="pGM-7h-M8n">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.30378631119999999" green="0.72814372260000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="ACv-0w-qe9" kind="relationship" relationship="rootViewController" id="ZsJ-p4-Wl3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n4o-d9-ewy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-614" y="134"/>
+        </scene>
         <!--Details-->
         <scene sceneID="tXo-Zm-Kex">
             <objects>
-                <viewController title="Details" id="ACv-0w-qe9" customClass="ArticleDetailsViewController" customModule="_7442_DM" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Details" title="Details" id="ACv-0w-qe9" customClass="ArticleDetailsViewController" customModule="DailyArchive" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wcz-xX-Ntp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Headline Goes Here" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Tm-bH-mW1">
-                                <rect key="frame" x="28" y="115" width="319" height="175"/>
+                                <rect key="frame" x="28" y="159" width="319" height="175"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="175" identifier="titleHeight" id="JbO-p3-rSZ"/>
                                 </constraints>
@@ -28,13 +45,13 @@
                                 <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find Out More" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ogh-Zc-yrJ">
-                                <rect key="frame" x="16" y="389" width="113" height="21"/>
+                                <rect key="frame" x="16" y="433" width="113" height="21"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7SS-lb-kzJ">
-                                <rect key="frame" x="0.0" y="432" width="375" height="235"/>
+                                <rect key="frame" x="0.0" y="476" width="375" height="191"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="lcell" rowHeight="47" id="m7I-9Y-8mx">
@@ -57,7 +74,7 @@
                                 </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="On This Day in History" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mCB-bs-E4N">
-                                <rect key="frame" x="91" y="74" width="193" height="21"/>
+                                <rect key="frame" x="91" y="118" width="193" height="21"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -74,8 +91,8 @@
                             <constraint firstItem="7SS-lb-kzJ" firstAttribute="bottom" secondItem="hdn-6F-m8e" secondAttribute="bottom" identifier="tableBottomAlign" id="4hi-BK-7BN"/>
                             <constraint firstItem="7SS-lb-kzJ" firstAttribute="top" secondItem="Ogh-Zc-yrJ" secondAttribute="bottom" constant="22" identifier="linksTableSpace" id="CiD-Qa-LCl"/>
                             <constraint firstItem="Ogh-Zc-yrJ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="hdn-6F-m8e" secondAttribute="leading" constant="10" identifier="linksLeadingSpace" id="GD0-5o-s8e"/>
-                            <constraint firstItem="Ogh-Zc-yrJ" firstAttribute="top" secondItem="OU7-zz-Dsg" secondAttribute="bottom" constant="60" identifier="yearBottomSpace" id="LJT-V2-h3X"/>
-                            <constraint firstItem="OU7-zz-Dsg" firstAttribute="top" secondItem="1Tm-bH-mW1" secondAttribute="bottom" constant="18" identifier="titleSpaceAboveYear" id="TBT-bJ-hub"/>
+                            <constraint firstItem="Ogh-Zc-yrJ" firstAttribute="top" secondItem="OU7-zz-Dsg" secondAttribute="bottom" constant="104" identifier="yearBottomSpace" id="LJT-V2-h3X"/>
+                            <constraint firstItem="OU7-zz-Dsg" firstAttribute="top" secondItem="1Tm-bH-mW1" secondAttribute="bottom" constant="-26" identifier="titleSpaceAboveYear" id="TBT-bJ-hub"/>
                             <constraint firstItem="Ogh-Zc-yrJ" firstAttribute="leading" secondItem="OU7-zz-Dsg" secondAttribute="leading" identifier="linksYearSpaceLeading" id="aLL-mf-MGo"/>
                             <constraint firstItem="mCB-bs-E4N" firstAttribute="centerX" secondItem="hdn-6F-m8e" secondAttribute="centerX" identifier="headerCenterAlign" id="bQv-1C-VhO"/>
                             <constraint firstItem="7SS-lb-kzJ" firstAttribute="leading" secondItem="wcz-xX-Ntp" secondAttribute="leading" identifier="tableSuperview" id="bbw-oY-dYY"/>
@@ -89,8 +106,17 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hdn-6F-m8e"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Details" id="n1o-tT-1v1">
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="1VD-mJ-hm1">
+                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="shareButtonTapped:" destination="ACv-0w-qe9" id="KA8-gg-01g"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="headline" destination="1Tm-bH-mW1" id="4Xl-o0-QOz"/>
+                        <outlet property="shareButton" destination="1VD-mJ-hm1" id="Ydp-v5-i5g"/>
                         <outlet property="tableView" destination="7SS-lb-kzJ" id="hFq-Kj-t70"/>
                         <outlet property="year" destination="OU7-zz-Dsg" id="uj6-Ji-Uag"/>
                     </connections>
@@ -102,13 +128,13 @@
         <!--Article Web View Controller-->
         <scene sceneID="Cd4-25-iQx">
             <objects>
-                <viewController id="xay-W7-GOR" customClass="ArticleWebViewController" customModule="_7442_DM" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="xay-W7-GOR" customClass="ArticleWebViewController" customModule="DailyArchive" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="04q-yK-xBQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qd9-5P-hN6">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>

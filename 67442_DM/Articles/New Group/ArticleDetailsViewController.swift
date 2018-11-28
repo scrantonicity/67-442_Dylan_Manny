@@ -15,6 +15,7 @@ class ArticleDetailsViewController: UIViewController, UITableViewDataSource, UIT
   @IBOutlet weak var headline: UILabel!
   @IBOutlet weak var year: UILabel!
   @IBOutlet var tableView: UITableView!
+  @IBOutlet weak var shareButton: UIBarButtonItem!
 
     override func viewDidLoad() {
       super.viewDidLoad()
@@ -33,6 +34,14 @@ class ArticleDetailsViewController: UIViewController, UITableViewDataSource, UIT
       tableView.deselectRow(at: selectedRow, animated: true)
     }
     
+  }
+  
+  @IBAction func shareButtonTapped(_ sender: Any) {
+    let textToShare = headline.text!
+    
+    let ac = UIActivityViewController(activityItems: [textToShare], applicationActivities: nil)
+    present(ac, animated: true)
+//    navigationController?.present(activityViewController, animated: true)
   }
   
   
