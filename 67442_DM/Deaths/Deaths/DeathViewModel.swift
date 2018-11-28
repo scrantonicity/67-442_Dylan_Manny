@@ -17,7 +17,7 @@ class DeathViewModel {
   func refresh(month: Int, day: Int, _ completion: @escaping () -> Void) {
     client.fetchWikiInfo(month: month, day: day) { [unowned self] data in
       if let deaths = self.parser.deathsFromWiki(data) {
-        self.deaths = deaths
+        self.deaths = deaths.reversed()
       }
       completion()
     }

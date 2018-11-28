@@ -10,7 +10,7 @@ import Foundation
 
 class ArticlesViewModel {
   var articles = [Event]()
-  var reverse = false
+  var reverse = true
   
   let client = SearchArticlesClient()
   let parser = Parser()
