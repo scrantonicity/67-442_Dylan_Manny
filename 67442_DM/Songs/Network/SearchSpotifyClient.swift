@@ -14,7 +14,7 @@ class SearchSpotifyClient {
     
     //Must be https or else this will complain
     let urlString = convertToURLString(keyword: keyword)
-    
+    print(urlString)
     Alamofire.request(urlString).response { response in
       if let error = response.error {
         print("Error fetching repositories: \(error)")

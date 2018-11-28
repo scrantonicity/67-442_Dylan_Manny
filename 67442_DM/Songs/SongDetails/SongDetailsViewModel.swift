@@ -11,10 +11,10 @@ import Foundation
 class SongDetailsViewModel {
   
   let song: Song
-  var url: String
+  var url = String()
   
-  let client: SearchSpotifyClient
-  let parser: SpotifyParser
+  let client = SearchSpotifyClient()
+  let parser = SpotifyParser()
   
   init(song: Song) {
     self.song = song
@@ -27,7 +27,7 @@ class SongDetailsViewModel {
         print("got url!")
         print(self.url)
       }
-      completion()
+//      completion()
     }
   }
   

@@ -29,11 +29,7 @@ class SongDetailsViewController: UIViewController {
     }
   
   func refresh() -> Void {
-    viewModel!.refresh() { [unowned self] in
-      DispatchQueue.main.async {
-        self.url.reloadInputViews()
-      }
-    }
+    viewModel!.refresh()
   }
   
     

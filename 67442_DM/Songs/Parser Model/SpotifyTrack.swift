@@ -9,7 +9,7 @@
 import Foundation
 
 struct SpotifyTrack: Decodable {
-  let item: [SpotifyItem]
+  let item: SpotifyItem
   
   enum CodingKeys : String, CodingKey {
     case item = "items"

@@ -8,13 +8,13 @@
 
 import Foundation
 
-typealias JSONDictionary = [String: AnyObject]
+//typealias JSONDictionary = [String: AnyObject]
 
 class SpotifyParser {
-  func parseDictionary(_ data: Data?) -> Result? {
+  func parseDictionary(_ data: Data?) -> SpotifyResponse? {
     print("starting parsing")
     if let data = data,
-      let json = try? JSONDecoder().decode(Result.self, from: data) {
+      let json = try? JSONDecoder().decode(SpotifyResponse.self, from: data) {
       return json
     }  else {
       return nil
@@ -22,12 +22,13 @@ class SpotifyParser {
   }
   
   func spotifySongsFromLoadResponse(_ data: Data?) -> String? {
+    print(data)
     guard let result = parseDictionary(data) else {
       print("Error: couldn't parse result from data")
       return nil
     }
     print("Got result from data")
-    return SpotifyResponse.track
+    return result.track.item.link
   }
   
 }

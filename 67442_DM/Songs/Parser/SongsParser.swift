@@ -8,7 +8,7 @@
 
 import Foundation
 
-typealias JSONDictionary = [String: AnyObject]
+//typealias JSONDictionary = [String: AnyObject]
 
 class SongsParser {
   func parseDictionary(_ data: Data?) -> Result? {
