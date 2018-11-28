@@ -36,8 +36,10 @@ class SongDetailsViewModel {
     spotifyManager.find(SpotifyTrack.self, song.title) { tracks in
       let uri = tracks[0].uri
       print(uri)
-      let url = self.convertToURL(uri: uri)
-      print(url)
+      let urlLink = self.convertToURL(uri: uri)
+      print(urlLink)
+      guard let url = URL(string: urlLink) else { return }
+      UIApplication.shared.open(url)
     }
   }
   
