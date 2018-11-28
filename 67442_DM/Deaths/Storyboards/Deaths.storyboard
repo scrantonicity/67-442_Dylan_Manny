@@ -5,6 +5,7 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -24,6 +25,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="OwW-0W-fm7" kind="show" identifier="showDeathDetails" id="GgN-8N-hsC"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -40,10 +44,44 @@
             </objects>
             <point key="canvasLocation" x="116" y="205"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Death Web View Controller-->
+        <scene sceneID="WrI-AD-IOR">
+            <objects>
+                <viewController id="OwW-0W-fm7" customClass="DeathWebViewController" customModule="DailyArchive" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uJD-gn-FTn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FUZ-cN-LPD">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="FUZ-cN-LPD" firstAttribute="top" secondItem="yGd-fq-akQ" secondAttribute="top" id="7gO-eL-GxE"/>
+                            <constraint firstAttribute="trailing" secondItem="FUZ-cN-LPD" secondAttribute="trailing" id="MKR-T3-01J"/>
+                            <constraint firstItem="FUZ-cN-LPD" firstAttribute="bottom" secondItem="yGd-fq-akQ" secondAttribute="bottom" id="ODa-5K-99M"/>
+                            <constraint firstItem="FUZ-cN-LPD" firstAttribute="leading" secondItem="uJD-gn-FTn" secondAttribute="leading" id="TG8-gT-kPs"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="yGd-fq-akQ"/>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="FUZ-cN-LPD" id="A23-s9-sOm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EYJ-1E-Wg1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="856.79999999999995" y="204.64767616191907"/>
+        </scene>
+        <!--Deaths-->
         <scene sceneID="wdy-ek-Yqg">
             <objects>
-                <navigationController id="Nl1-2O-fFL" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="Deaths" title="Deaths" id="Nl1-2O-fFL" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="EbE-Qq-0RW">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

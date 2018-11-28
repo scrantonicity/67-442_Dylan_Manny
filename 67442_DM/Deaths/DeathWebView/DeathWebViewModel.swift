@@ -1,5 +1,5 @@
 //
-//  BirthWebViewModel.swift
+//  DeathWebViewModel.swift
 //  67442_DM
 //
 //  Created by Manuel Lopez on 11/27/18.
@@ -8,18 +8,18 @@
 
 import Foundation
 
-class BirthWebViewModel {
-  let birth: Birth
+class DeathWebViewModel {
+  let death: Death
   
-  init(birth: Birth) {
-    self.birth = birth
+  init(death: Death) {
+    self.death = death
   }
   
   func getUrl() -> String {
-    let links = birth.links
+    let links = death.links
     let first = links[0]
     return first.url
   }
-
+  
   
 }

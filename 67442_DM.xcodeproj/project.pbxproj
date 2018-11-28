@@ -53,6 +53,8 @@
 		653734EF21AE239E0064EA8A /* Deaths.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 653734EE21AE239E0064EA8A /* Deaths.storyboard */; };
 		653734F121AE24CC0064EA8A /* DeathCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 653734F021AE24CC0064EA8A /* DeathCell.xib */; };
 		653734F321AE256F0064EA8A /* DeathCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653734F221AE256F0064EA8A /* DeathCellTableViewCell.swift */; };
+		653734F621AE28930064EA8A /* DeathWebViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653734F521AE28930064EA8A /* DeathWebViewModel.swift */; };
+		653734F821AE28C90064EA8A /* DeathWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 653734F721AE28C90064EA8A /* DeathWebViewController.swift */; };
 		65898967218F91B600D53E95 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65898966218F91B600D53E95 /* Response.swift */; };
 		6589896A218F91D700D53E95 /* Link.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65898969218F91D700D53E95 /* Link.swift */; };
 		6589896C218F91E800D53E95 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6589896B218F91E800D53E95 /* Event.swift */; };
@@ -135,6 +137,8 @@
 		653734EE21AE239E0064EA8A /* Deaths.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Deaths.storyboard; sourceTree = "<group>"; };
 		653734F021AE24CC0064EA8A /* DeathCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeathCell.xib; sourceTree = "<group>"; };
 		653734F221AE256F0064EA8A /* DeathCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeathCellTableViewCell.swift; sourceTree = "<group>"; };
+		653734F521AE28930064EA8A /* DeathWebViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeathWebViewModel.swift; sourceTree = "<group>"; };
+		653734F721AE28C90064EA8A /* DeathWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeathWebViewController.swift; sourceTree = "<group>"; };
 		65898966218F91B600D53E95 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		65898969218F91D700D53E95 /* Link.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Link.swift; sourceTree = "<group>"; };
 		6589896B218F91E800D53E95 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
@@ -419,6 +423,7 @@
 		653734E121AE20BA0064EA8A /* Deaths */ = {
 			isa = PBXGroup;
 			children = (
+				653734F421AE28780064EA8A /* DeathWebView */,
 				653734E521AE214E0064EA8A /* Storyboards */,
 				653734E421AE21350064EA8A /* Deaths */,
 				653734E321AE21300064EA8A /* Network */,
@@ -460,6 +465,15 @@
 				653734F021AE24CC0064EA8A /* DeathCell.xib */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		653734F421AE28780064EA8A /* DeathWebView */ = {
+			isa = PBXGroup;
+			children = (
+				653734F521AE28930064EA8A /* DeathWebViewModel.swift */,
+				653734F721AE28C90064EA8A /* DeathWebViewController.swift */,
+			);
+			path = DeathWebView;
 			sourceTree = "<group>";
 		};
 		65898965218F91A800D53E95 /* Parser Model */ = {
@@ -752,7 +766,9 @@
 				5922762B21ADE5A400EC6BAC /* Song.swift in Sources */,
 				59C386BD218E1435003F5919 /* AppDelegate.swift in Sources */,
 				653734C721ACD5930064EA8A /* SearchBirthsClient.swift in Sources */,
+				653734F621AE28930064EA8A /* DeathWebViewModel.swift in Sources */,
 				6589897C218F96EF00D53E95 /* HeadlineTableViewCell.swift in Sources */,
+				653734F821AE28C90064EA8A /* DeathWebViewController.swift in Sources */,
 				65898976218F92CF00D53E95 /* ArticlesViewModel.swift in Sources */,
 				653734E721AE21870064EA8A /* DeathViewModel.swift in Sources */,
 				6589896C218F91E800D53E95 /* Event.swift in Sources */,

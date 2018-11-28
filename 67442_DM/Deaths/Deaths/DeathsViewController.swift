@@ -46,7 +46,7 @@ class DeathsViewController: UIViewController, UITableViewDataSource, UITableView
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: "deathCell", for: indexPath) as! BirthCellTableViewCell
+    let cell = tableView.dequeueReusableCell(withIdentifier: "deathCell", for: indexPath) as! DeathCellTableViewCell
     cell.person?.text = viewModel.headlineForRowAtIndexPath(indexPath)
     //    cell.headline?.numberOfLines = 0
     cell.year?.text = viewModel.yearForRowAtIndexPath(indexPath)
@@ -58,12 +58,12 @@ class DeathsViewController: UIViewController, UITableViewDataSource, UITableView
   }
   
   //   MARK: - Segues
-//  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//    if let birthWebView = segue.destination as? BirthWebViewController,
-//      let indexPath = sender as? IndexPath {
-//      birthWebView.viewModel = viewModel.detailViewModelForRowAtIndexPath(indexPath)
-//    }
-//  }
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if let deathWebView = segue.destination as? DeathWebViewController,
+      let indexPath = sender as? IndexPath {
+      deathWebView.viewModel = viewModel.detailViewModelForRowAtIndexPath(indexPath) 
+    }
+  }
   
   
   

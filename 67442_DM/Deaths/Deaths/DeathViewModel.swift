@@ -41,10 +41,10 @@ class DeathViewModel {
     return deaths[indexPath.row].year
   }
   
-//  func detailViewModelForRowAtIndexPath(_ indexPath: IndexPath) -> BirthWebViewModel {
-//    let birthDetail = deaths[indexPath.row]
-//    return BirthWebViewModel(birth: birthDetail)
-//  }
+  func detailViewModelForRowAtIndexPath(_ indexPath: IndexPath) -> DeathWebViewModel {
+    let deathDetail = deaths[indexPath.row]
+    return DeathWebViewModel(death: deathDetail)
+  }
   
   
 }
