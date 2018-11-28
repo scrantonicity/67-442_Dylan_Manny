@@ -15,6 +15,7 @@ class ArticleDetailsViewController: UIViewController, UITableViewDataSource, UIT
   @IBOutlet weak var headline: UILabel!
   @IBOutlet weak var year: UILabel!
   @IBOutlet var tableView: UITableView!
+  @IBOutlet weak var shareButton: UIBarButtonItem!
 
     override func viewDidLoad() {
       super.viewDidLoad()
@@ -35,19 +36,21 @@ class ArticleDetailsViewController: UIViewController, UITableViewDataSource, UIT
     
   }
   
+  @IBAction func shareButtonTapped(_ sender: Any) {
+    let text = self.headline.text!
+    let year = self.year.text!
+    let textToShare = "Did you know? On \(year), \(text)"
+    
+    let ac = UIActivityViewController(activityItems: [textToShare], applicationActivities: nil)
+    present(ac, animated: true)
+//    navigationController?.present(activityViewController, animated: true)
+  }
+  
   
   // MARK: - Table View
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return viewModel!.numberOfRows()
   }
-  
-//  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//    let cell = tableView.dequeueReusableCell(withIdentifier: "linkcell", for: indexPath) as! LinksTableViewCell
-//    print("getting titles")
-//    cell.title?.text = viewModel?.headlineAtRow(indexPath)
-//    print(cell.title?.text)
-//    return cell
-//  }
 
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
