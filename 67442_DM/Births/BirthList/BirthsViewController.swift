@@ -57,14 +57,14 @@ class BirthsViewController: UIViewController, UITableViewDataSource, UITableView
     performSegue(withIdentifier: "showBirthDetails", sender: indexPath)
   }
   
-  // MARK: - Segues
-//  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//    if let detailArticle = segue.destination as? ArticleDetailsViewController,
-//      let indexPath = sender as? IndexPath {
-//      detailArticle.viewModel = viewModel.detailViewModelForRowAtIndexPath(indexPath)
-//      //      detailArticle.article = self.
-//    }
-//  }
+//   MARK: - Segues
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if let birthWebView = segue.destination as? BirthWebViewController,
+      let indexPath = sender as? IndexPath {
+      birthWebView.viewModel = viewModel.detailViewModelForRowAtIndexPath(indexPath)
+    }
+  }
+
   
   
   
