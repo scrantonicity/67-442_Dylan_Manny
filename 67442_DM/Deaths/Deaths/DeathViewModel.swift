@@ -15,12 +15,12 @@ class DeathViewModel {
   let parser = deathParser()
   
   func refresh(month: Int, day: Int, _ completion: @escaping () -> Void) {
-    client.fetchWikiInfo(month: month, day: day) { [unowned self] data in
-      if let deaths = self.parser.deathsFromWiki(data) {
-        self.deaths = deaths.reversed()
-      }
-      completion()
-    }
+//    client.fetchWikiInfo(month: month, day: day) { [unowned self] data in
+//      if let deaths = self.parser.deathsFromWiki(data) {
+//        self.deaths = deaths.reversed()
+//      }
+//      completion()
+//    }
   }
   
   func numberOfRows() -> Int {

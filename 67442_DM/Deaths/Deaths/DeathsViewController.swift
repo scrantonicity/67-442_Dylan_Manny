@@ -72,11 +72,11 @@ class DeathsViewController: UIViewController, UITableViewDataSource, UITableView
     let date = getCurrentDate()
     let month = Int(date.0)!
     let day = Int(date.1)!
-    viewModel.refresh(month: month, day: day) { [unowned self] in
-      DispatchQueue.main.async {
-        self.tableView.reloadData()
-      }
-    }
+//    viewModel.refresh(month: month, day: day) { [unowned self] in
+//      DispatchQueue.main.async {
+//        self.tableView.reloadData()
+//      }
+//    }
   }
   
   func getCurrentDate() -> (String, String) {
