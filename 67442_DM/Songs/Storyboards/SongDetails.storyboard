@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Song Details View Controller-->
+        <!--Song-->
         <scene sceneID="cOU-tr-yZL">
             <objects>
                 <viewController storyboardIdentifier="SongDetails" id="h2B-cG-IiQ" customClass="SongDetailsViewController" customModule="DailyArchive" customModuleProvider="target" sceneMemberID="viewController">
@@ -50,10 +50,19 @@
                                     <action selector="openSpotify:" destination="h2B-cG-IiQ" eventType="touchUpInside" id="SWR-ou-DCF"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ept-qu-6f9">
+                                <rect key="frame" x="16" y="318" width="104" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="View Full Chart"/>
+                                <connections>
+                                    <segue destination="YiM-wt-Rro" kind="show" identifier="openChart" id="yTm-VY-RaG"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Q7w-aU-Miu"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Song" id="xDu-2U-ENF"/>
                     <connections>
                         <outlet property="artist" destination="JV3-1l-RAC" id="ogG-av-zXt"/>
                         <outlet property="cover" destination="bHY-2I-7k9" id="eus-Ly-Vd3"/>
@@ -65,6 +74,51 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XRK-bu-uJp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-47.200000000000003" y="158.77061469265368"/>
+        </scene>
+        <!--Chart Web View Controller-->
+        <scene sceneID="7yY-Qo-yZi">
+            <objects>
+                <viewController id="YiM-wt-Rro" customClass="ChartWebViewController" customModule="DailyArchive" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mI2-w7-Jel">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cl5-6X-rg0">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="4bG-vX-e6F"/>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="Cl5-6X-rg0" id="JXi-e4-wI5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uUD-lV-I30" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="788" y="158.77061469265368"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="G0y-7P-K6O">
+            <objects>
+                <navigationController id="a9F-hh-DHL" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="V4Q-Cn-rtF">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="h2B-cG-IiQ" kind="relationship" relationship="rootViewController" id="Wfp-VI-OYF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WZn-aI-LUN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-759" y="159"/>
         </scene>
     </scenes>
 </document>

@@ -46,6 +46,12 @@ class SongDetailsViewController: UIViewController {
       viewModel!.openSpotify()
     }
   
+  // MARK: - Segues
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    let link = viewModel?.song.url
+    (segue.destination as! ChartWebViewController).urlString = link
+  }
+  
     
     
 
