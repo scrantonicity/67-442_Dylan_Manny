@@ -16,6 +16,7 @@ class ArticleDetailsViewController: UIViewController, UITableViewDataSource, UIT
   @IBOutlet weak var year: UILabel!
   @IBOutlet var tableView: UITableView!
   @IBOutlet weak var shareButton: UIBarButtonItem!
+  @IBOutlet weak var saveButton: UIBarButtonItem!
 
     override func viewDidLoad() {
       super.viewDidLoad()
@@ -44,6 +45,12 @@ class ArticleDetailsViewController: UIViewController, UITableViewDataSource, UIT
     let ac = UIActivityViewController(activityItems: [textToShare], applicationActivities: nil)
     present(ac, animated: true)
 //    navigationController?.present(activityViewController, animated: true)
+  }
+  
+  @IBAction func saveButtonTapped() {
+    savedArticles.append(self.viewModel!.article)
+    self.saveButton.tintColor = UIColor.white
+    print(savedArticles)
   }
   
   

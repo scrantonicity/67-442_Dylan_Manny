@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import _7442_DM
+@testable import DailyArchive
 
 class SongsViewModelTests: XCTestCase {
   

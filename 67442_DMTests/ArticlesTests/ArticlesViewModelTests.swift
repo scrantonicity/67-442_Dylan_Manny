@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import _7442_DM
+@testable import DailyArchive
 
 class ArticlesViewModelTests: XCTestCase {
 
@@ -52,8 +52,6 @@ class ArticlesViewModelTests: XCTestCase {
     let indexPath3 = IndexPath(row: 99, section: 99)
     XCTAssertEqual(viewModel.yearForRowAtIndexPath(indexPath3), "")
   }
-  
-  
   
   func createEvent() -> Event {
     return Event(year: "2018", headline: "TestHeadline", links: [])

@@ -24,7 +24,7 @@ class birthParser {
   
   func birthsFromWiki(_ data:Data?) -> [Birth]? {
     guard let result = birthParser(data) else {
-      print("Error: couldn't parse result from data")
+      print("Error: couldn't parse birth result from data")
       return nil
     }
 

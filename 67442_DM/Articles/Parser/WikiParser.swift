@@ -23,7 +23,7 @@ class Parser {
   
   func articlesFromWiki(_ data:Data?) -> [Event]? {
     guard let result = parseWiki(data) else {
-      print("Error: couldn't parse result from data")
+      print("Error: couldn't parse event result from data")
       return nil
     }
     

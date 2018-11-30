@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kyi-8q-c70">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kyi-8q-c70">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -107,15 +107,24 @@
                         <viewLayoutGuide key="safeArea" id="hdn-6F-m8e"/>
                     </view>
                     <navigationItem key="navigationItem" title="Details" id="n1o-tT-1v1">
-                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="1VD-mJ-hm1">
-                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <connections>
-                                <action selector="shareButtonTapped:" destination="ACv-0w-qe9" id="KA8-gg-01g"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="action" id="1VD-mJ-hm1">
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="shareButtonTapped:" destination="ACv-0w-qe9" id="KA8-gg-01g"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem style="plain" systemItem="bookmarks" id="vvF-o4-h02" userLabel="Save Button">
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="saveButtonTapped" destination="ACv-0w-qe9" id="09j-zB-6Rw"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="headline" destination="1Tm-bH-mW1" id="4Xl-o0-QOz"/>
+                        <outlet property="saveButton" destination="vvF-o4-h02" id="eHQ-e2-HjZ"/>
                         <outlet property="shareButton" destination="1VD-mJ-hm1" id="Ydp-v5-i5g"/>
                         <outlet property="tableView" destination="7SS-lb-kzJ" id="hFq-Kj-t70"/>
                         <outlet property="year" destination="OU7-zz-Dsg" id="uj6-Ji-Uag"/>

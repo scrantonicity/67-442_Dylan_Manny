@@ -17,6 +17,7 @@ fileprivate let application = SpotifyManager.SpotifyDeveloperApplication(
 )
 
 let spotifyManager = SpotifyManager(with: application)
+var savedArticles = [Event]()
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
