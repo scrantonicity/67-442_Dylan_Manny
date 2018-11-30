@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1kl-Vm-rrV">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uSz-Nu-tMB">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,49 +9,60 @@
     </dependencies>
     <scenes>
         <!--Root View Controller-->
-        <scene sceneID="EXj-ag-nsp">
+        <scene sceneID="bb4-Q6-MHM">
             <objects>
-                <tableViewController storyboardIdentifier="Saved" useStoryboardIdentifierAsRestorationIdentifier="YES" id="dp0-Yn-HaU" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="C0K-BY-iiw">
+                <tableViewController id="T2R-0X-UkB" customClass="SavedViewController" customModule="DailyArchive" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="p5v-9g-jKF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="gr6-9b-qaG" customClass="HeadlineTableViewCell" customModule="DailyArchive">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="RCZ-YQ-Xa4" customClass="TableViewCell" customModule="DailyArchive" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gr6-9b-qaG" id="rQB-pm-sQp">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RCZ-YQ-Xa4" id="7vw-nT-a7n" customClass="HeadlineTableViewCell" customModule="DailyArchive" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="av1-s1-y27" kind="show" id="dOE-pk-Vga"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="dp0-Yn-HaU" id="8pZ-pA-Vth"/>
-                            <outlet property="delegate" destination="dp0-Yn-HaU" id="D7C-3C-MJS"/>
+                            <outlet property="dataSource" destination="T2R-0X-UkB" id="i8u-uI-xkb"/>
+                            <outlet property="delegate" destination="T2R-0X-UkB" id="r77-79-4gi"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="791-Cj-P7L"/>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="oJ6-Zk-382"/>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="KJf-D5-MBq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7DS-RZ-FlE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="175" y="167"/>
+            <point key="canvasLocation" x="-144" y="-40"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="QgC-pl-hRh">
+        <!--ArticleDetails-->
+        <scene sceneID="jOT-zb-oXr">
             <objects>
-                <navigationController id="1kl-Vm-rrV" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="XHQ-UA-OKc">
+                <viewControllerPlaceholder storyboardName="ArticleDetails" id="av1-s1-y27" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZHd-Xu-wKr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="639" y="-95"/>
+        </scene>
+        <!--Saved-->
+        <scene sceneID="AVf-GV-A2U">
+            <objects>
+                <navigationController title="Saved" id="uSz-Nu-tMB" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Tgp-er-g2Z">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="dp0-Yn-HaU" kind="relationship" relationship="rootViewController" id="h5p-65-C9V"/>
+                        <segue destination="T2R-0X-UkB" kind="relationship" relationship="rootViewController" id="Y86-mn-ogZ"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ST7-Xv-Fwc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YIm-86-qlf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-777" y="167"/>
+            <point key="canvasLocation" x="-1096" y="-40"/>
         </scene>
     </scenes>
 </document>

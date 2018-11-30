@@ -14,7 +14,7 @@ class TabsViewController: UITabBarController, UITabBarControllerDelegate {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    
+    print("loaded Tab bAr")
 //    let songsViewController = SongsViewController()
 //    songsViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .Songs, tag: 0)
 //    let articlesViewController = ArticlesViewController()

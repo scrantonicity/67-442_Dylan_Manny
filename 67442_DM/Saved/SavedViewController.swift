@@ -8,14 +8,14 @@
 
 import UIKit
 
-class SavedViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class SavedViewController: UITableViewController {
   
   // MARK: - Properties & Outlets
   let viewModel = SavedViewModel()
   
   
-  @IBOutlet var tableView: UITableView!
-  @IBOutlet weak var filter: UIBarButtonItem!
+//  @IBOutlet var tableView: UITableView!
+//  @IBOutlet weak var filter: UIBarButtonItem!
   
   // MARK: - viewDidLoad, WillAppear
   override func viewDidLoad() {
@@ -46,11 +46,11 @@ class SavedViewController: UIViewController, UITableViewDataSource, UITableViewD
   
   
   // MARK: - Table View
-  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+  override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return viewModel.numberOfRows()
   }
   
-  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+  override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: "acell", for: indexPath) as! HeadlineTableViewCell
     cell.headline?.text = viewModel.headlineForRowAtIndexPath(indexPath)
     //    cell.headline?.numberOfLines = 0
@@ -58,7 +58,7 @@ class SavedViewController: UIViewController, UITableViewDataSource, UITableViewD
     return cell
   }
   
-  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
+  override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
     performSegue(withIdentifier: "showArticleDetails", sender: indexPath)
   }
   
