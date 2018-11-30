@@ -63,7 +63,7 @@
         <scene sceneID="9og-4m-gOO">
             <objects>
                 <viewControllerPlaceholder storyboardName="Articles" referencedIdentifier="ArticlesController" id="j8X-8s-axU" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Articles" id="aRc-be-ekp"/>
+                    <tabBarItem key="tabBarItem" title="Events" image="event" id="aRc-be-ekp"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RL7-eQ-TZj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -80,4 +80,7 @@
             <point key="canvasLocation" x="-34" y="150"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="event" width="25" height="25"/>
+    </resources>
 </document>

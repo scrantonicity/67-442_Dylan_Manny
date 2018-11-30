@@ -79,8 +79,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Year" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OU7-zz-Dsg">
-                                <rect key="frame" x="16" y="308" width="83" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Year" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OU7-zz-Dsg">
+                                <rect key="frame" x="16" y="358" width="122" height="21"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -89,20 +89,21 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="7SS-lb-kzJ" firstAttribute="bottom" secondItem="hdn-6F-m8e" secondAttribute="bottom" identifier="tableBottomAlign" id="4hi-BK-7BN"/>
+                            <constraint firstItem="OU7-zz-Dsg" firstAttribute="leading" secondItem="Ogh-Zc-yrJ" secondAttribute="leading" id="83n-TD-QkM"/>
                             <constraint firstItem="7SS-lb-kzJ" firstAttribute="top" secondItem="Ogh-Zc-yrJ" secondAttribute="bottom" constant="22" identifier="linksTableSpace" id="CiD-Qa-LCl"/>
                             <constraint firstItem="Ogh-Zc-yrJ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="hdn-6F-m8e" secondAttribute="leading" constant="10" identifier="linksLeadingSpace" id="GD0-5o-s8e"/>
-                            <constraint firstItem="Ogh-Zc-yrJ" firstAttribute="top" secondItem="OU7-zz-Dsg" secondAttribute="bottom" constant="104" identifier="yearBottomSpace" id="LJT-V2-h3X"/>
-                            <constraint firstItem="OU7-zz-Dsg" firstAttribute="top" secondItem="1Tm-bH-mW1" secondAttribute="bottom" constant="-26" identifier="titleSpaceAboveYear" id="TBT-bJ-hub"/>
-                            <constraint firstItem="Ogh-Zc-yrJ" firstAttribute="leading" secondItem="OU7-zz-Dsg" secondAttribute="leading" identifier="linksYearSpaceLeading" id="aLL-mf-MGo"/>
+                            <constraint firstItem="Ogh-Zc-yrJ" firstAttribute="top" secondItem="OU7-zz-Dsg" secondAttribute="bottom" constant="54" id="H5R-Su-VzY"/>
+                            <constraint firstItem="OU7-zz-Dsg" firstAttribute="leading" secondItem="wcz-xX-Ntp" secondAttribute="leadingMargin" id="HNx-he-Fgb"/>
                             <constraint firstItem="mCB-bs-E4N" firstAttribute="centerX" secondItem="hdn-6F-m8e" secondAttribute="centerX" identifier="headerCenterAlign" id="bQv-1C-VhO"/>
                             <constraint firstItem="7SS-lb-kzJ" firstAttribute="leading" secondItem="wcz-xX-Ntp" secondAttribute="leading" identifier="tableSuperview" id="bbw-oY-dYY"/>
                             <constraint firstItem="mCB-bs-E4N" firstAttribute="top" secondItem="hdn-6F-m8e" secondAttribute="top" constant="54" identifier="headerTopSpace" id="bzb-tn-ewt"/>
                             <constraint firstItem="7SS-lb-kzJ" firstAttribute="centerX" secondItem="1Tm-bH-mW1" secondAttribute="centerX" identifier="titleCenterX" id="egw-eN-Dfl"/>
                             <constraint firstItem="hdn-6F-m8e" firstAttribute="trailing" secondItem="1Tm-bH-mW1" secondAttribute="trailing" constant="28" identifier="titleFollowingSpace" id="g4p-tL-8yf"/>
                             <constraint firstItem="mCB-bs-E4N" firstAttribute="leading" secondItem="hdn-6F-m8e" secondAttribute="leading" constant="91" identifier="headerInsertSpace" id="idd-1v-pA7"/>
-                            <constraint firstItem="OU7-zz-Dsg" firstAttribute="leading" secondItem="hdn-6F-m8e" secondAttribute="leading" constant="16" id="kaK-jN-hWK"/>
+                            <constraint firstItem="OU7-zz-Dsg" firstAttribute="top" secondItem="1Tm-bH-mW1" secondAttribute="bottom" constant="24" id="jf9-CL-CQS"/>
                             <constraint firstItem="1Tm-bH-mW1" firstAttribute="top" secondItem="hdn-6F-m8e" secondAttribute="top" constant="95" identifier="titleTopSpace" id="qNi-ZV-JXw"/>
                             <constraint firstItem="1Tm-bH-mW1" firstAttribute="leading" secondItem="hdn-6F-m8e" secondAttribute="leading" constant="28" identifier="titleLeadingSpace" id="voL-ld-h6N"/>
+                            <constraint firstItem="hdn-6F-m8e" firstAttribute="trailing" secondItem="OU7-zz-Dsg" secondAttribute="trailing" constant="237" id="xDY-ef-Pxz"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hdn-6F-m8e"/>
                     </view>
