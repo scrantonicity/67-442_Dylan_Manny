@@ -22,14 +22,14 @@ class deathParser {
   }
   
   
-//  func deathsFromWiki(_ data:Data?) -> [Death]? {
-//    guard let result = deathParser(data) else {
-//      print("Error: couldn't parse result from data")
-//      return nil
-//    }
-//    print("Data was parsed successfully")
-//    return result.data.deaths
-//  }
+  func deathsFromWiki(_ data:Data?) -> [Death]? {
+    guard let result = deathParser(data) else {
+      print("Error: couldn't parse result from data")
+      return nil
+    }
+    print("Data was parsed successfully")
+    return result.data.deaths
+  }
   
   
 }
