@@ -83,9 +83,9 @@ class SongsViewModel {
     return filteredSongs[indexPath.row].artist
   }
   
-//  func detailViewModelForRowAtIndexPath(_ indexPath: IndexPath) -> SongDetailsViewModel {
-//    let song = filteredSongs[indexPath.row]
-//    return SongDetailsViewModel(song: song)
-//  }
+  func detailViewModelForRowAtIndexPath(_ indexPath: IndexPath) -> SongDetailsViewModel {
+    let song = filteredSongs[indexPath.row]
+    return SongDetailsViewModel(song: song)
+  }
   
 }

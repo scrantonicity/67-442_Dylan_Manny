@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SpotifyKit
 
 class SongDetailsViewController: UIViewController {
   
@@ -16,25 +17,40 @@ class SongDetailsViewController: UIViewController {
   @IBOutlet weak var cover: UIImageView!
   @IBOutlet weak var trackTitle: UILabel!
   @IBOutlet weak var artist: UILabel!
-  @IBOutlet weak var url: UILabel!
+  @IBOutlet weak var playButton: UIButton!
   
 
     override func viewDidLoad() {
       super.viewDidLoad()
-//      date.text = viewModel?.song.date 
-////      cover.image =
-//      trackTitle.text = viewModel?.song.title
-//      artist.text = viewModel?.song.artist
+      date.text = viewModel?.song.date
+//      cover.image =
+      trackTitle.text = viewModel?.song.title
+      artist.text = viewModel?.song.artist
+      
+//      spotifyManager.authorize()
+//
+//      spotifyManager.find(SpotifyTrack.self,  (viewModel?.song.title)!) { tracks in
+//        for track in tracks {
+//          print("URI \(track.uri)")
+//        }
+//      }
+      
 //      self.refresh()
     }
   
 //  func refresh() -> Void {
-//    viewModel!.refresh() { [unowned self] in
-//      DispatchQueue.main.async {
-//        self.url.reloadInputViews()
-//      }
-//    }
+//    viewModel!.refresh()
 //  }
+  
+    @IBAction func openSpotify(_ sender: Any) {
+      viewModel!.openSpotify()
+    }
+  
+  // MARK: - Segues
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    let link = viewModel?.song.url
+    (segue.destination as! ChartWebViewController).urlString = link
+  }
   
     
     

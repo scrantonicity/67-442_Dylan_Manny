@@ -8,5 +8,6 @@ target '67442_DM' do
   # Pods for 67442_DM
 
   pod 'Alamofire', '~> 4.7'
+  pod 'SpotifyKit'
 
 end
