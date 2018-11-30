@@ -20,10 +20,12 @@ class SavedViewController: UITableViewController {
   // MARK: - viewDidLoad, WillAppear
   override func viewDidLoad() {
     super.viewDidLoad()
+    print("loaded saved")
     // register the nib
     let cellNib = UINib(nibName: "Headline", bundle: nil)
     tableView.register(cellNib, forCellReuseIdentifier: "acell")
     // get the data for the table
+    tableView.reloadData()
   }
   
   override func viewWillAppear(_ animated: Bool) {

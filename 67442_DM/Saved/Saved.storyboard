@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--Saved-->
         <scene sceneID="bb4-Q6-MHM">
             <objects>
-                <tableViewController id="T2R-0X-UkB" customClass="SavedViewController" customModule="DailyArchive" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="Saved" title="Saved" useStoryboardIdentifierAsRestorationIdentifier="YES" id="T2R-0X-UkB" customClass="SavedViewController" customModule="DailyArchive" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="p5v-9g-jKF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

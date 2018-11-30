@@ -52,10 +52,10 @@
             </objects>
             <point key="canvasLocation" x="492" y="-161"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Songs-->
         <scene sceneID="iOH-fj-MMN">
             <objects>
-                <navigationController storyboardIdentifier="Songs" id="cag-Ox-IVp" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="Songs" title="Songs" id="cag-Ox-IVp" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Z4Y-pu-dFM">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
