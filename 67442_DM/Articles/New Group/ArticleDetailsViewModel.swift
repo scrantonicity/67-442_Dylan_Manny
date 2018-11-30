@@ -47,11 +47,15 @@ class ArticleDetailsViewModel {
   
   // Possibly have it return in name format i.e Nov instead of 11
   func date() -> String {
+    let months:[Int:String] = [1:"Jan", 2:"Feb", 3:"Mar", 4: "Apr", 5:"May",
+                               6:"Jun", 7:"Jul", 8:"Aug", 9:"Sep", 10:"Oct",
+                               11:"Nov", 12:"Dec"]
     let dateCurrent = Date()
     let calendar = Calendar.current
     let components = calendar.dateComponents([Calendar.Component.day, Calendar.Component.month, Calendar.Component.year], from: dateCurrent)
     let year = article.year
-    return "\(components.month!)/\(components.day!)/\(year)"
+    let currentMonth = components.month!
+    return "\(months[currentMonth]!) \(components.day!), \(year)"
   }
   
   //returns list with tuples of titles and urls
