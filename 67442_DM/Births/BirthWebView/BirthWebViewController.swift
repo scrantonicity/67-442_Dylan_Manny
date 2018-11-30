@@ -15,7 +15,7 @@ class BirthWebViewController: UIViewController, WKNavigationDelegate {
   var urlString: String?
   var viewModel: BirthWebViewModel?
   @IBOutlet var webView: WKWebView!
-  //  @IBOutlet weak var back: UIBarButtonItem!
+  @IBOutlet weak var share: UIBarButtonItem!
   
   
   override func viewDidLoad() {
@@ -65,10 +65,16 @@ class BirthWebViewController: UIViewController, WKNavigationDelegate {
     showActivityIndicator(show: false)
   }
   
-  @IBAction func backTapped(_ sender: Any) {
-    if webView.canGoBack {
-      webView.goBack()
-    }
+  @IBAction func shareButtonTapped(_ sender: Any) {
+    let person:String = viewModel!.getName()
+    let year:String = viewModel!.birth.year
+    let url:String = viewModel!.getUrl()
+    let textToShare = "Did you know? Today in \(year), \(person) was born. \(url)"
+    
+    let ac = UIActivityViewController(activityItems: [textToShare], applicationActivities: nil)
+    present(ac, animated: true)
+    //    navigationController?.present(activityViewController, animated: true)
   }
+  
 
 }

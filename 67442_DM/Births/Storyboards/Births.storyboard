@@ -70,7 +70,16 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="TAr-6c-6Uf"/>
                     </view>
+                    <navigationItem key="navigationItem" id="eHo-zL-Es7">
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="WdT-cl-EAY">
+                            <color key="tintColor" red="0.99466502359999998" green="1" blue="0.96806740550000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="shareButtonTapped:" destination="5f6-Ki-0hS" id="RSA-yd-UNi"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="share" destination="WdT-cl-EAY" id="daL-R5-PcX"/>
                         <outlet property="webView" destination="wok-jG-H5Z" id="R2e-Yk-dwL"/>
                     </connections>
                 </viewController>
