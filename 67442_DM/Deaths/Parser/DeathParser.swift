@@ -27,7 +27,7 @@ class deathParser {
       print("Error: couldn't parse death result from data")
       return nil
     }
-    
+    print("Data was parsed successfully")
     return result.data.deaths
   }
   

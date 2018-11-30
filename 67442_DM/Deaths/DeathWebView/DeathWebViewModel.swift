@@ -21,5 +21,11 @@ class DeathWebViewModel {
     return first.url
   }
   
+  func getName() -> String {
+    let links = death.links
+    let first = links[0]
+    return first.title
+  }
+  
   
 }

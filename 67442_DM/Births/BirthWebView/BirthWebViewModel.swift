@@ -20,6 +20,12 @@ class BirthWebViewModel {
     let first = links[0]
     return first.url
   }
+  
+  func getName() -> String {
+    let links = birth.links
+    let first = links[0]
+    return first.title
+  }
 
   
 }
