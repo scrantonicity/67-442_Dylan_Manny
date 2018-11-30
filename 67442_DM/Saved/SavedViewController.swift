@@ -10,7 +10,6 @@ import UIKit
 
 class SavedViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
   
-  //class ArticlesViewController: UITableViewController {
   // MARK: - Properties & Outlets
   let viewModel = SavedViewModel()
   
