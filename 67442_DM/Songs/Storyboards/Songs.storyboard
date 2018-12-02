@@ -56,7 +56,7 @@
         <scene sceneID="iOH-fj-MMN">
             <objects>
                 <navigationController storyboardIdentifier="Songs" title="Songs" id="cag-Ox-IVp" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Songs" image="songs" id="9JK-oS-gOa"/>
+                    <tabBarItem key="tabBarItem" title="Songs" image="song" id="9JK-oS-gOa"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Z4Y-pu-dFM">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -76,6 +76,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="fP0-0i-SrV" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="JcG-sQ-lwj">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -89,6 +90,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="songs" width="30" height="30"/>
+        <image name="song" width="25" height="25"/>
     </resources>
 </document>
