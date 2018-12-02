@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="EiW-a3-tJj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7YV-Kd-RNT">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Articles-->
+        <!--Events-->
         <scene sceneID="j78-G6-MsQ">
             <objects>
-                <tableViewController storyboardIdentifier="Articles" title="Articles" id="eef-iK-Hy1" customClass="ArticlesViewController" customModule="DailyArchive" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="Articles" title="Events" id="eef-iK-Hy1" customClass="ArticlesViewController" customModule="DailyArchive" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="9OR-Yj-wvY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -56,7 +56,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="039-p4-wmZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="120.8" y="-1182.4587706146926"/>
+            <point key="canvasLocation" x="1060" y="-1182.4587706146926"/>
         </scene>
         <!--Details-->
         <scene sceneID="jKd-Ke-BLl">
@@ -64,12 +64,13 @@
                 <viewControllerPlaceholder storyboardIdentifier="Details" storyboardName="ArticleDetails" referencedIdentifier="Details" id="FfW-NN-oGA" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FnL-WA-ULv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="790" y="-1183"/>
+            <point key="canvasLocation" x="1728" y="-1183.8080959520241"/>
         </scene>
         <!--Events-->
         <scene sceneID="iUo-r4-EJn">
             <objects>
                 <navigationController storyboardIdentifier="Events" title="Events" id="EiW-a3-tJj" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Events" image="event" id="eOU-5d-ZVd"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ugt-36-kpt">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -81,7 +82,27 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tyk-UE-deC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-833" y="-1182"/>
+            <point key="canvasLocation" x="104.8" y="-1182.4587706146926"/>
+        </scene>
+        <!--Events-->
+        <scene sceneID="NTp-CL-Qqh">
+            <objects>
+                <tabBarController title="Events" automaticallyAdjustsScrollViewInsets="NO" id="7YV-Kd-RNT" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qLT-R9-K0N">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="EiW-a3-tJj" kind="relationship" relationship="viewControllers" id="jFt-56-Sgp"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OtP-Hp-7pA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-834.39999999999998" y="-1182.4587706146926"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="event" width="25" height="25"/>
+    </resources>
 </document>
