@@ -10,20 +10,53 @@ import UIKit
 
 class TabsViewController: UITabBarController, UITabBarControllerDelegate {
   
-//  @IBOutlet weak var songsViewController: 
+  // UITabBarDelegate
+  override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
+    setUpTabBar()
+  }
+  
+  // UITabBarControllerDelegate
+  private func tabBarController(tabBarController: UITabBarController, didSelectViewController viewController: UIViewController) {
+  }
+  
+//  @IBOutlet weak var songsViewController:
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    print("loaded Tab bAr")
-//    print(self.viewControllers)
-    print(self.tabBar.items)
-//    let songsViewController = SongsViewController()
-//    songsViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .Songs, tag: 0)
-//    let articlesViewController = ArticlesViewController()
-//    articlesViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .Articles, tag: 1)
-//    let viewControllerList = [ songsViewController, articlesViewController]
-//    viewControllers = viewControllerList
+    self.delegate = self
+    setUpTabBar()
     
+  }
+  
+  override func viewDidAppear(_ animated: Bool) {
+    setUpTabBar()
+  }
+  
+  func setUpTabBar() -> Void {
+//    let tabs = self.tabBar.items
+//    let eventsItem = tabs![0]
+//    let birthsItem = tabs![1]
+//    let deathsItem = tabs![2]
+//    let songsItem = tabs![3]
+//    let savedItem = tabs![4]
+    setTintColor()
+  }
+  
+  func setTintColor() -> Void {
+    switch self.tabBar.selectedItem {
+    case (self.tabBar.items![0]):
+      self.tabBar.tintColor = UIColor(red:0.00, green:0.60, blue:1.00, alpha:1.0)
+    case (self.tabBar.items![1]):
+      self.tabBar.tintColor = UIColor(red:0.60, green:0.20, blue:1.00, alpha:1.0)
+    case (self.tabBar.items![2]):
+      self.tabBar.tintColor = UIColor(red:1.00, green:0.20, blue:0.20, alpha:1.0)
+    case (self.tabBar.items![3]):
+      self.tabBar.tintColor = UIColor(red:0.20, green:0.80, blue:0.40, alpha:1.0)
+    case (self.tabBar.items![4]):
+      self.tabBar.tintColor = UIColor(red:0.00, green:0.60, blue:1.00, alpha:1.0)
+    default:
+      self.tabBar.tintColor = UIColor(red:0.00, green:0.60, blue:1.00, alpha:1.0)
+    }
   }
   
   override func viewWillAppear(_ animated: Bool) {
