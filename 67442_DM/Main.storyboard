@@ -12,7 +12,7 @@
         <!--Home View Controller-->
         <scene sceneID="YMo-8i-8np">
             <objects>
-                <viewController id="UCl-bw-Wm2" customClass="HomeViewController" customModule="_7442_DM" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="UCl-bw-Wm2" customClass="HomeViewController" customModule="DailyArchive" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lik-EG-dS2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -65,13 +65,13 @@
             </objects>
             <point key="canvasLocation" x="-68" y="189.3553223388306"/>
         </scene>
-        <!--Tabs-->
+        <!--tabsController-->
         <scene sceneID="JR4-6E-G8e">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="SongsView" storyboardName="Tabs" id="ATk-kw-YrZ" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardIdentifier="SongsView" storyboardName="Tabs" referencedIdentifier="tabsController" id="ATk-kw-YrZ" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jY8-Re-L7e" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="413" y="177"/>
+            <point key="canvasLocation" x="480" y="189"/>
         </scene>
     </scenes>
 </document>
