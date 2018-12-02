@@ -30,6 +30,8 @@ class SavedViewController: UITableViewController {
   
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
+    viewModel.articles = savedArticles
+    tableView.reloadData()
     if let selectedRow = tableView.indexPathForSelectedRow {
       tableView.deselectRow(at: selectedRow, animated: true)
     }
@@ -49,6 +51,7 @@ class SavedViewController: UITableViewController {
   
   // MARK: - Table View
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    print(viewModel.numberOfRows())
     return viewModel.numberOfRows()
   }
   
@@ -61,7 +64,7 @@ class SavedViewController: UITableViewController {
   }
   
   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
-    performSegue(withIdentifier: "showArticleDetails", sender: indexPath)
+    performSegue(withIdentifier: "showSavedArticleDetails", sender: indexPath)
   }
   
   // MARK: - Segues

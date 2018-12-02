@@ -25,7 +25,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="av1-s1-y27" kind="show" id="dOE-pk-Vga"/>
+                                    <segue destination="av1-s1-y27" kind="show" identifier="showSavedArticleDetails" id="dOE-pk-Vga"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -34,7 +34,7 @@
                             <outlet property="delegate" destination="T2R-0X-UkB" id="r77-79-4gi"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="oJ6-Zk-382"/>
+                    <navigationItem key="navigationItem" title="Saved Events" id="oJ6-Zk-382"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7DS-RZ-FlE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
