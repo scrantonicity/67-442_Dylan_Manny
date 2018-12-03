@@ -57,7 +57,7 @@ class ArticlesViewController: UIViewController, UITableViewDataSource, UITableVi
     cell.headline?.text = viewModel.headlineForRowAtIndexPath(indexPath)
 //    cell.headline?.numberOfLines = 0 
     cell.year?.text = viewModel.yearForRowAtIndexPath(indexPath)
-    var fontName = viewModel.getFont(year: Int(viewModel.yearForRowAtIndexPath(indexPath))!)
+    let fontName = viewModel.getFont(year: Int(viewModel.yearForRowAtIndexPath(indexPath))!)
     cell.headline?.font = UIFont(name: fontName, size: 17)
     return cell
   }

@@ -19,6 +19,21 @@ fileprivate let application = SpotifyManager.SpotifyDeveloperApplication(
 let spotifyManager = SpotifyManager(with: application)
 var savedArticles = [Event]()
 
+func getFont(year: Int) -> String {
+  if (year < 1920) {
+    return "Baskerville"
+  } else if (year < 1940) {
+    return "Futura"
+  } else if (year < 1960) {
+    return "Helvetica"
+  } else if (year < 1980) {
+    return "GillSans"
+  } else if (year < 2000) {
+    return "AmericanTypewriter"
+  }
+  return "Avenir"
+}
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
   

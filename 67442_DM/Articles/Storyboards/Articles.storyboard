@@ -106,4 +106,5 @@
     <resources>
         <image name="today_apps" width="25" height="25"/>
     </resources>
+    <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
 </document>
