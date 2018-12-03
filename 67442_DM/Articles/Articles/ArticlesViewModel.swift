@@ -57,6 +57,21 @@ class ArticlesViewModel {
     let article = articles[indexPath.row]
     return ArticleDetailsViewModel(article: article)
   }
+  
+  func getFont(year: Int) -> String {
+    if (year < 1920) {
+      return "Baskerville"
+    } else if (year < 1940) {
+      return "Futura"
+    } else if (year < 1960) {
+      return "Helvetica"
+    } else if (year < 1980) {
+      return "GillSans"
+    } else if (year < 2000) {
+      return "AmericanTypewriter"
+    }
+    return "Avenir"
+  }
 
   
 }

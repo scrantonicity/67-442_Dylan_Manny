@@ -33,12 +33,13 @@ class TabsViewController: UITabBarController, UITabBarControllerDelegate {
   }
   
   func setUpTabBar() -> Void {
-//    let tabs = self.tabBar.items
+    let tabs = self.tabBar.items
 //    let eventsItem = tabs![0]
 //    let birthsItem = tabs![1]
 //    let deathsItem = tabs![2]
 //    let songsItem = tabs![3]
-//    let savedItem = tabs![4]
+    let savedItem = tabs![4]
+    savedItem.image = UIImage(named: "saved")
     setTintColor()
   }
   
