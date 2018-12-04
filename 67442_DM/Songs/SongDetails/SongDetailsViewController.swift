@@ -13,21 +13,22 @@ class SongDetailsViewController: UIViewController {
   
   var viewModel: SongDetailsViewModel?
   
-  @IBOutlet weak var date: UILabel!
   @IBOutlet weak var trackTitle: UILabel!
   @IBOutlet weak var artist: UILabel!
   @IBOutlet weak var playButton: UIButton!
+  @IBOutlet weak var backgroundImage: UIImageView!
   
 
     override func viewDidLoad() {
       super.viewDidLoad()
-      date.text = viewModel?.date()
+      self.title = viewModel?.date()
       trackTitle.text = viewModel?.song.title
       artist.text = viewModel?.song.artist
       let fontName = getFont(year: Int((viewModel?.song.date[0...3])!) ?? 0)
-      date.font = UIFont(name: fontName, size: 18)
-      trackTitle.font = UIFont(name: fontName, size: 18)
+      trackTitle.font = UIFont(name: fontName, size: 26)
       artist.font = UIFont(name: fontName, size: 18)
+      print(Int(viewModel!.song.date[0...3]))
+      self.backgroundImage.image = getImage(year: Int(viewModel!.song.date[0...3]) ?? 0)
     }
   
     @IBAction func openSpotify(_ sender: Any) {

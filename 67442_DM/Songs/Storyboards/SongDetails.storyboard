@@ -17,51 +17,104 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Song Title" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hzi-d5-FzA">
-                                <rect key="frame" x="174" y="123" width="185" height="72"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="90s" translatesAutoresizingMaskIntoConstraints="NO" id="Vai-CB-y0u" userLabel="background">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="box" translatesAutoresizingMaskIntoConstraints="NO" id="e99-3l-U92" userLabel="headlineBox">
+                                <rect key="frame" x="-3" y="64" width="381" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="kp2-SY-YwI"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JV3-1l-RAC">
+                                <rect key="frame" x="57" y="191.5" width="261" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="2jX-cG-caI"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Artist" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JV3-1l-RAC">
-                                <rect key="frame" x="174" y="203" width="185" height="58"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="italicSystem" pointSize="16"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The #1 song on " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Yg-1r-YZx">
-                                <rect key="frame" x="16" y="83" width="122" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X4n-Bq-dAD">
-                                <rect key="frame" x="16" y="281" width="116" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Listen on Spotify"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="barButtonDark" translatesAutoresizingMaskIntoConstraints="NO" id="I3U-dg-lLd">
+                                <rect key="frame" x="12" y="537" width="351" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="YlO-OY-1bJ"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X4n-Bq-dAD">
+                                <rect key="frame" x="133" y="547" width="144" height="34"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                                <state key="normal" title="Listen on Spotify">
+                                    <color key="titleColor" red="0.24035788841122763" green="0.90422032478497116" blue="0.52676503936663088" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="openSpotify:" destination="h2B-cG-IiQ" eventType="touchUpInside" id="SWR-ou-DCF"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ept-qu-6f9">
-                                <rect key="frame" x="16" y="318" width="104" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="View Full Chart"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="spotifyLogo" translatesAutoresizingMaskIntoConstraints="NO" id="DDK-QK-K8f">
+                                <rect key="frame" x="98" y="552" width="24" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="24" id="Znc-O7-dP0"/>
+                                    <constraint firstAttribute="height" constant="24" id="l5l-8M-JYG"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="barButtonLight" translatesAutoresizingMaskIntoConstraints="NO" id="iMw-yD-yZa">
+                                <rect key="frame" x="12" y="592" width="351" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="38u-Cu-ZJq"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ept-qu-6f9">
+                                <rect key="frame" x="88" y="603" width="199" height="33"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="View Full Billboard Chart">
+                                    <color key="titleColor" red="0.20000000000000001" green="0.80000000000000004" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <segue destination="YiM-wt-Rro" kind="show" identifier="openChart" id="yTm-VY-RaG"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Song Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hzi-d5-FzA">
+                                <rect key="frame" x="49" y="111.5" width="277" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="75" id="rUV-ub-9c9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="I3U-dg-lLd" firstAttribute="bottom" secondItem="iMw-yD-yZa" secondAttribute="top" id="2WH-zP-GVb"/>
+                            <constraint firstItem="hzi-d5-FzA" firstAttribute="leadingMargin" secondItem="e99-3l-U92" secondAttribute="leading" constant="60" id="5FP-EQ-qzP"/>
+                            <constraint firstItem="iMw-yD-yZa" firstAttribute="leadingMargin" secondItem="Q7w-aU-Miu" secondAttribute="leading" constant="20" id="75x-hz-UO8"/>
+                            <constraint firstItem="iMw-yD-yZa" firstAttribute="bottom" secondItem="Q7w-aU-Miu" secondAttribute="bottom" constant="-20" id="8Gf-KS-QdN"/>
+                            <constraint firstItem="X4n-Bq-dAD" firstAttribute="centerX" secondItem="Q7w-aU-Miu" secondAttribute="centerX" constant="20" id="8uz-Gc-ygm"/>
+                            <constraint firstItem="JV3-1l-RAC" firstAttribute="leadingMargin" secondItem="e99-3l-U92" secondAttribute="leadingMargin" constant="60" id="CaW-AW-Tkd"/>
+                            <constraint firstItem="JV3-1l-RAC" firstAttribute="centerY" secondItem="e99-3l-U92" secondAttribute="centerY" constant="40" id="Exh-cg-hzE"/>
+                            <constraint firstItem="X4n-Bq-dAD" firstAttribute="centerY" secondItem="I3U-dg-lLd" secondAttribute="centerY" id="I8P-Oj-HK7"/>
+                            <constraint firstItem="iMw-yD-yZa" firstAttribute="centerX" secondItem="bCy-bI-Yvj" secondAttribute="centerX" id="QIA-ga-puo"/>
+                            <constraint firstItem="I3U-dg-lLd" firstAttribute="leadingMargin" secondItem="Q7w-aU-Miu" secondAttribute="leading" constant="20" id="UBi-rK-IvD"/>
+                            <constraint firstItem="DDK-QK-K8f" firstAttribute="centerY" secondItem="I3U-dg-lLd" secondAttribute="centerY" id="Z1N-7o-K9J"/>
+                            <constraint firstItem="JV3-1l-RAC" firstAttribute="centerX" secondItem="e99-3l-U92" secondAttribute="centerX" id="cRQ-PC-aZ5"/>
+                            <constraint firstItem="e99-3l-U92" firstAttribute="leadingMargin" secondItem="Q7w-aU-Miu" secondAttribute="leading" constant="5" id="dO3-jT-gkf"/>
+                            <constraint firstItem="hzi-d5-FzA" firstAttribute="centerX" secondItem="e99-3l-U92" secondAttribute="centerX" id="dmn-ZY-Hgv"/>
+                            <constraint firstItem="hzi-d5-FzA" firstAttribute="centerY" secondItem="e99-3l-U92" secondAttribute="centerY" constant="-40" id="fnS-gy-5S1"/>
+                            <constraint firstItem="e99-3l-U92" firstAttribute="top" secondItem="Q7w-aU-Miu" secondAttribute="top" id="gjH-Eq-3cu"/>
+                            <constraint firstItem="I3U-dg-lLd" firstAttribute="centerX" secondItem="bCy-bI-Yvj" secondAttribute="centerX" id="nnZ-we-O7R"/>
+                            <constraint firstItem="Ept-qu-6f9" firstAttribute="centerX" secondItem="bCy-bI-Yvj" secondAttribute="centerX" id="tm3-jl-V1L"/>
+                            <constraint firstItem="Ept-qu-6f9" firstAttribute="centerY" secondItem="iMw-yD-yZa" secondAttribute="centerY" id="vT9-PT-Anb"/>
+                            <constraint firstItem="e99-3l-U92" firstAttribute="centerX" secondItem="bCy-bI-Yvj" secondAttribute="centerX" id="wA3-1K-qHS"/>
+                            <constraint firstItem="DDK-QK-K8f" firstAttribute="centerX" secondItem="Q7w-aU-Miu" secondAttribute="centerX" constant="-75" id="x21-MQ-ebA"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Q7w-aU-Miu"/>
                     </view>
                     <navigationItem key="navigationItem" title="Song" id="xDu-2U-ENF"/>
                     <connections>
                         <outlet property="artist" destination="JV3-1l-RAC" id="ogG-av-zXt"/>
-                        <outlet property="date" destination="6Yg-1r-YZx" id="eJc-Xv-rHz"/>
+                        <outlet property="backgroundImage" destination="Vai-CB-y0u" id="x9a-hd-LpM"/>
                         <outlet property="playButton" destination="X4n-Bq-dAD" id="txo-zr-j3d"/>
                         <outlet property="trackTitle" destination="hzi-d5-FzA" id="Hlh-8d-hIZ"/>
                     </connections>
@@ -116,4 +169,11 @@
             <point key="canvasLocation" x="-759" y="159"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="90s" width="547" height="844"/>
+        <image name="barButtonDark" width="425" height="74"/>
+        <image name="barButtonLight" width="425" height="74"/>
+        <image name="box" width="450" height="320"/>
+        <image name="spotifyLogo" width="324" height="325"/>
+    </resources>
 </document>
