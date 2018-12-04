@@ -34,7 +34,8 @@ class ArticleDetailsViewController: UIViewController, UITableViewDataSource, UIT
     }
   
   func setFonts() -> Void {
-    headline.font = UIFont(name: (viewModel?.font)!, size: 18)
+    let fontName = getFont(year: Int((viewModel?.article.year)!) ?? 0)
+    headline.font = UIFont(name: fontName, size: 18)
 //    tableViewLabel.font = UIFont(name: (viewModel?.font)!, size: 18)
   }
   
@@ -73,7 +74,8 @@ class ArticleDetailsViewController: UIViewController, UITableViewDataSource, UIT
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: "lcell", for: indexPath)
     cell.textLabel?.text = viewModel?.headlineAtRow(indexPath)
-    cell.textLabel?.font = UIFont(name: (viewModel?.font)!, size: 17)
+    let fontName = getFont(year: Int((viewModel?.article.year)!) ?? 0)
+    cell.textLabel?.font = UIFont(name: fontName, size: 17)
 //    cell. = UIFont(name: (viewModel?.font)!, size: 16)
     return cell
   }

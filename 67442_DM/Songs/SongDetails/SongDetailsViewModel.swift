@@ -20,16 +20,17 @@ class SongDetailsViewModel {
     self.song = song
   }
   
-//  func refresh() -> Void {
-//    client.fetchSpotifySongs(keyword: song.title) { [unowned self] data in
-//      if let url = self.parser.spotifySongsFromLoadResponse(data) {
-//        self.url = url
-//        print("got url!")
-//        print(self.url)
-//      }
-////      completion()
-//    }
-//  }
+  func date() -> String {
+    let months:[Int:String] = [1:"Jan", 2:"Feb", 3:"Mar", 4: "Apr", 5:"May",
+                               6:"Jun", 7:"Jul", 8:"Aug", 9:"Sep", 10:"Oct",
+                               11:"Nov", 12:"Dec"]
+    let dateCurrent = Date()
+    let calendar = Calendar.current
+    let components = calendar.dateComponents([Calendar.Component.day, Calendar.Component.month, Calendar.Component.year], from: dateCurrent)
+    let year = song.date[0...3]
+    let currentMonth = components.month!
+    return "\(months[currentMonth]!) \(components.day!), \(year)"
+  }
   
   func openSpotify() -> Void {
     spotifyManager.authorize()

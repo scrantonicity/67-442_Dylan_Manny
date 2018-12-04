@@ -50,6 +50,8 @@ class BirthsViewController: UIViewController, UITableViewDataSource, UITableView
     cell.person?.text = viewModel.headlineForRowAtIndexPath(indexPath)
     //    cell.headline?.numberOfLines = 0
     cell.year?.text = viewModel.yearForRowAtIndexPath(indexPath)
+    let fontName = getFont(year: Int(viewModel.yearForRowAtIndexPath(indexPath)) ?? 0)
+    cell.person.font = UIFont(name: fontName, size: 17)
     return cell
   }
   

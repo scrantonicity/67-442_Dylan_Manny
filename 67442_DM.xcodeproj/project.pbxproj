@@ -21,7 +21,6 @@
 		5922763221ADE5A400EC6BAC /* SongDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5922762421ADE5A400EC6BAC /* SongDetailsViewModel.swift */; };
 		5922763321ADE5A400EC6BAC /* SongDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5922762521ADE5A400EC6BAC /* SongDetailsViewController.swift */; };
 		5922763421ADE5A400EC6BAC /* SongDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5922762721ADE5A400EC6BAC /* SongDetails.storyboard */; };
-		5922763521ADE5A400EC6BAC /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5922762821ADE5A400EC6BAC /* TableViewCell.xib */; };
 		5922763621ADE5A400EC6BAC /* Songs.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5922762921ADE5A400EC6BAC /* Songs.storyboard */; };
 		5922763821ADF77200EC6BAC /* SearchSpotifyClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5922763721ADF77200EC6BAC /* SearchSpotifyClient.swift */; };
 		5922763A21ADF77F00EC6BAC /* SpotifyParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5922763921ADF77F00EC6BAC /* SpotifyParser.swift */; };
@@ -35,6 +34,7 @@
 		5949915D21B105AB0066E896 /* SongDetailsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5949915C21B105AB0066E896 /* SongDetailsViewModelTests.swift */; };
 		5949916121B106270066E896 /* BirthsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5949916021B106270066E896 /* BirthsViewModelTests.swift */; };
 		5949916321B1063B0066E896 /* BirthWebViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5949916221B1063B0066E896 /* BirthWebViewModelTests.swift */; };
+		594BFDF021B66CB1000EE08C /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 594BFDEF21B66CB1000EE08C /* TableViewCell.xib */; };
 		594C922C2195203900B4256C /* Tabs.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 594C922B2195203900B4256C /* Tabs.storyboard */; };
 		594C922E2195257000B4256C /* TabsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594C922D2195257000B4256C /* TabsViewController.swift */; };
 		59C386BD218E1435003F5919 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C386BC218E1435003F5919 /* AppDelegate.swift */; };
@@ -112,7 +112,6 @@
 		5922762421ADE5A400EC6BAC /* SongDetailsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongDetailsViewModel.swift; sourceTree = "<group>"; };
 		5922762521ADE5A400EC6BAC /* SongDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongDetailsViewController.swift; sourceTree = "<group>"; };
 		5922762721ADE5A400EC6BAC /* SongDetails.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SongDetails.storyboard; sourceTree = "<group>"; };
-		5922762821ADE5A400EC6BAC /* TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		5922762921ADE5A400EC6BAC /* Songs.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Songs.storyboard; sourceTree = "<group>"; };
 		5922763721ADF77200EC6BAC /* SearchSpotifyClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchSpotifyClient.swift; sourceTree = "<group>"; };
 		5922763921ADF77F00EC6BAC /* SpotifyParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpotifyParser.swift; sourceTree = "<group>"; };
@@ -128,6 +127,7 @@
 		5949915C21B105AB0066E896 /* SongDetailsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongDetailsViewModelTests.swift; sourceTree = "<group>"; };
 		5949916021B106270066E896 /* BirthsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthsViewModelTests.swift; sourceTree = "<group>"; };
 		5949916221B1063B0066E896 /* BirthWebViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthWebViewModelTests.swift; sourceTree = "<group>"; };
+		594BFDEF21B66CB1000EE08C /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		594C922B2195203900B4256C /* Tabs.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tabs.storyboard; sourceTree = "<group>"; };
 		594C922D2195257000B4256C /* TabsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabsViewController.swift; sourceTree = "<group>"; };
 		59C386B9218E1435003F5919 /* DailyArchive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyArchive.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -253,8 +253,8 @@
 			isa = PBXGroup;
 			children = (
 				5922762721ADE5A400EC6BAC /* SongDetails.storyboard */,
-				5922762821ADE5A400EC6BAC /* TableViewCell.xib */,
 				5922762921ADE5A400EC6BAC /* Songs.storyboard */,
+				594BFDEF21B66CB1000EE08C /* TableViewCell.xib */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -712,7 +712,6 @@
 				653734EF21AE239E0064EA8A /* Deaths.storyboard in Resources */,
 				653734CF21ACDAD40064EA8A /* Births.storyboard in Resources */,
 				5922763621ADE5A400EC6BAC /* Songs.storyboard in Resources */,
-				5922763521ADE5A400EC6BAC /* TableViewCell.xib in Resources */,
 				653734F121AE24CC0064EA8A /* DeathCell.xib in Resources */,
 				653734D121ACDE1B0064EA8A /* BirthCell.xib in Resources */,
 				6589897A218F965A00D53E95 /* Headline.xib in Resources */,
@@ -722,6 +721,7 @@
 				59022FB121B1A4A400A5C87C /* Saved.storyboard in Resources */,
 				6589898621952B4A00D53E95 /* ArticleDetails.storyboard in Resources */,
 				59C386CA218E1439003F5919 /* LaunchScreen.storyboard in Resources */,
+				594BFDF021B66CB1000EE08C /* TableViewCell.xib in Resources */,
 				6589898C2195338F00D53E95 /* Links.xib in Resources */,
 				59C386E9218F7E18003F5919 /* billboard.json in Resources */,
 				59C386EB218F8C85003F5919 /* Main.storyboard in Resources */,

@@ -10,11 +10,9 @@ import Foundation
 
 class ArticleDetailsViewModel {
   let article: Event
-  let font: String
   
   init(article: Event) {
     self.article = article
-    self.font = getFont(year: Int(article.year)!)
   }
   
   func numberOfRows() -> Int {

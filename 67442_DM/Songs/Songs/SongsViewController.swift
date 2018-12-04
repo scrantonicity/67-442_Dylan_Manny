@@ -47,6 +47,10 @@ class SongsViewController: UIViewController, UITableViewDataSource, UITableViewD
     cell.year?.text = viewModel.yearForRowAtIndexPath(indexPath)
     cell.title?.text = viewModel.titleForRowAtIndexPath(indexPath)
     cell.artist?.text = viewModel.artistForRowAtIndexPath(indexPath)
+    let fontName = getFont(year: Int(viewModel.yearForRowAtIndexPath(indexPath)) ?? 0)
+    cell.year?.font = UIFont(name: fontName, size: 18)
+    cell.title?.font = UIFont(name: fontName, size: 18)
+    cell.artist?.font = UIFont(name: fontName, size: 18)
     return cell
   }
   

@@ -17,10 +17,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bHY-2I-7k9">
-                                <rect key="frame" x="16" y="123" width="138" height="138"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Song Title" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hzi-d5-FzA">
                                 <rect key="frame" x="174" y="123" width="185" height="72"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -65,7 +61,6 @@
                     <navigationItem key="navigationItem" title="Song" id="xDu-2U-ENF"/>
                     <connections>
                         <outlet property="artist" destination="JV3-1l-RAC" id="ogG-av-zXt"/>
-                        <outlet property="cover" destination="bHY-2I-7k9" id="eus-Ly-Vd3"/>
                         <outlet property="date" destination="6Yg-1r-YZx" id="eJc-Xv-rHz"/>
                         <outlet property="playButton" destination="X4n-Bq-dAD" id="txo-zr-j3d"/>
                         <outlet property="trackTitle" destination="hzi-d5-FzA" id="Hlh-8d-hIZ"/>
