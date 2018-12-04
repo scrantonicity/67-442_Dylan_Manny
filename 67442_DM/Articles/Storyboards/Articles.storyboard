@@ -44,7 +44,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Events" id="EtO-pZ-LKn">
-                        <barButtonItem key="rightBarButtonItem" title="Filter" id="10B-C5-Dck">
+                        <barButtonItem key="rightBarButtonItem" title="Sort" id="10B-C5-Dck">
                             <connections>
                                 <action selector="filterHit:" destination="eef-iK-Hy1" id="fUa-PW-eEY"/>
                             </connections>

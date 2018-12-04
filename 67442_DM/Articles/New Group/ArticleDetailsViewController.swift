@@ -18,6 +18,7 @@ class ArticleDetailsViewController: UIViewController, UITableViewDataSource, UIT
   @IBOutlet weak var shareButton: UIBarButtonItem!
   @IBOutlet weak var saveButton: UIBarButtonItem!
   @IBOutlet weak var backgroundImage: UIImageView!
+//  @IBOutlet weak var tableViewLabel: UILabel!
 
     override func viewDidLoad() {
       super.viewDidLoad()
@@ -34,6 +35,7 @@ class ArticleDetailsViewController: UIViewController, UITableViewDataSource, UIT
   
   func setFonts() -> Void {
     headline.font = UIFont(name: (viewModel?.font)!, size: 18)
+//    tableViewLabel.font = UIFont(name: (viewModel?.font)!, size: 18)
   }
   
   
