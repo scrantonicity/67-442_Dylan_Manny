@@ -19,6 +19,48 @@ fileprivate let application = SpotifyManager.SpotifyDeveloperApplication(
 let spotifyManager = SpotifyManager(with: application)
 var savedArticles = [Event]()
 
+func getFont(year: Int) -> String {
+  if (year < 1920) {
+    return "Baskerville"
+  } else if (year < 1940) {
+    return "AmericanTypewriter"
+  } else if (year < 1960) {
+    return "Helvetica"
+  } else if (year < 1980) {
+    return "GillSans"
+  } else if (year < 2000) {
+    return "Avenir-Medium"
+  }
+  return "SanFranciscoDisplay-Medium"
+}
+
+func getImage(year: Int) -> UIImage {
+  switch year {
+  case _ where year < 1920:
+    return UIImage(named: "10s")!
+  case _ where year < 1930:
+    return UIImage(named: "20s")!
+  case _ where year < 1940:
+    return UIImage(named: "30s")!
+  case _ where year < 1950:
+    return UIImage(named: "40s")!
+  case _ where year < 1960:
+    return UIImage(named: "50s")!
+  case _ where year < 1970:
+    return UIImage(named: "60s")!
+  case _ where year < 1980:
+    return UIImage(named: "70s")!
+  case _ where year < 1990:
+    return UIImage(named: "80s")!
+  case _ where year < 2000:
+    return UIImage(named: "90s")!
+  case _ where year < 2010:
+    return UIImage(named: "2000s")!
+  default:
+    return UIImage(named: "2010s")!
+  }
+}
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
   

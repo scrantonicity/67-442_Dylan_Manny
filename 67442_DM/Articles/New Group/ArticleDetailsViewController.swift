@@ -13,20 +13,31 @@ class ArticleDetailsViewController: UIViewController, UITableViewDataSource, UIT
   var viewModel: ArticleDetailsViewModel?
   
   @IBOutlet weak var headline: UILabel!
-  @IBOutlet weak var year: UILabel!
+  //@IBOutlet weak var year: UILabel!
   @IBOutlet var tableView: UITableView!
   @IBOutlet weak var shareButton: UIBarButtonItem!
   @IBOutlet weak var saveButton: UIBarButtonItem!
+  @IBOutlet weak var backgroundImage: UIImageView!
+//  @IBOutlet weak var tableViewLabel: UILabel!
 
     override func viewDidLoad() {
       super.viewDidLoad()
       headline.text = viewModel?.article.headline
 //      year.text = viewModel?.article.year
-      year.text = viewModel?.date()
+      //year.text = viewModel?.date()
 //      let cellNib = UINib(nibName: "Links", bundle: nil)
 //      tableView.register(cellNib, forCellReuseIdentifier: "linkcell")
+      self.title = viewModel?.date()
+      setFonts()
+      self.backgroundImage.image = getImage(year: Int((viewModel?.article.year)!)!)
       tableView.reloadData()
     }
+  
+  func setFonts() -> Void {
+    let fontName = getFont(year: Int((viewModel?.article.year)!) ?? 0)
+    headline.font = UIFont(name: fontName, size: 18)
+//    tableViewLabel.font = UIFont(name: (viewModel?.font)!, size: 18)
+  }
   
   
   override func viewWillAppear(_ animated: Bool) {
@@ -38,9 +49,9 @@ class ArticleDetailsViewController: UIViewController, UITableViewDataSource, UIT
   }
   
   @IBAction func shareButtonTapped(_ sender: Any) {
-    let text = self.headline.text!
-    let year = self.year.text!
-    let textToShare = "Did you know? On \(year), \(text)"
+    let text = viewModel?.article.headline
+    let year = viewModel?.article.year
+    let textToShare = "Did you know? On \(String(describing: year)), \(String(describing: text))"
     
     let ac = UIActivityViewController(activityItems: [textToShare], applicationActivities: nil)
     present(ac, animated: true)
@@ -63,6 +74,9 @@ class ArticleDetailsViewController: UIViewController, UITableViewDataSource, UIT
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: "lcell", for: indexPath)
     cell.textLabel?.text = viewModel?.headlineAtRow(indexPath)
+    let fontName = getFont(year: Int((viewModel?.article.year)!) ?? 0)
+    cell.textLabel?.font = UIFont(name: fontName, size: 17)
+//    cell. = UIFont(name: (viewModel?.font)!, size: 16)
     return cell
   }
   
