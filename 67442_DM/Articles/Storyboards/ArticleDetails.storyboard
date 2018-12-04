@@ -34,7 +34,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="90s" translatesAutoresizingMaskIntoConstraints="NO" id="lx4-hq-Xz1">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="90s" translatesAutoresizingMaskIntoConstraints="NO" id="lx4-hq-Xz1" userLabel="background">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -42,7 +42,7 @@
                                 <rect key="frame" x="0.0" y="74" width="375" height="235"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="box" translatesAutoresizingMaskIntoConstraints="NO" id="lUv-7O-jUJ" userLabel="linkBox">
-                                <rect key="frame" x="0.0" y="357" width="365" height="320"/>
+                                <rect key="frame" x="0.0" y="357" width="375" height="320"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Learn more" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ogh-Zc-yrJ">
                                 <rect key="frame" x="40" y="402" width="91" height="21"/>
@@ -51,14 +51,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7SS-lb-kzJ">
-                                <rect key="frame" x="20" y="447" width="325" height="180"/>
+                                <rect key="frame" x="20" y="447" width="335" height="180"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="lcell" rowHeight="47" id="m7I-9Y-8mx">
-                                        <rect key="frame" x="0.0" y="28" width="325" height="47"/>
+                                        <rect key="frame" x="0.0" y="28" width="335" height="47"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="m7I-9Y-8mx" id="dT0-jf-UUh">
-                                            <rect key="frame" x="0.0" y="0.0" width="292" height="46.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="302" height="46.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <viewLayoutGuide key="safeArea" id="c27-Gv-HXu"/>
                                         </tableViewCellContentView>
@@ -126,6 +126,7 @@
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
+                        <outlet property="backgroundImage" destination="lx4-hq-Xz1" id="rRk-ov-jWs"/>
                         <outlet property="headline" destination="1Tm-bH-mW1" id="4Xl-o0-QOz"/>
                         <outlet property="saveButton" destination="vvF-o4-h02" id="eHQ-e2-HjZ"/>
                         <outlet property="shareButton" destination="1VD-mJ-hm1" id="Ydp-v5-i5g"/>

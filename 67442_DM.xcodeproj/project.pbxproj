@@ -584,8 +584,8 @@
 		65898981218FE64800D53E95 /* Articles */ = {
 			isa = PBXGroup;
 			children = (
-				65898975218F92CF00D53E95 /* ArticlesViewModel.swift */,
 				6589897D218F9A0400D53E95 /* ArticlesViewController.swift */,
+				65898975218F92CF00D53E95 /* ArticlesViewModel.swift */,
 				6589897B218F96EF00D53E95 /* HeadlineTableViewCell.swift */,
 			);
 			path = Articles;

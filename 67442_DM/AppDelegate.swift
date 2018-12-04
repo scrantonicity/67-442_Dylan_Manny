@@ -34,6 +34,33 @@ func getFont(year: Int) -> String {
   return "Avenir"
 }
 
+func getImage(year: Int) -> UIImage {
+  switch year {
+  case _ where year < 1920:
+    return UIImage(named: "10s")!
+  case _ where year < 1930:
+    return UIImage(named: "90s")!
+  case _ where year < 1940:
+    return UIImage(named: "90s")!
+  case _ where year < 1950:
+    return UIImage(named: "90s")!
+  case _ where year < 1960:
+    return UIImage(named: "90s")!
+  case _ where year < 1970:
+    return UIImage(named: "90s")!
+  case _ where year < 1980:
+    return UIImage(named: "90s")!
+  case _ where year < 1990:
+    return UIImage(named: "90s")!
+  case _ where year < 2000:
+    return UIImage(named: "90s")!
+  case _ where year < 2010:
+    return UIImage(named: "90s")!
+  default:
+    return UIImage(named: "90s")!
+  }
+}
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
   

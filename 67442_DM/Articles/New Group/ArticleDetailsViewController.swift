@@ -17,6 +17,7 @@ class ArticleDetailsViewController: UIViewController, UITableViewDataSource, UIT
   @IBOutlet var tableView: UITableView!
   @IBOutlet weak var shareButton: UIBarButtonItem!
   @IBOutlet weak var saveButton: UIBarButtonItem!
+  @IBOutlet weak var backgroundImage: UIImageView!
 
     override func viewDidLoad() {
       super.viewDidLoad()
@@ -27,6 +28,7 @@ class ArticleDetailsViewController: UIViewController, UITableViewDataSource, UIT
 //      tableView.register(cellNib, forCellReuseIdentifier: "linkcell")
       self.title = viewModel?.date()
       setFonts()
+      self.backgroundImage.image = getImage(year: Int((viewModel?.article.year)!)!)
       tableView.reloadData()
     }
   
