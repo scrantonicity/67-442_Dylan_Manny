@@ -34,19 +34,19 @@
                             <outlet property="delegate" destination="T2R-0X-UkB" id="r77-79-4gi"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Saved Events" id="oJ6-Zk-382"/>
+                    <navigationItem key="navigationItem" title="Saved" id="oJ6-Zk-382"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7DS-RZ-FlE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="794.39999999999998" y="-40.029985007496258"/>
         </scene>
-        <!--ArticleDetails-->
+        <!--Details-->
         <scene sceneID="jOT-zb-oXr">
             <objects>
-                <viewControllerPlaceholder storyboardName="ArticleDetails" id="av1-s1-y27" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardIdentifier="Details" storyboardName="ArticleDetails" referencedIdentifier="Details" id="av1-s1-y27" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZHd-Xu-wKr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1576.8" y="-95.352323838080963"/>
+            <point key="canvasLocation" x="1556" y="-40"/>
         </scene>
         <!--Saved-->
         <scene sceneID="AVf-GV-A2U">

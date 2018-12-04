@@ -55,6 +55,7 @@ class SavedViewModel {
   
   func detailViewModelForRowAtIndexPath(_ indexPath: IndexPath) -> ArticleDetailsViewModel {
     let article = articles[indexPath.row]
+    print("created ArticleDetailsViewModel")
     return ArticleDetailsViewModel(article: article)
   }
   
