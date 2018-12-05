@@ -20,8 +20,8 @@ class deathParser {
       return nil
     }
   }
-  
-  
+
+
   func deathsFromWiki(_ data:Data?) -> [Death]? {
     guard let result = deathParser(data) else {
       print("Error: couldn't parse death result from data")

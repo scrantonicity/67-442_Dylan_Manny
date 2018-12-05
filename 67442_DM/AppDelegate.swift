@@ -18,6 +18,16 @@ fileprivate let application = SpotifyManager.SpotifyDeveloperApplication(
 
 let spotifyManager = SpotifyManager(with: application)
 var savedArticles = [Event]()
+var savedDict:[String:Event] = [:]
+//var savedArticles = savedFromDict()
+//
+func updateDict() {
+  for item in savedArticles{
+    let headline = item.headline
+    savedDict[headline] = item
+  }
+  print("updated dict")
+}
 
 func getFont(year: Int) -> String {
   if (year < 1920) {

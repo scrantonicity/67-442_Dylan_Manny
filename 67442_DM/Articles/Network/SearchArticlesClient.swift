@@ -14,7 +14,7 @@ class SearchArticlesClient {
     
     //Must be https or else this will complain
     let urlString = "https://history.muffinlabs.com/date/\(month)/\(day)"
-    
+    print(urlString)
     Alamofire.request(urlString).response { response in
       if let error = response.error {
         print("Error fetching repositories: \(error)")

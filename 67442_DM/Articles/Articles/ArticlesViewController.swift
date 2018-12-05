@@ -79,6 +79,8 @@ class ArticlesViewController: UIViewController, UITableViewDataSource, UITableVi
     let date = getCurrentDate()
     let month = Int(date.0)!
     let day = Int(date.1)!
+//    let month = 12
+//    let day = 7
     viewModel.refresh(month: month, day: day) { [unowned self] in
       DispatchQueue.main.async {
         self.tableView.reloadData()
