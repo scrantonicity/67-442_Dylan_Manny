@@ -88,10 +88,11 @@ class ArticleDetailsViewModel {
     if savedDict.removeValue(forKey:key) != nil {
       self.removeFromArray(event)
       self.removeFromCore()
-      print("The Dictionary now has \(savedDict.count) entries")
+      print("Removed! The Dictionary now has \(savedDict.count) entries")
     } else {
       savedArticles.append(event)
       savedDict[key] = event
+      saveEvent(article)
       print("Added! Dictionary now has \(savedDict.count) entries \n")
     }
   }
@@ -143,6 +144,28 @@ class ArticleDetailsViewModel {
         savedArticles.remove(at: count)
       }
       count += 1
+    }
+  }
+  
+  func saveEvent(_ event: Event){
+    // Connect to the context for the container stack
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    let context = appDelegate.persistentContainer.viewContext
+    // Specifically select the Event entity to save this object to
+    let entity = NSEntityDescription.entity(forEntityName: "EventModel", in: context)
+    let newEvent = NSManagedObject(entity: entity!, insertInto: context)
+    // setting values for links
+//    let link = viewModel!.createLinkString(viewModel!.links())
+    let link = createLinkString(self.links())
+    // Set values for events
+    newEvent.setValue(article.headline, forKey: "headline")
+    newEvent.setValue(article.year, forKey:"date")
+    newEvent.setValue(link, forKey: "links")
+    do {
+      try context.save()
+      print("saved to core data")
+    } catch {
+      print("Failed saving")
     }
   }
   

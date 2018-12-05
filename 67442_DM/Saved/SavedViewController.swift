@@ -102,7 +102,7 @@ class SavedViewController: UITableViewController {
     let title = data.value(forKey: "headline") as! String
     let newEvent = Event(year: year, headline: title, links: links)
     savedArticles.append(newEvent)
-//    savedDict[newEvent.headline] = newEvent
+    savedDict[newEvent.headline] = newEvent
   }
   
   
