@@ -72,7 +72,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="b8t-I6-xhY">
                         <barButtonItem key="rightBarButtonItem" systemItem="action" id="lgB-Km-Mg4">
-                            <color key="tintColor" red="0.99466502359999998" green="1" blue="0.96806740550000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="shareButtonTapped:" destination="OwW-0W-fm7" id="3kr-ie-2Qy"/>
                             </connections>
@@ -95,6 +95,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="EbE-Qq-0RW">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" red="1" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <connections>
