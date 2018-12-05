@@ -34,7 +34,7 @@ class SavedViewController: UITableViewController {
       let result = try context.fetch(request)
       for data in result as! [NSManagedObject] {
         self.loadingSaved(data: data)
-        print(data.value(forKey: "headline") as! String)
+//        print(data.value(forKey: "headline") as! String)
       }
     } catch {
       print("Failed")
@@ -50,6 +50,7 @@ class SavedViewController: UITableViewController {
     if let selectedRow = tableView.indexPathForSelectedRow {
       tableView.deselectRow(at: selectedRow, animated: true)
     }
+//    tableView.reloadData()
   }
   
   //MARK: - Actions
@@ -101,6 +102,7 @@ class SavedViewController: UITableViewController {
     let title = data.value(forKey: "headline") as! String
     let newEvent = Event(year: year, headline: title, links: links)
     savedArticles.append(newEvent)
+//    savedDict[newEvent.headline] = newEvent
   }
   
   

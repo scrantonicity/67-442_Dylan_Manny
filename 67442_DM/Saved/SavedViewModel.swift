@@ -13,6 +13,7 @@ class SavedViewModel {
   var reverse = true
   
   
+  
   func numberOfRows() -> Int {
     return articles.count
   }
@@ -33,7 +34,7 @@ class SavedViewModel {
   
   func detailViewModelForRowAtIndexPath(_ indexPath: IndexPath) -> ArticleDetailsViewModel {
     let article = articles[indexPath.row]
-    print("created ArticleDetailsViewModel")
+//    print("created ArticleDetailsViewModel")
     return ArticleDetailsViewModel(article: article)
   }
   
@@ -55,6 +56,15 @@ class SavedViewModel {
     let newLink = Link(title: title, url: url)
     return newLink
   }
+  
+//  func savedFromDict() -> [Event]{
+//    let saved = savedDict
+//    var array:[Event] = []
+//    for (_,pair) in saved {
+//      array.append(pair)
+//    }
+//    return array
+//  }
   
   
 }

@@ -31,6 +31,7 @@ class ArticleDetailsViewController: UIViewController, UITableViewDataSource, UIT
       self.title = viewModel?.date()
       setFonts()
       self.backgroundImage.image = getImage(year: Int((viewModel?.article.year)!)!)
+      self.saveButton.tintColor = viewModel!.updateSavedColor()
       tableView.reloadData()
     }
   
@@ -60,10 +61,13 @@ class ArticleDetailsViewController: UIViewController, UITableViewDataSource, UIT
   }
   
   @IBAction func saveButtonTapped() {
-    savedArticles.append(self.viewModel!.article)
-    self.saveButton.tintColor = UIColor.white
-    saveEvent(self.viewModel!.article)
-    print(savedArticles)
+//    savedArticles.append(self.viewModel!.article)
+    viewModel?.savedButtonTapped(self.viewModel!.article)
+//    self.saveButton.tintColor = UIColor.white
+    self.saveButton.tintColor = self.viewModel!.updateSavedColor()
+    if viewModel!.isSaved() {
+      saveEvent(self.viewModel!.article)
+    }
   }
   
   
