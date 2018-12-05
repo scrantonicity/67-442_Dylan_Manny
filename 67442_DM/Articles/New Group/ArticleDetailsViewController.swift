@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class ArticleDetailsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
   
@@ -61,6 +62,7 @@ class ArticleDetailsViewController: UIViewController, UITableViewDataSource, UIT
   @IBAction func saveButtonTapped() {
     savedArticles.append(self.viewModel!.article)
     self.saveButton.tintColor = UIColor.white
+    saveEvent(self.viewModel!.article)
     print(savedArticles)
   }
   
@@ -87,6 +89,27 @@ class ArticleDetailsViewController: UIViewController, UITableViewDataSource, UIT
       let link = viewModel?.linkAtRow(indexPath)
       (segue.destination as! ArticleWebViewController).urlString = link
       print("going to link")
+    }
+  }
+  
+  func saveEvent(_ event: Event){
+    // Connect to the context for the container stack
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    let context = appDelegate.persistentContainer.viewContext
+    // Specifically select the Event entity to save this object to
+    let entity = NSEntityDescription.entity(forEntityName: "EventModel", in: context)
+    let newEvent = NSManagedObject(entity: entity!, insertInto: context)
+    // setting values for links
+    let link = viewModel!.createLinkString(viewModel!.links())
+    // Set values for events
+    newEvent.setValue(viewModel?.article.headline, forKey: "headline")
+    newEvent.setValue(viewModel?.article.year, forKey:"date")
+    newEvent.setValue(link, forKey: "links")
+    do {
+      try context.save()
+      print("saved to core data")
+    } catch {
+      print("Failed saving")
     }
   }
   

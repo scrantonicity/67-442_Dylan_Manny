@@ -12,28 +12,6 @@ class SavedViewModel {
   var articles = savedArticles
   var reverse = true
   
-//  let client = SearchArticlesClient()
-//  let parser = Parser()
-  
-  
-//  func refresh(month: Int, day: Int, _ completion: @escaping () -> Void) {
-//    print("running refresh")
-//    client.fetchArticles(month: month, day: day) { [unowned self] data in
-//      print("fetched articles")
-//      if let articles = self.parser.articlesFromWiki(data) {
-//        print("finished refresh")
-//        if self.reverse {
-//          self.articles = articles.reversed()
-//        } else {
-//          self.articles = articles
-//        }
-//        //        for article in articles{
-//        //          print(article)
-//        //        }
-//      }
-//      completion()
-//    }
-//  }
   
   func numberOfRows() -> Int {
     return articles.count
@@ -57,6 +35,25 @@ class SavedViewModel {
     let article = articles[indexPath.row]
     print("created ArticleDetailsViewModel")
     return ArticleDetailsViewModel(article: article)
+  }
+  
+  func createLinkArray(_ linkString: String) -> [Link] {
+    var array:[Link] = []
+    let seperatedString = linkString.split(separator: ";")
+    for pair in seperatedString {
+      let link = createLink(String(pair))
+      array.append(link)
+    }
+    return array
+  }
+  
+  func createLink(_ string:String) -> Link{
+    //given "title, url"
+    let lines = string.split(separator: ",")
+    let title = String(lines[0])
+    let url = String(lines[1])
+    let newLink = Link(title: title, url: url)
+    return newLink
   }
   
   

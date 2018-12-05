@@ -59,7 +59,7 @@ class ArticleDetailsViewModel {
   }
   
   //returns list with tuples of titles and urls
-  private func links() -> [(String,String)] {
+  func links() -> [(String,String)] {
     var list:[(String, String)] = []
     let links = article.links
     for item in links {
@@ -68,5 +68,18 @@ class ArticleDetailsViewModel {
     }
     return list
   }
+  
+  func createLinkString(_ links: [(String,String)]) -> String {
+    var result:String = ""
+    //    let links = viewModel?.links()
+    for link in links {
+      let title = link.0
+      let url = link.1
+      let pair = "\(title),\(url);"
+      result += pair
+    }
+    return result
+  }
+  
 }
 

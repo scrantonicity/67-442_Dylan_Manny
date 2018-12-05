@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class SavedViewController: UITableViewController {
   
@@ -24,6 +25,20 @@ class SavedViewController: UITableViewController {
     // register the nib
     let cellNib = UINib(nibName: "Headline", bundle: nil)
     tableView.register(cellNib, forCellReuseIdentifier: "acell")
+    //loading in saved data
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    let context = appDelegate.persistentContainer.viewContext
+    let request = NSFetchRequest<NSFetchRequestResult>(entityName: "EventModel")
+    request.returnsObjectsAsFaults = false
+    do {
+      let result = try context.fetch(request)
+      for data in result as! [NSManagedObject] {
+        self.loadingSaved(data: data)
+        print(data.value(forKey: "headline") as! String)
+      }
+    } catch {
+      print("Failed")
+    }
     // get the data for the table
     tableView.reloadData()
   }
@@ -51,7 +66,7 @@ class SavedViewController: UITableViewController {
   
   // MARK: - Table View
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    print(viewModel.numberOfRows())
+//    print(viewModel.numberOfRows())
     return viewModel.numberOfRows()
   }
   
@@ -78,23 +93,16 @@ class SavedViewController: UITableViewController {
     }
   }
   
-//  func refresh() -> Void {
-//    let date = getCurrentDate()
-//    let month = Int(date.0)!
-//    let day = Int(date.1)!
-//    viewModel.refresh(month: month, day: day) { [unowned self] in
-//      DispatchQueue.main.async {
-//        self.tableView.reloadData()
-//      }
-//    }
-//  }
+  // MARK: - Loading
+  func loadingSaved(data: NSManagedObject) {
+    let linkString = data.value(forKey: "links") as! String
+    let links = viewModel.createLinkArray(linkString)
+    let year = data.value(forKey: "date") as! String
+    let title = data.value(forKey: "headline") as! String
+    let newEvent = Event(year: year, headline: title, links: links)
+    savedArticles.append(newEvent)
+  }
   
-//  func getCurrentDate() -> (String, String) {
-//    let dateCurrent = Date()
-//    let calendar = Calendar.current
-//    let components = calendar.dateComponents([Calendar.Component.day, Calendar.Component.month, Calendar.Component.year], from: dateCurrent)
-//    return ("\(components.month ?? 1)", "\(components.day ?? 1)")
-//  }
   
 }
 

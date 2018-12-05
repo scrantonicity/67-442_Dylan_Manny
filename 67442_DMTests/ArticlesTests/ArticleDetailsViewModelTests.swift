@@ -50,4 +50,26 @@ class ArticleDetailsViewModelTests: XCTestCase {
     return Event(year: "2018", headline: "TestHeadline", links: [Link(title: "Who has two thumbs and hates Todd Packer?", url: "https://media.giphy.com/media/aVOgaQLUVsHss/giphy.gif"), Link(title: "Merry Christmas Dwight.", url: "https://media.giphy.com/media/6IDzg16LaG7yU/giphy.gif")])
   }
   
+  let link1 = ( "title1","url1")
+  let link2 = ("title2","url2")
+  var links:[(String,String)] = []
+  
+  
+  func test_createLinkString() {
+    links.append(link1)
+    links.append(link2)
+    let model = ArticleDetailsViewController()
+    let result = model.createLinkString(links)
+    XCTAssertEqual(result, "title1,url1;title2,url2;")
+  }
+  
+//  func test_createLink(){
+//    let string = "title, url"
+//    let event1 = createEvent()
+//    let viewModel = ArticleDetailsViewModel(article: event1)
+////    let newLink = Link(title: "title", url: "url")
+//    let result = viewModel.createLink(string)
+//
+//  }
+  
 }

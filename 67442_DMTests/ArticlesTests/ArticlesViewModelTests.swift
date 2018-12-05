@@ -56,5 +56,6 @@ class ArticlesViewModelTests: XCTestCase {
   func createEvent() -> Event {
     return Event(year: "2018", headline: "TestHeadline", links: [])
   }
+
   
 }
