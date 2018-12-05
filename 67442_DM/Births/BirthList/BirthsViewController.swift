@@ -18,7 +18,7 @@ class BirthsViewController: UIViewController, UITableViewDataSource, UITableView
   
   
   @IBOutlet var tableView: UITableView! 
-  @IBOutlet weak var filter: UIBarButtonItem!
+  @IBOutlet weak var sort: UIBarButtonItem!
   
   // MARK: - viewDidLoad, WillAppear
   override func viewDidLoad() {
@@ -37,6 +37,14 @@ class BirthsViewController: UIViewController, UITableViewDataSource, UITableView
   }
   
   //MARK: - Actions
+  @IBAction func sortHit() {
+    if viewModel.reverse {
+      viewModel.reverse = false
+    } else {
+      viewModel.reverse = true
+    }
+    self.refresh()
+  }
   
   
   

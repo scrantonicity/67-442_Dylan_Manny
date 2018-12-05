@@ -63,9 +63,6 @@ class ArticleDetailsViewController: UIViewController, UITableViewDataSource, UIT
   @IBAction func saveButtonTapped() {
     viewModel?.savedButtonTapped(self.viewModel!.article)
     self.saveButton.tintColor = self.viewModel!.updateSavedColor()
-//    if viewModel!.isSaved() {
-//      saveEvent(self.viewModel!.article)
-//    }
   }
   
   

@@ -10,7 +10,7 @@ import Foundation
 
 class BirthViewModel {
   var births = [Birth]()
-//  var reverse = false
+  var reverse = true
   
   let client = SearchWikiClient()
   let parser = birthParser()
@@ -18,7 +18,11 @@ class BirthViewModel {
   func refresh(month: Int, day: Int, _ completion: @escaping () -> Void) {
     client.fetchWikiInfo(month: month, day: day) { [unowned self] data in
       if let births = self.parser.birthsFromWiki(data) {
+        if self.reverse {
           self.births = births.reversed()
+        } else {
+          self.births = births
+        }
       }
       completion()
     }
