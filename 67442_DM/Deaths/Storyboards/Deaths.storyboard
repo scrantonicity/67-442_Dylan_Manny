@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xjU-iQ-cJR">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xjU-iQ-cJR">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -35,8 +35,15 @@
                             <outlet property="delegate" destination="wIk-LZ-ZUO" id="Wfp-cA-dLr"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Deaths" id="k54-eF-9yA"/>
+                    <navigationItem key="navigationItem" title="Deaths" id="k54-eF-9yA">
+                        <barButtonItem key="rightBarButtonItem" title="Sort" id="2qE-Fv-xHk">
+                            <connections>
+                                <action selector="sortHit" destination="wIk-LZ-ZUO" id="FWq-HU-l32"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="sort" destination="2qE-Fv-xHk" id="T2H-pg-WmA"/>
                         <outlet property="tableView" destination="nGb-PO-bj6" id="BEy-2x-bNV"/>
                     </connections>
                 </tableViewController>

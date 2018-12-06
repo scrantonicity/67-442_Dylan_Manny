@@ -10,6 +10,7 @@ import Foundation
 
 class DeathViewModel {
   var deaths = [Death]()
+  var reverse = true
   
   let client = SearchWikiClient()
   let parser = deathParser()
@@ -17,7 +18,11 @@ class DeathViewModel {
   func refresh(month: Int, day: Int, _ completion: @escaping () -> Void) {
     client.fetchWikiInfo(month: month, day: day) { [unowned self] data in
       if let deaths = self.parser.deathsFromWiki(data) {
-        self.deaths = deaths.reversed()
+        if self.reverse {
+          self.deaths = deaths.reversed()
+        } else {
+          self.deaths = deaths
+        }
       }
       completion()
     }
