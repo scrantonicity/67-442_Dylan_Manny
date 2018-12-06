@@ -23,11 +23,25 @@ class SongsViewController: UIViewController, UITableViewDataSource, UITableViewD
     let cellNib = UINib(nibName: "TableViewCell", bundle: nil)
     tableView.register(cellNib, forCellReuseIdentifier: "scell")
     // get the data for the table
+    self.refresh()
+  }
+  
+  func refresh() -> Void {
     viewModel.refresh { [unowned self] in
       DispatchQueue.main.async {
         self.tableView.reloadData()
       }
     }
+  }
+  
+  //MARK: - Actions
+  @IBAction func sortHit() {
+    if viewModel.reverse {
+      viewModel.reverse = false
+    } else {
+      viewModel.reverse = true
+    }
+    self.refresh()
   }
   
   override func viewWillAppear(_ animated: Bool) {

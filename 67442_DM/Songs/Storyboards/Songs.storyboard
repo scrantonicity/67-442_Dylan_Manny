@@ -34,7 +34,13 @@
                             <outlet property="delegate" destination="jaM-UT-giU" id="hh3-HT-cdj"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="PBi-fe-MiS"/>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="PBi-fe-MiS">
+                        <barButtonItem key="rightBarButtonItem" title="Sort" id="3tc-7n-Whx">
+                            <connections>
+                                <action selector="sortHit" destination="jaM-UT-giU" id="Cta-uZ-lCU"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="9pH-L6-fTN" id="kGU-lc-svg"/>

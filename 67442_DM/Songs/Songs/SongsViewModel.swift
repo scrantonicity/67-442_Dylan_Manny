@@ -26,6 +26,7 @@ import Alamofire
 class SongsViewModel {
   var songs = [Song]()
   var filteredSongs = [Song]()
+  var reverse = true
   
   let client = SearchSongsClient()
   let parser = SongsParser()
@@ -45,6 +46,7 @@ class SongsViewModel {
   }
   
   func getSongsForDay() -> Void {
+    var filteredSongs = [Song]()
     let dateCurrent = Date()
     let calendar = Calendar.current
     let components = calendar.dateComponents([Calendar.Component.day, Calendar.Component.month, Calendar.Component.year], from: dateCurrent)
@@ -55,7 +57,11 @@ class SongsViewModel {
         filteredSongs.append(song)
       }
     }
-    self.filteredSongs.reverse()
+    if self.reverse {
+      self.filteredSongs = filteredSongs.reversed()
+    } else {
+      self.filteredSongs = filteredSongs
+    }
   }
   
   func numberOfRows() -> Int {
