@@ -41,7 +41,7 @@ func getFont(year: Int) -> String {
   } else if (year < 2000) {
     return "Avenir-Medium"
   }
-  return "SanFranciscoDisplay-Medium"
+  return ".SFUIText"
 }
 
 func getImage(year: Int) -> UIImage {

@@ -28,6 +28,7 @@ class SongDetailsViewController: UIViewController {
       trackTitle.font = UIFont(name: fontName, size: 26)
       artist.font = UIFont(name: fontName, size: 18)
       print(Int(viewModel!.song.date[0...3]))
+      print(fontName)
       self.backgroundImage.image = getImage(year: Int(viewModel!.song.date[0...3]) ?? 0)
     }
   

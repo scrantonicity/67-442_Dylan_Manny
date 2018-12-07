@@ -35,6 +35,7 @@
 		5949916121B106270066E896 /* BirthsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5949916021B106270066E896 /* BirthsViewModelTests.swift */; };
 		5949916321B1063B0066E896 /* BirthWebViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5949916221B1063B0066E896 /* BirthWebViewModelTests.swift */; };
 		594BFDF021B66CB1000EE08C /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 594BFDEF21B66CB1000EE08C /* TableViewCell.xib */; };
+		594BFDF621B9A57C000EE08C /* dec7.json in Resources */ = {isa = PBXBuildFile; fileRef = 594BFDF521B9A57C000EE08C /* dec7.json */; };
 		594C922C2195203900B4256C /* Tabs.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 594C922B2195203900B4256C /* Tabs.storyboard */; };
 		594C922E2195257000B4256C /* TabsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594C922D2195257000B4256C /* TabsViewController.swift */; };
 		59C386BD218E1435003F5919 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C386BC218E1435003F5919 /* AppDelegate.swift */; };
@@ -129,6 +130,7 @@
 		5949916021B106270066E896 /* BirthsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthsViewModelTests.swift; sourceTree = "<group>"; };
 		5949916221B1063B0066E896 /* BirthWebViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthWebViewModelTests.swift; sourceTree = "<group>"; };
 		594BFDEF21B66CB1000EE08C /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
+		594BFDF521B9A57C000EE08C /* dec7.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = dec7.json; path = Data/dec7.json; sourceTree = "<group>"; };
 		594C922B2195203900B4256C /* Tabs.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tabs.storyboard; sourceTree = "<group>"; };
 		594C922D2195257000B4256C /* TabsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabsViewController.swift; sourceTree = "<group>"; };
 		59C386B9218E1435003F5919 /* DailyArchive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DailyArchive.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -395,6 +397,7 @@
 		59C386D2218E1CA2003F5919 /* Articles */ = {
 			isa = PBXGroup;
 			children = (
+				594BFDF521B9A57C000EE08C /* dec7.json */,
 				65898965218F91A800D53E95 /* Parser Model */,
 				6589899021954F3400D53E95 /* WebView */,
 				6589898F2195455800D53E95 /* ArticleDetails */,
@@ -728,6 +731,7 @@
 				6589898C2195338F00D53E95 /* Links.xib in Resources */,
 				59C386E9218F7E18003F5919 /* billboard.json in Resources */,
 				59C386EB218F8C85003F5919 /* Main.storyboard in Resources */,
+				594BFDF621B9A57C000EE08C /* dec7.json in Resources */,
 				59C386C7218E1439003F5919 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1040,7 +1044,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = JJHAL4T3UX;
+				DEVELOPMENT_TEAM = X7RL4D5VTN;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/67442_DM/Libraries/ios-sdk",
@@ -1057,7 +1061,7 @@
 					"\"Alamofire\"",
 					"-ObjC",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Timefeed;
+				PRODUCT_BUNDLE_IDENTIFIER = Timefeedd;
 				PRODUCT_NAME = DailyArchive;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "";
@@ -1072,7 +1076,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = JJHAL4T3UX;
+				DEVELOPMENT_TEAM = X7RL4D5VTN;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/67442_DM/Libraries/ios-sdk",
@@ -1089,7 +1093,7 @@
 					"\"Alamofire\"",
 					"-ObjC",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Timefeed;
+				PRODUCT_BUNDLE_IDENTIFIER = Timefeedd;
 				PRODUCT_NAME = DailyArchive;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "";
