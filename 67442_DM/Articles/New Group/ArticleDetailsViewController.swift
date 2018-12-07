@@ -51,8 +51,8 @@ class ArticleDetailsViewController: UIViewController, UITableViewDataSource, UIT
   }
   
   @IBAction func shareButtonTapped(_ sender: Any) {
-    let text = viewModel?.article.headline
-    let year = viewModel?.article.year
+    let text = viewModel!.article.headline
+    let year = viewModel!.article.year
     let textToShare = "Did you know? On \(String(describing: year)), \(String(describing: text))"
     
     let ac = UIActivityViewController(activityItems: [textToShare], applicationActivities: nil)

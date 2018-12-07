@@ -111,7 +111,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Q7w-aU-Miu"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Song" id="xDu-2U-ENF"/>
+                    <navigationItem key="navigationItem" title="Song" id="xDu-2U-ENF">
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="v6m-ce-ryS">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="shareButtonTapped:" destination="h2B-cG-IiQ" id="Rja-hd-doG"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="artist" destination="JV3-1l-RAC" id="ogG-av-zXt"/>
                         <outlet property="backgroundImage" destination="Vai-CB-y0u" id="x9a-hd-LpM"/>

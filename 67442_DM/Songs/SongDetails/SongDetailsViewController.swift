@@ -27,14 +27,24 @@ class SongDetailsViewController: UIViewController {
       let fontName = getFont(year: Int((viewModel?.song.date[0...3])!) ?? 0)
       trackTitle.font = UIFont(name: fontName, size: 26)
       artist.font = UIFont(name: fontName, size: 18)
-      print(Int(viewModel!.song.date[0...3]))
-      print(fontName)
+
       self.backgroundImage.image = getImage(year: Int(viewModel!.song.date[0...3]) ?? 0)
     }
   
     @IBAction func openSpotify(_ sender: Any) {
       viewModel!.openSpotify()
     }
+  
+  @IBAction func shareButtonTapped(_ sender: Any) {
+    let title = viewModel!.song.title
+    let artist = viewModel!.song.artist
+    let year = viewModel!.song.date[0...3]
+    let url = viewModel!.song.url
+    let textToShare = "Did you know? On this day in \(String(describing: year)), \(String(describing: title)) by \(String(describing: artist)) was the #1 song in America? \(String(describing: url))"
+    
+    let ac = UIActivityViewController(activityItems: [textToShare], applicationActivities: nil)
+    present(ac, animated: true)
+  }
   
   // MARK: - Segues
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
