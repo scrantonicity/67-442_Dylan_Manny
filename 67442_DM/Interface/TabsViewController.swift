@@ -54,7 +54,7 @@ class TabsViewController: UITabBarController, UITabBarControllerDelegate {
     case (self.tabBar.items![3]):
       self.tabBar.tintColor = UIColor(red:0.20, green:0.80, blue:0.40, alpha:1.0)
     case (self.tabBar.items![4]):
-      self.tabBar.tintColor = UIColor(red:0.00, green:0.60, blue:1.00, alpha:1.0)
+      self.tabBar.tintColor = UIColor(red:1.00, green:0.60, blue:0.00, alpha:1.0)
     default:
       self.tabBar.tintColor = UIColor(red:0.00, green:0.60, blue:1.00, alpha:1.0)
     }

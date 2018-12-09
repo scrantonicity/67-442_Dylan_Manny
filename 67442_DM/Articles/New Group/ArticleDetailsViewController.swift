@@ -45,7 +45,7 @@ class ArticleDetailsViewController: UIViewController, UITableViewDataSource, UIT
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
     if let selectedRow = tableView.indexPathForSelectedRow {
-      tableView.deselectRow(at: selectedRow, animated: true)
+      tableView.deselectRow(at: selectedRow, animated: false)
     }
     
   }
@@ -56,7 +56,7 @@ class ArticleDetailsViewController: UIViewController, UITableViewDataSource, UIT
     let textToShare = "Did you know? On \(String(describing: year)), \(String(describing: text))"
     
     let ac = UIActivityViewController(activityItems: [textToShare], applicationActivities: nil)
-    present(ac, animated: true)
+    present(ac, animated: false)
 //    navigationController?.present(activityViewController, animated: true)
   }
   

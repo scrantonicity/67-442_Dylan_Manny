@@ -16,7 +16,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" restorationIdentifier="detailsInit" insetsLayoutMarginsFromSafeArea="NO" id="pGM-7h-M8n">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.0" green="0.59999999999999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.0" green="0.59999999999999998" blue="1" alpha="0.80158390410958902" colorSpace="custom" customColorSpace="calibratedRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="ACv-0w-qe9" kind="relationship" relationship="rootViewController" id="ZsJ-p4-Wl3"/>

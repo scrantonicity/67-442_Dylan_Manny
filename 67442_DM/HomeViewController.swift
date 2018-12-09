@@ -44,7 +44,7 @@ class HomeViewController: UIViewController {
     let components = calendar.dateComponents([Calendar.Component.day, Calendar.Component.month, Calendar.Component.year], from: dateCurrent)
     let currentMonth = components.month!
     let ending = getNumEnding(year: components.day!)
-    return "\(months[currentMonth]!), \(components.day!)\(ending), \(components.year!)"
+    return "\(months[currentMonth]!) \(components.day!)\(ending), \(components.year!)"
   }
   
   func getNumEnding(year: Int) -> String {

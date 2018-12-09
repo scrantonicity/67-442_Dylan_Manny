@@ -18,13 +18,14 @@ class ArticleWebViewController: UIViewController, WKNavigationDelegate {
 
 
   override func viewDidLoad() {
+    print("starting web view load")
     super.viewDidLoad()
+    print("did super loading")
     webView.navigationDelegate = self
-//    print(urlString ?? "None given")
-//    let url:URL = URL(string: urlString!)!
-//
-//    let urlRequest:URLRequest = URLRequest(url:url)
-//    webView.load(urlRequest)
+    print(urlString ?? "None given")
+    let url:URL = URL(string: urlString!)!
+    let urlRequest:URLRequest = URLRequest(url:url)
+    webView.load(urlRequest)
     // Do any additional setup after loading the view.
     activityIndicator = UIActivityIndicatorView()
     activityIndicator.center = self.view.center
@@ -37,6 +38,7 @@ class ArticleWebViewController: UIViewController, WKNavigationDelegate {
     super.viewDidAppear(true)
 //    print(urlString ?? "None given")
     let url:URL = URL(string: urlString!)!
+    print(url)
 
     let urlRequest:URLRequest = URLRequest(url:url)
     webView.load(urlRequest)
@@ -56,6 +58,7 @@ class ArticleWebViewController: UIViewController, WKNavigationDelegate {
   }
   
   func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
+    print("Did start loading")
     showActivityIndicator(show: true)
   }
   

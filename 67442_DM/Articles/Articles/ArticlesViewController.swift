@@ -31,7 +31,7 @@ class ArticlesViewController: UIViewController, UITableViewDataSource, UITableVi
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
     if let selectedRow = tableView.indexPathForSelectedRow {
-      tableView.deselectRow(at: selectedRow, animated: true)
+      tableView.deselectRow(at: selectedRow, animated: false)
     }
   }
   
