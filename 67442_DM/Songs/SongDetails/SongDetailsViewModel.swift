@@ -29,8 +29,7 @@ class SongDetailsViewModel {
     let components = calendar.dateComponents([Calendar.Component.day, Calendar.Component.month, Calendar.Component.year], from: dateCurrent)
     let year = song.date[0...3]
     let currentMonth = components.month!
-//    return "\(months[currentMonth]!) \(components.day!), \(year)"
-    return "\(months[currentMonth]!) 7, \(year)"
+    return "\(months[currentMonth]!) \(components.day!), \(year)"
   }
   
   func openSpotify() -> Void {

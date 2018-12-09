@@ -57,8 +57,7 @@ class ArticleDetailsViewModel {
     let components = calendar.dateComponents([Calendar.Component.day, Calendar.Component.month, Calendar.Component.year], from: dateCurrent)
     let year = article.year
     let currentMonth = components.month!
-//    return "\(months[currentMonth]!) \(components.day!), \(year)"
-    return "\(months[currentMonth]!) 7, \(year)"
+    return "\(months[currentMonth]!) \(components.day!), \(year)"
   }
   
   //returns list with tuples of titles and urls
