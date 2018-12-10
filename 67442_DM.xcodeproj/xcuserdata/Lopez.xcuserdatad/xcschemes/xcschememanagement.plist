@@ -7,7 +7,11 @@
 		<key>67442_DM.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
+<<<<<<< HEAD
 			<integer>3</integer>
+=======
+			<integer>5</integer>
+>>>>>>> a9a87a7f5d7413c0478264d00cf88db16a9f0b13
 		</dict>
 	</dict>
 </dict>
