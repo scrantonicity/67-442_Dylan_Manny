@@ -1,0 +1,55 @@
+//
+//  DeathViewModel.swift
+//  67442_DM
+//
+//  Created by Manuel Lopez on 11/27/18.
+//  Copyright © 2018 Dylan Hyun. All rights reserved.
+//
+
+import Foundation
+
+class DeathViewModel {
+  var deaths = [Death]()
+  var reverse = true
+  
+  let client = SearchWikiClient()
+  let parser = deathParser()
+  
+  func refresh(month: Int, day: Int, _ completion: @escaping () -> Void) {
+    client.fetchWikiInfo(month: month, day: day) { [unowned self] data in
+      if let deaths = self.parser.deathsFromWiki(data) {
+        if self.reverse {
+          self.deaths = deaths.reversed()
+        } else {
+          self.deaths = deaths
+        }
+      }
+      completion()
+    }
+  }
+  
+  func numberOfRows() -> Int {
+    return deaths.count
+  }
+  
+  func headlineForRowAtIndexPath(_ indexPath: IndexPath) -> String {
+    guard indexPath.row >= 0 && indexPath.row < deaths.count else {
+      return ""
+    }
+    return deaths[indexPath.row].person
+  }
+  
+  func yearForRowAtIndexPath(_ indexPath: IndexPath) -> String {
+    guard indexPath.row >= 0 && indexPath.row < deaths.count else {
+      return ""
+    }
+    return deaths[indexPath.row].year
+  }
+  
+  func detailViewModelForRowAtIndexPath(_ indexPath: IndexPath) -> DeathWebViewModel {
+    let deathDetail = deaths[indexPath.row]
+    return DeathWebViewModel(death: deathDetail)
+  }
+  
+  
+}

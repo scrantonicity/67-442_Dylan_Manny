@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xjU-iQ-cJR">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Deaths-->
+        <scene sceneID="7Dx-V4-0ya">
+            <objects>
+                <tableViewController title="Deaths" id="wIk-LZ-ZUO" customClass="DeathsViewController" customModule="DailyArchive" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="nGb-PO-bj6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="deathCell" id="cLT-aE-HZH">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cLT-aE-HZH" id="8zD-Vf-Ng4">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="OwW-0W-fm7" kind="show" identifier="showDeathDetails" id="GgN-8N-hsC"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="wIk-LZ-ZUO" id="MQd-OM-Npl"/>
+                            <outlet property="delegate" destination="wIk-LZ-ZUO" id="Wfp-cA-dLr"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Deaths" id="k54-eF-9yA">
+                        <barButtonItem key="rightBarButtonItem" title="Sort" id="2qE-Fv-xHk">
+                            <connections>
+                                <action selector="sortHit" destination="wIk-LZ-ZUO" id="FWq-HU-l32"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="sort" destination="2qE-Fv-xHk" id="T2H-pg-WmA"/>
+                        <outlet property="tableView" destination="nGb-PO-bj6" id="BEy-2x-bNV"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WiQ-Oo-YWR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1055.2" y="204.64767616191907"/>
+        </scene>
+        <!--Death Web View Controller-->
+        <scene sceneID="WrI-AD-IOR">
+            <objects>
+                <viewController id="OwW-0W-fm7" customClass="DeathWebViewController" customModule="DailyArchive" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uJD-gn-FTn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FUZ-cN-LPD">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="FUZ-cN-LPD" firstAttribute="top" secondItem="yGd-fq-akQ" secondAttribute="top" id="7gO-eL-GxE"/>
+                            <constraint firstAttribute="trailing" secondItem="FUZ-cN-LPD" secondAttribute="trailing" id="MKR-T3-01J"/>
+                            <constraint firstItem="FUZ-cN-LPD" firstAttribute="bottom" secondItem="yGd-fq-akQ" secondAttribute="bottom" id="ODa-5K-99M"/>
+                            <constraint firstItem="FUZ-cN-LPD" firstAttribute="leading" secondItem="uJD-gn-FTn" secondAttribute="leading" id="TG8-gT-kPs"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="yGd-fq-akQ"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="b8t-I6-xhY">
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="lgB-Km-Mg4">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="shareButtonTapped:" destination="OwW-0W-fm7" id="3kr-ie-2Qy"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="share" destination="lgB-Km-Mg4" id="O5f-Or-ZDs"/>
+                        <outlet property="webView" destination="FUZ-cN-LPD" id="A23-s9-sOm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EYJ-1E-Wg1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1796" y="204.64767616191907"/>
+        </scene>
+        <!--Deaths-->
+        <scene sceneID="wdy-ek-Yqg">
+            <objects>
+                <navigationController storyboardIdentifier="Deaths" title="Deaths" id="Nl1-2O-fFL" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Deaths" image="tombstone" id="RQl-8u-Akv"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="EbE-Qq-0RW">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="1" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="wIk-LZ-ZUO" kind="relationship" relationship="rootViewController" id="bwg-1d-2ub"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="476-v7-e3q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="103.2" y="204.64767616191907"/>
+        </scene>
+        <!--Deaths-->
+        <scene sceneID="xWe-nn-thI">
+            <objects>
+                <tabBarController title="Deaths" automaticallyAdjustsScrollViewInsets="NO" id="xjU-iQ-cJR" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Hb8-kO-MZn">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Nl1-2O-fFL" kind="relationship" relationship="viewControllers" id="vr1-p7-TOg"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PUt-7B-bzl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-836" y="204.64767616191907"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="tombstone" width="25" height="25"/>
+    </resources>
+</document>

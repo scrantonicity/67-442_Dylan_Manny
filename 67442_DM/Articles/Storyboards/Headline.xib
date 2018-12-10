@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="67" id="fc7-ve-bZu" customClass="HeadlineTableViewCell" customModule="DailyArchive" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="67"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fc7-ve-bZu" id="Vf4-kO-DVk">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="66.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Headline" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FwO-Gr-Pay">
+                        <rect key="frame" x="16" y="11" width="343" height="28"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Year" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DzH-aR-qsi">
+                        <rect key="frame" x="16" y="41" width="27" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="16" id="jTc-W9-yl6"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="FwO-Gr-Pay" firstAttribute="leading" secondItem="Vf4-kO-DVk" secondAttribute="leadingMargin" id="576-Nt-xG0"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="DzH-aR-qsi" secondAttribute="bottom" constant="-1" id="BWE-s0-jxO"/>
+                    <constraint firstItem="DzH-aR-qsi" firstAttribute="leading" secondItem="FwO-Gr-Pay" secondAttribute="leading" id="Hr0-C4-34y"/>
+                    <constraint firstItem="DzH-aR-qsi" firstAttribute="top" secondItem="FwO-Gr-Pay" secondAttribute="bottom" constant="2" id="Us4-kY-Vw6"/>
+                    <constraint firstItem="FwO-Gr-Pay" firstAttribute="trailing" secondItem="Vf4-kO-DVk" secondAttribute="trailingMargin" id="a3A-2d-qhC"/>
+                    <constraint firstItem="FwO-Gr-Pay" firstAttribute="top" secondItem="Vf4-kO-DVk" secondAttribute="topMargin" id="jXK-u7-Hqp"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="headline" destination="FwO-Gr-Pay" id="FI1-YG-HUg"/>
+                <outlet property="year" destination="DzH-aR-qsi" id="MgN-41-ZFs"/>
+            </connections>
+            <point key="canvasLocation" x="136.80000000000001" y="481.70914542728639"/>
+        </tableViewCell>
+    </objects>
+</document>

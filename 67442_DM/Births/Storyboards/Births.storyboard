@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ta6-Lk-efO">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Births-->
+        <scene sceneID="5ge-Qm-kvr">
+            <objects>
+                <tableViewController title="Births" id="Mx5-GC-edE" customClass="BirthsViewController" customModule="DailyArchive" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="phS-od-x0m">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="birthCell" id="YKL-Gz-aWZ">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YKL-Gz-aWZ" id="htB-fV-gkN">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="5f6-Ki-0hS" kind="show" identifier="showBirthDetails" id="psm-2P-F9x"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Mx5-GC-edE" id="Y3E-dF-J98"/>
+                            <outlet property="delegate" destination="Mx5-GC-edE" id="UfK-dN-vw7"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Births" id="l6m-66-U9O">
+                        <barButtonItem key="rightBarButtonItem" title="Sort" id="zgS-uu-opT">
+                            <connections>
+                                <action selector="sortHit" destination="Mx5-GC-edE" id="I8g-rw-E37"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="sort" destination="zgS-uu-opT" id="FGI-Cg-FDM"/>
+                        <outlet property="tableView" destination="phS-od-x0m" id="Ijv-hK-ZA9"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HoJ-zD-dIu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="975.20000000000005" y="29.23538230884558"/>
+        </scene>
+        <!--Birth Web View Controller-->
+        <scene sceneID="JAi-Oc-V7J">
+            <objects>
+                <viewController id="5f6-Ki-0hS" customClass="BirthWebViewController" customModule="DailyArchive" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4hq-s5-I6F">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wok-jG-H5Z">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="wok-jG-H5Z" firstAttribute="leading" secondItem="4hq-s5-I6F" secondAttribute="leading" id="Msw-Zg-WEa"/>
+                            <constraint firstItem="wok-jG-H5Z" firstAttribute="top" secondItem="TAr-6c-6Uf" secondAttribute="top" id="NxN-ht-HZA"/>
+                            <constraint firstItem="wok-jG-H5Z" firstAttribute="bottom" secondItem="TAr-6c-6Uf" secondAttribute="bottom" id="hzw-6x-VnM"/>
+                            <constraint firstAttribute="trailing" secondItem="wok-jG-H5Z" secondAttribute="trailing" id="nuj-mY-xLU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="TAr-6c-6Uf"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="eHo-zL-Es7">
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="WdT-cl-EAY">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="shareButtonTapped:" destination="5f6-Ki-0hS" id="RSA-yd-UNi"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="share" destination="WdT-cl-EAY" id="daL-R5-PcX"/>
+                        <outlet property="webView" destination="wok-jG-H5Z" id="R2e-Yk-dwL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ngF-ik-EH6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1800.8" y="28.335832083958024"/>
+        </scene>
+        <!--Births-->
+        <scene sceneID="eiy-lX-8HS">
+            <objects>
+                <navigationController storyboardIdentifier="Births" title="Births" id="Ya1-1c-LdD" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Births" image="sunrise" id="go5-O6-a6r"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="TTM-WB-rqU">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.59999999999999998" green="0.20000000000000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Mx5-GC-edE" kind="relationship" relationship="rootViewController" id="Rmg-4E-V7z"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vvh-cE-mOM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="124" y="28.335832083958024"/>
+        </scene>
+        <!--Births-->
+        <scene sceneID="mY4-9O-W8K">
+            <objects>
+                <tabBarController title="Births" automaticallyAdjustsScrollViewInsets="NO" id="Ta6-Lk-efO" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="UQF-hn-tGT">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Ya1-1c-LdD" kind="relationship" relationship="viewControllers" id="Wyc-Gp-2VE"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="asO-2c-ZSv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-815.20000000000005" y="28.335832083958024"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="sunrise" width="25" height="25"/>
+    </resources>
+</document>

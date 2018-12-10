@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UCl-bw-Wm2">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="YMo-8i-8np">
+            <objects>
+                <viewController id="UCl-bw-Wm2" customClass="HomeViewController" customModule="DailyArchive" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lik-EG-dS2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon" translatesAutoresizingMaskIntoConstraints="NO" id="b88-hw-FS6">
+                                <rect key="frame" x="137.5" y="258.5" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="1Pk-6u-aIz"/>
+                                    <constraint firstAttribute="width" constant="100" id="HCq-Nz-OxV"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TimeFeed" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NVF-Xh-ahy">
+                                <rect key="frame" x="88" y="358.5" width="199" height="50"/>
+                                <fontDescription key="fontDescription" name="Baskerville-SemiBold" family="Baskerville" pointSize="43"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="barButtonLight" translatesAutoresizingMaskIntoConstraints="NO" id="Zee-pQ-64i">
+                                <rect key="frame" x="33" y="437" width="311" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="TTI-k4-Rql"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MmD-JC-m0W">
+                                <rect key="frame" x="117" y="446" width="143" height="36"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                <state key="normal" title="Start Exploring">
+                                    <color key="titleColor" red="0.0" green="0.59999999999999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="ATk-kw-YrZ" kind="show" id="gBQ-ug-pmw"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Date" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zYx-0d-oX7">
+                                <rect key="frame" x="117" y="402" width="143" height="27"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.59999999999999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="zYx-0d-oX7" firstAttribute="top" secondItem="NVF-Xh-ahy" secondAttribute="bottom" id="6JA-ff-okd"/>
+                            <constraint firstItem="Zee-pQ-64i" firstAttribute="centerX" secondItem="Bc6-ey-iPb" secondAttribute="centerX" id="6u0-K8-B8o"/>
+                            <constraint firstItem="NVF-Xh-ahy" firstAttribute="centerX" secondItem="lik-EG-dS2" secondAttribute="centerX" id="BxN-Gh-byK"/>
+                            <constraint firstItem="b88-hw-FS6" firstAttribute="centerX" secondItem="lik-EG-dS2" secondAttribute="centerX" id="Txk-JR-xXa"/>
+                            <constraint firstItem="Zee-pQ-64i" firstAttribute="centerY" secondItem="Bc6-ey-iPb" secondAttribute="centerY" constant="140" id="a39-14-gDR"/>
+                            <constraint firstItem="NVF-Xh-ahy" firstAttribute="top" secondItem="lik-EG-dS2" secondAttribute="centerY" constant="25" id="d9J-I2-KfA"/>
+                            <constraint firstItem="zYx-0d-oX7" firstAttribute="centerX" secondItem="Bc6-ey-iPb" secondAttribute="centerX" id="g1d-t6-VCx"/>
+                            <constraint firstItem="MmD-JC-m0W" firstAttribute="centerY" secondItem="Bc6-ey-iPb" secondAttribute="centerY" constant="140" id="oYp-8a-eKu"/>
+                            <constraint firstItem="Zee-pQ-64i" firstAttribute="leadingMargin" secondItem="Bc6-ey-iPb" secondAttribute="leading" constant="40" id="wYu-IB-tVM"/>
+                            <constraint firstItem="MmD-JC-m0W" firstAttribute="centerX" secondItem="Bc6-ey-iPb" secondAttribute="centerX" id="wsQ-4H-CjY"/>
+                            <constraint firstItem="b88-hw-FS6" firstAttribute="centerY" secondItem="lik-EG-dS2" secondAttribute="centerY" constant="-25" id="xDX-er-3sO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Bc6-ey-iPb"/>
+                    </view>
+                    <connections>
+                        <outlet property="date" destination="zYx-0d-oX7" id="IXj-Hf-0WS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Ms-ny-GG6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-68" y="189.3553223388306"/>
+        </scene>
+        <!--tabsController-->
+        <scene sceneID="JR4-6E-G8e">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="SongsView" storyboardName="Tabs" referencedIdentifier="tabsController" id="ATk-kw-YrZ" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jY8-Re-L7e" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="480" y="189"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="barButtonLight" width="425" height="74"/>
+        <image name="icon" width="365" height="367"/>
+    </resources>
+</document>
