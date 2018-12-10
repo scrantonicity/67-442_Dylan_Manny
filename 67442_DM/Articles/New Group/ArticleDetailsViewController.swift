@@ -44,10 +44,15 @@ class ArticleDetailsViewController: UIViewController, UITableViewDataSource, UIT
   
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
+    print("article detail view appearing")
     if let selectedRow = tableView.indexPathForSelectedRow {
       tableView.deselectRow(at: selectedRow, animated: false)
     }
     
+  }
+  
+  override func viewWillDisappear(_ animated: Bool) {
+    print("article detail view disappearing")
   }
   
   @IBAction func shareButtonTapped(_ sender: Any) {
@@ -56,7 +61,20 @@ class ArticleDetailsViewController: UIViewController, UITableViewDataSource, UIT
     let textToShare = "Did you know? On \(String(describing: year)), \(String(describing: text))"
     
     let ac = UIActivityViewController(activityItems: [textToShare], applicationActivities: nil)
-    present(ac, animated: false)
+    ac.excludedActivityTypes = [.message, .mail]
+    ac.willMove(toParent: self)
+    ac.completionWithItemsHandler = {(activityType: UIActivity.ActivityType?, completed: Bool, returnedItems: [Any]?, error: Error?) in
+      if !completed {
+        // User canceled
+        print("canceled")
+        return
+      }
+      print("completed")
+      // User completed activity
+      self.loadView()
+    }
+    present(ac, animated: true, completion: nil)
+    
 //    navigationController?.present(activityViewController, animated: true)
   }
   
